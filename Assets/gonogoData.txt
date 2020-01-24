@@ -1,0 +1,1 @@
+{"aciertosRonda1":6,"aciertosRonda2":0,"errorPorContinuación":0,"errorPorAzar":0,"errorPorOmision":3,"errorPorPerseveracionDeRespuesta":0}

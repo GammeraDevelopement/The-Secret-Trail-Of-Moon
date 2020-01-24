@@ -1,0 +1,1120 @@
+fileFormatVersion: 2
+guid: f1ec5533eeada334fbf356fef630b7b2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6766247395255365212
+    second: botones-playstation-png-4 (1)_0
+  - first:
+      213: 1812051687976805147
+    second: botones-playstation-png-4 (1)_1
+  - first:
+      213: 6579923566169129615
+    second: botones-playstation-png-4 (1)_2
+  - first:
+      213: 8921075159153293329
+    second: botones-playstation-png-4 (1)_3
+  - first:
+      213: 9071696413415710017
+    second: botones-playstation-png-4 (1)_4
+  - first:
+      213: -6728442520030185465
+    second: botones-playstation-png-4 (1)_5
+  - first:
+      213: 3252184854145776721
+    second: botones-playstation-png-4 (1)_6
+  - first:
+      213: -2204367444081029472
+    second: botones-playstation-png-4 (1)_7
+  - first:
+      213: 4889872321279489279
+    second: botones-playstation-png-4 (1)_8
+  - first:
+      213: 4692950475952564143
+    second: botones-playstation-png-4 (1)_9
+  - first:
+      213: 7447805124597293258
+    second: botones-playstation-png-4 (1)_10
+  - first:
+      213: -6603976276565887264
+    second: botones-playstation-png-4 (1)_11
+  - first:
+      213: -7212412687972984812
+    second: botones-playstation-png-4 (1)_12
+  - first:
+      213: 4390311413106275022
+    second: botones-playstation-png-4 (1)_13
+  - first:
+      213: 98017293714105691
+    second: botones-playstation-png-4 (1)_14
+  - first:
+      213: -5602943742222070705
+    second: botones-playstation-png-4 (1)_15
+  - first:
+      213: -6208440158258764554
+    second: botones-playstation-png-4 (1)_16
+  - first:
+      213: -8109772913223752778
+    second: botones-playstation-png-4 (1)_17
+  - first:
+      213: -7909130954243644997
+    second: botones-playstation-png-4 (1)_18
+  - first:
+      213: 7090288722911386834
+    second: botones-playstation-png-4 (1)_19
+  - first:
+      213: -2455208984397629166
+    second: botones-playstation-png-4 (1)_20
+  - first:
+      213: 7984533419215367935
+    second: botones-playstation-png-4 (1)_21
+  - first:
+      213: -4740401255168244761
+    second: botones-playstation-png-4 (1)_22
+  - first:
+      213: 7616827879509980539
+    second: botones-playstation-png-4 (1)_23
+  - first:
+      213: -3936943766599380891
+    second: botones-playstation-png-4 (1)_24
+  - first:
+      213: 8588425170952803364
+    second: botones-playstation-png-4 (1)_25
+  - first:
+      213: 8706801985137351891
+    second: botones-playstation-png-4 (1)_26
+  - first:
+      213: -4542762195128133949
+    second: botones-playstation-png-4 (1)_27
+  - first:
+      213: 1680853219453102283
+    second: botones-playstation-png-4 (1)_28
+  - first:
+      213: 3461746023272869255
+    second: botones-playstation-png-4 (1)_29
+  - first:
+      213: -9161441846881675986
+    second: botones-playstation-png-4 (1)_30
+  - first:
+      213: 8331478691327136343
+    second: botones-playstation-png-4 (1)_31
+  - first:
+      213: -3743777580086025772
+    second: botones-playstation-png-4 (1)_32
+  - first:
+      213: -1622077526509033565
+    second: botones-playstation-png-4 (1)_33
+  - first:
+      213: -6789884348498313608
+    second: botones-playstation-png-4 (1)_34
+  - first:
+      213: -3511231145802879021
+    second: botones-playstation-png-4 (1)_35
+  - first:
+      213: 1540034924645071533
+    second: botones-playstation-png-4 (1)_36
+  - first:
+      213: -3100670545154176667
+    second: botones-playstation-png-4 (1)_37
+  - first:
+      213: -6347069318834008754
+    second: botones-playstation-png-4 (1)_38
+  - first:
+      213: 5132248358539658123
+    second: botones-playstation-png-4 (1)_39
+  - first:
+      213: 3288068834126943509
+    second: botones-playstation-png-4 (1)_40
+  - first:
+      213: -2642032226993588711
+    second: botones-playstation-png-4 (1)_41
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: PS4
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 463
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b11f97bf264c8e49842978b7f4f5d3d
+      internalID: 6766247395255365212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 461
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff0d840c41188d41b8adaa2d04f4e00
+      internalID: 1812051687976805147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 386
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784bb50ff1feaab4fad469bb471dda43
+      internalID: 6579923566169129615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 386
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b87679cd2d7a9d4e94c582741456410
+      internalID: 8921075159153293329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 386
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d770a47f3547bd47bb1d9be5b15398a
+      internalID: 9071696413415710017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 386
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4032d38eef55c40ba4263832151fe9
+      internalID: -6728442520030185465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 323
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad8285a39d0b4d48a5d569fb5256cfb
+      internalID: 3252184854145776721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 323
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dcb867fe6d9f34e9128f19a0c05f06
+      internalID: -2204367444081029472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 329
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9f721ccacbd9249bba56a2e00bf656
+      internalID: 4889872321279489279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 329
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f215a244e317446b168e37e3b94947
+      internalID: 4692950475952564143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 256
+        width: 125
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f598dc5ff099834fb91184aae42540d
+      internalID: 7447805124597293258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864a18b39e080234faeeced7608ae17b
+      internalID: -6603976276565887264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cc9b3830e51dd409e6514b311404c1
+      internalID: -7212412687972984812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7272926c1d7415247b7411695c135e3b
+      internalID: 4390311413106275022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 256
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911251fe142c062419e2545307d20f4c
+      internalID: 98017293714105691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4c34d6bb196c24d9d67f6f16833321
+      internalID: -5602943742222070705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 256
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85129ccef92a6b6489e219bb10b3e9ba
+      internalID: -6208440158258764554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 193
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8accedeb22ef2bb4383deadb4b640000
+      internalID: -8109772913223752778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 193
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9e0c3936fac9a458825532ec0a2a28
+      internalID: -7909130954243644997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 193
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d4e459c83ef534e8d2a690b61aa5ef
+      internalID: 7090288722911386834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 193
+        width: 124
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341fd2edfb25fc94cb2f4448471246eb
+      internalID: -2455208984397629166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 193
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49971ca9e5f69834cbb8f300e2db9376
+      internalID: 7984533419215367935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 193
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2216c86b3219c4384e161ae5de0f8b
+      internalID: -4740401255168244761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 193
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d4b89ac53bfa0469d82f53a02e75da
+      internalID: 7616827879509980539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 129
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c317e5c1fce265c438b2b35599125fea
+      internalID: -3936943766599380891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5453ff15ef908c544ad5927fa2964287
+      internalID: 8588425170952803364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a559a02a2dd439e4ba9aae5d9dfb44f9
+      internalID: 8706801985137351891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28eead83cf0dd77428af4253ed3af058
+      internalID: -4542762195128133949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_28
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 126
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1787014cad8f8a44f9ed725725001619
+      internalID: 1680853219453102283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8861b2028aa5fc45917004a1937c7a5
+      internalID: 3461746023272869255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_30
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 128
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2987ad3a3c7c8cd40842413ccf5fc8f0
+      internalID: -9161441846881675986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8c309c94c78524a8446578c9e2f6fa
+      internalID: 8331478691327136343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_32
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 65
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232c7dcc32db3a647a19657a607f9a8f
+      internalID: -3743777580086025772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_33
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 65
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f22fa07d3e7a744383f49f4bc430aff
+      internalID: -1622077526509033565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 72
+        width: 94
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cde2479db46c846a7ada3437bf389e
+      internalID: -6789884348498313608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 68
+        width: 88
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a37290de020f6f47be186afe37e1d4e
+      internalID: -3511231145802879021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 14
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63916ab6fb2b8ed4296bc9510c4c376f
+      internalID: 1540034924645071533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_37
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9c222fd09bced49924e829ba4add63
+      internalID: -3100670545154176667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_38
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 14
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d05696eeabe90c40bd99075eb22d5ed
+      internalID: -6347069318834008754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_39
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 14
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e847d3e61e46248b297079779cc4fd
+      internalID: 5132248358539658123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_40
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 4
+        width: 79
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6f8f369194824478fcb8a745def8cf
+      internalID: 3288068834126943509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones-playstation-png-4 (1)_41
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 4
+        width: 85
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3002b5bbfe58d047b9fa84f81d76445
+      internalID: -2642032226993588711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d9c70ffd17f6e2545a3019865c091f14
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

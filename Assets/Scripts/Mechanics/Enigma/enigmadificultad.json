@@ -1,0 +1,204 @@
+{ "dificultades":[
+ {
+   "Nivel": 1,
+   "NRuedas": 1,
+   "NElementos": 2,
+   "Tiempo": 30,
+   "TiempoDisponible": 60,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 2,
+   "NRuedas": 2,
+   "NElementos": 2,
+   "Tiempo": 30,
+   "TiempoDisponible": 60,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 3,
+   "NRuedas": 2,
+   "NElementos": 2,
+   "Tiempo": 25,
+   "TiempoDisponible": 60,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 4,
+   "NRuedas": 3,
+   "NElementos": 2,
+   "Tiempo": 25,
+   "TiempoDisponible": 60,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 5,
+   "NRuedas": 2,
+   "NElementos": 3,
+   "Tiempo": 25,
+   "TiempoDisponible": 60,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 6,
+   "NRuedas": 2,
+   "NElementos": 3,
+   "Tiempo": 25,
+   "TiempoDisponible": 90,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 7,
+   "NRuedas": 3,
+   "NElementos": 3,
+   "Tiempo": 25,
+   "TiempoDisponible": 90,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 8,
+   "NRuedas": 3,
+   "NElementos": 3,
+   "Tiempo": 20,
+   "TiempoDisponible": 90,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 9,
+   "NRuedas": 4,
+   "NElementos": 3,
+   "Tiempo": 20,
+   "TiempoDisponible": 90,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 10,
+   "NRuedas": 2,
+   "NElementos": 2,
+   "Tiempo": 25,
+   "TiempoDisponible": 60,
+   "Comodines": 2
+ },
+ {
+   "Nivel": 11,
+   "NRuedas": 2,
+   "NElementos": 4,
+   "Tiempo": 30,
+   "TiempoDisponible": 60,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 12,
+   "NRuedas": 3,
+   "NElementos": 4,
+   "Tiempo": 25,
+   "TiempoDisponible": 90,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 13,
+   "NRuedas": 3,
+   "NElementos": 4,
+   "Tiempo": 20,
+   "TiempoDisponible": 120,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 14,
+   "NRuedas": 4,
+   "NElementos": 4,
+   "Tiempo": 20,
+   "TiempoDisponible": 120,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 15,
+   "NRuedas": 5,
+   "NElementos": 4,
+   "Tiempo": 20,
+   "TiempoDisponible": 120,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 16,
+   "NRuedas": 3,
+   "NElementos": 5,
+   "Tiempo": 30,
+   "TiempoDisponible": 120,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 17,
+   "NRuedas": 3,
+   "NElementos": 3,
+   "Tiempo": 20,
+   "TiempoDisponible": 90,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 18,
+   "NRuedas": 3,
+   "NElementos": 5,
+   "Tiempo": 20,
+   "TiempoDisponible": 120,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 19,
+   "NRuedas": 4,
+   "NElementos": 5,
+   "Tiempo": 20,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 20,
+   "NRuedas": 5,
+   "NElementos": 5,
+   "Tiempo": 20,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 21,
+   "NRuedas": 3,
+   "NElementos": 6,
+   "Tiempo": 30,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 22,
+   "NRuedas": 3,
+   "NElementos": 6,
+   "Tiempo": 20,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 23,
+   "NRuedas": 4,
+   "NElementos": 6,
+   "Tiempo": 20,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 24,
+   "NRuedas": 5,
+   "NElementos": 6,
+   "Tiempo": 20,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ },
+ {
+   "Nivel": 25,
+   "NRuedas": 6,
+   "NElementos": 6,
+   "Tiempo": 20,
+   "TiempoDisponible": 150,
+   "Comodines": 1
+ }
+
+]
+}

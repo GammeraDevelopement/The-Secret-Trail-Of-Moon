@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectDataExport>
+  <PhonemeData>
+    <TargetLanguage>Spanish</TargetLanguage>
+    <Word>Foxpack Project</Word>
+    <PhonemeParameterDataModelCollection>
+      <PhonemeParameterDataModel>
+        <Phoneme>f o k s p a k ___ p r o x e k</Phoneme>
+        <IsCheckedP>true</IsCheckedP>
+        <IsImported>false</IsImported>
+      </PhonemeParameterDataModel>
+      <PhonemeParameterDataModel>
+        <Phoneme>f o k s p a k k ___ p r o x e k</Phoneme>
+        <IsCheckedP>true</IsCheckedP>
+        <IsImported>false</IsImported>
+      </PhonemeParameterDataModel>
+      <PhonemeParameterDataModel>
+        <Phoneme>f o k s p a k ___ p r a jj e k t</Phoneme>
+        <IsCheckedP>true</IsCheckedP>
+        <IsImported>false</IsImported>
+      </PhonemeParameterDataModel>
+      <PhonemeParameterDataModel>
+        <Phoneme>f o k s p a k k ___ p r a jj e k t</Phoneme>
+        <IsCheckedP>true</IsCheckedP>
+        <IsImported>false</IsImported>
+      </PhonemeParameterDataModel>
+    </PhonemeParameterDataModelCollection>
+    <Display>true</Display>
+  </PhonemeData>
+</ProjectDataExport>

@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 1685f78eb358d9941a37db521c55c6a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7966697505002299693
+    second: piezas chibi_0
+  - first:
+      213: 2708146098413160688
+    second: piezas chibi_1
+  - first:
+      213: -5452849059083078254
+    second: piezas chibi_2
+  - first:
+      213: -3516494412286542005
+    second: piezas chibi_3
+  - first:
+      213: -6669684120110533899
+    second: piezas chibi_4
+  - first:
+      213: -8181068707506793605
+    second: piezas chibi_5
+  - first:
+      213: 3234232451200271760
+    second: piezas chibi_6
+  - first:
+      213: -6253636958054098906
+    second: piezas chibi_7
+  - first:
+      213: -1532501347300834276
+    second: piezas chibi_8
+  - first:
+      213: 1475442587374650949
+    second: piezas chibi_9
+  - first:
+      213: 8791104317255696691
+    second: piezas chibi_10
+  - first:
+      213: 7479374761721432130
+    second: piezas chibi_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: PS4
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: piezas chibi_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 582
+        width: 370
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0cf00ee3976194a9de8fc32b8c3e92
+      internalID: 7966697505002299693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_1
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 582
+        width: 294
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458d2fa583016d04b9039ee6024d74ff
+      internalID: 2708146098413160688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_2
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 575
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39768cb5ef36b6d44b8100131f44f4b3
+      internalID: -5452849059083078254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_3
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 573
+        width: 257
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1eaf4e28172316429f68742b19cc50e
+      internalID: -3516494412286542005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_4
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 573
+        width: 238
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087bf5d62a32afe40b7d3293331f4a7b
+      internalID: -6669684120110533899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_5
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 568
+        width: 213
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc21b08e34ad0e4fa41dc83982a0ca5
+      internalID: -8181068707506793605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_6
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 166
+        width: 370
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9544eef3bc4391408b2c20c6dd72122
+      internalID: 3234232451200271760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_7
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 167
+        width: 294
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5a30b0c4661af4fb77386337c86011
+      internalID: -6253636958054098906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_8
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 160
+        width: 258
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2bd3da0bbfe4449afe3874051d799b
+      internalID: -1532501347300834276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_9
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 159
+        width: 257
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47bc95b607c88647ab7c224d32dadbf
+      internalID: 1475442587374650949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_10
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 157
+        width: 238
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d43f200f5b1624882017d07dc6a0b2
+      internalID: 8791104317255696691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piezas chibi_11
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 153
+        width: 214
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a32b190aa720447ac0288ff151794e
+      internalID: 7479374761721432130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7eb2fa370f94b8149a626decd14a3b92
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

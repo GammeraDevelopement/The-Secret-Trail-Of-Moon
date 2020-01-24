@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gamePackage>
+  <language id="03" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Foxpack Project</text>
+      <pronunciation>f o k s p a k ___ p r o x e k</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Foxpack Project</text>
+      <pronunciation>f o k s p a k k ___ p r o x e k</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Foxpack Project</text>
+      <pronunciation>f o k s p a k ___ p r a jj e k t</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Foxpack Project</text>
+      <pronunciation>f o k s p a k k ___ p r a jj e k t</pronunciation>
+    </speechRecognitionWords>
+  </language>
+</gamePackage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gamePackage>
+  <language id="01" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Foxpack</text>
+      <pronunciation>f ao k s p ae k</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Foxpack</text>
+      <pronunciation>f ao k s p ae k k</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="03" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Foxpack</text>
+      <pronunciation>f o k s p a k</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Foxpack</text>
+      <pronunciation>f o k s p a k k</pronunciation>
+    </speechRecognitionWords>
+  </language>
+  <language id="18" modified="0">
+    <speechRecognitionWords>
+      <text display="1">Foxpack</text>
+      <pronunciation>f ao k s p ae k</pronunciation>
+    </speechRecognitionWords>
+    <speechRecognitionWords>
+      <text display="1">Foxpack</text>
+      <pronunciation>f ao k s p ae s k</pronunciation>
+    </speechRecognitionWords>
+  </language>
+</gamePackage>
