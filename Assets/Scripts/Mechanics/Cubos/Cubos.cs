@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.Video;
 using UnityStandardAssets.Characters.FirstPerson;
 using System;
+using System.Collections;
 
 public class Cubos : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Cubos : MonoBehaviour
     public GameObject[] blocks;
     public GameObject boards;
     public int[] levelSize;
-    public int[] levelCubes;
+    public int[] cubesAmount;
 
     public Image imageKey;
     public Light light;
@@ -87,7 +88,7 @@ public class Cubos : MonoBehaviour
         detectores = new GameObject[amountOfDetectors];
 
         //Instanciar los cubitos
-        for (int i = 0; i < levelCubes[level]; i++) {
+        for (int i = 0; i < cubesAmount[level]; i++) {
             cubes.GetChild(i).gameObject.SetActive(true);
         }
 
@@ -104,6 +105,7 @@ public class Cubos : MonoBehaviour
         
         temporizador.startTimer();
         state = CubeFSM.WAITING;
+        
     }
 
     private void Update() {
@@ -124,18 +126,24 @@ public class Cubos : MonoBehaviour
             case CubeFSM.WAITING:
 
                 imageKey.sprite = matrizPared[level - 1];
+                bool complete = true;
                 for (int i = 0; i < amountOfDetectors; i++) {
                     matrizSolucion[i] = detectores[i].GetComponent<FaceDetector>().getCara();
+                    if (matrizSolucion[i] == "") {
+                        complete = false;
+                    }
                 }
 
-                if (checkWinner()) {
-                    Debug.Log("Has ganado");
-                    light.gameObject.SetActive(true);
-                    light.color = Color.green;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().clip = finishedSound;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
-                    winBoard.SetActive(true);
-                    state = CubeFSM.FINISHED;
+                if (complete) {
+                    if (checkWinner()) {
+                        Debug.Log("Has ganado");
+                        light.gameObject.SetActive(true);
+                        light.color = Color.green;
+                        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().clip = finishedSound;
+                        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
+                        winBoard.SetActive(true);
+                        state = CubeFSM.FINISHED;
+                    } 
                 }
 
                 //For key image implementation only, uncomment if you want to create a key code
@@ -159,9 +167,8 @@ public class Cubos : MonoBehaviour
             default:
                 break;
         }
-     
-        
     }
+
 
     private void checkCodes() {
         /*****************************************************************************/
