@@ -222,7 +222,7 @@ public class Sokoban : MonoBehaviour {
                 break;
             case SokobanFSM.FINISHED:
                 if (Input.GetButtonDown("Square") && !loadingScene) {
-                    black.CrossFadeAlpha(1, 0.5F, true);
+                    black.CrossFadeAlpha(1, 0.5F, false);
                     loadingScene = true;
                     AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
                 }

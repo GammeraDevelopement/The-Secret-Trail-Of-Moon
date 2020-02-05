@@ -33,6 +33,7 @@ public class InstructionScreen : MonoBehaviour {
             case InstructionFSM.TUTORIAL:
                 instruction.gameObject.SetActive(true);
 
+                //Se activa el video
                 if ((Input.GetButtonDown(CONFIRM_BUTTON) || Input.GetKey(ALTERNATE_CONFIRM_BUTTON)) && introCount == 0) {
                     squareButton.SetActive(false);
                     videoPlayer.SetActive(true);
@@ -42,15 +43,15 @@ public class InstructionScreen : MonoBehaviour {
                 } else if (introCount == 1) {
                     videoPlayer.transform.GetChild(0).gameObject.SetActive(true);
                     introCount++;
+                    videoPlayer.GetComponent<VideoPlayer>().loopPointReached -= CheckOver;
 
-                } else if (Input.GetButtonDown("Cross") && introCount == 2) {
+                } else if (Input.GetButtonDown("Cross") && introCount >= 2) {
                     videoPlayer.SetActive(false);
                     instruction.gameObject.SetActive(false);
                     player.enabled = true;
                     if (!tutoOnly) {
                         GameObject.FindGameObjectWithTag("GameController").SendMessage("StartPlaying");
                     } else {
-                        //black.CrossFadeAlpha(1, 0.5F, true);
                         SceneManager.LoadScene("Intro");
                     }
                     state = InstructionFSM.FINISHED;
@@ -75,7 +76,13 @@ public class InstructionScreen : MonoBehaviour {
     }
 
     public void startInstruction() {
+        introCount = 0;
+        squareButton.SetActive(true);
         state = InstructionFSM.TUTORIAL;
+    }
+
+    public void setInstructionVideo(VideoClip clip) {
+        videoPlayer.GetComponent<VideoPlayer>().clip = clip;
     }
 
     public void startNoTutorial() {

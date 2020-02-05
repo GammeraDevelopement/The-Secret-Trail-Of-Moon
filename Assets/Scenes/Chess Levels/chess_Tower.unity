@@ -9278,6 +9278,8 @@ MonoBehaviour:
   correct: {fileID: 8300000, guid: 1d4039490c3b82e4680db13b68500f50, type: 3}
   black: {fileID: 1623605012}
   winCartel: {fileID: 369432978}
+  clips: []
+  instruction: {fileID: 0}
 --- !u!4 &1720124956
 Transform:
   m_ObjectHideFlags: 0
@@ -9612,7 +9614,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731052583}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: c4333ad481862fa4cbb74201cba5c871, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d4a430bc8844f284e9c88cdf93974412, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

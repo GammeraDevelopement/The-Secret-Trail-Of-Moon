@@ -24143,6 +24143,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8638862890825957704, guid: bf97951d6415b824397ad28c7a5590e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24198,16 +24208,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_HDR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_AllowDynamicResolution
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8638862890815170696, guid: bf97951d6415b824397ad28c7a5590e6,
         type: 3}
       propertyPath: m_WalkSpeed
@@ -24233,25 +24233,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8638862890398015927, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8638862889746567588, guid: bf97951d6415b824397ad28c7a5590e6,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8638862890398015921, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_Range
-      value: 2.17
-      objectReference: {fileID: 0}
     - target: {fileID: 8638862890386449519, guid: bf97951d6415b824397ad28c7a5590e6,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638862890398015927, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638862890398015921, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_Range
+      value: 2.17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf97951d6415b824397ad28c7a5590e6, type: 3}

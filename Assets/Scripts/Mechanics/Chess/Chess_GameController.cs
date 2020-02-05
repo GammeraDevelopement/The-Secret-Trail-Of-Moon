@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class Chess_GameController : MonoBehaviour
 {
@@ -54,12 +55,15 @@ public class Chess_GameController : MonoBehaviour
     [Header("GUI")]
     public Image black;
     public GameObject winCartel;
+    public VideoClip[] clips;
+    public GameObject instruction;
 
     private GameObject clone;
     private GameObject[,] gameMatrix;
     private GameObject movingPiece;
     private bool loadingScene = false;
     private int movimientoscorrectos = 0;
+    private bool newTuto = true;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +97,15 @@ public class Chess_GameController : MonoBehaviour
         winCartel.SetActive(false);
     }
 
+    private void setClips(int numberVideo) {
+        Debug.Log("Show new instruction video.");
+        instruction.SetActive(true);
+        instruction.GetComponent<InstructionScreen>().setInstructionVideo(clips[numberVideo]);
+        instruction.GetComponent<InstructionScreen>().startInstruction();
+        instruction.GetComponent<InstructionScreen>().state = InstructionScreen.InstructionFSM.TUTORIAL;
+        state = ChessFSM.INSTRUCTION;
+    }
+
     private void StartPlaying() {
         state = ChessFSM.PLAYING;
     }
@@ -105,8 +118,35 @@ public class Chess_GameController : MonoBehaviour
                 black.CrossFadeAlpha(0, 0.5F, true);
                 break;
             case ChessFSM.INSTRUCTION:
+                
                 break;
             case ChessFSM.PLAYING:
+
+                if (tipoMecánica == Pieza.KING) {
+                    switch (nivelActual) {
+                        case 5:
+                            if (newTuto) {
+                                newTuto = false;
+                                setClips(0);
+                            }
+                            break;
+                        case 10:
+                            if (newTuto) {
+                                newTuto = false;
+                                setClips(1);
+                            }
+                            break;
+                        case 15:
+                            if (newTuto) {
+                                newTuto = false;
+                                setClips(2);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                }
 
                 if (Input.GetButtonDown(CONFIRM)) {
 
@@ -194,6 +234,7 @@ public class Chess_GameController : MonoBehaviour
                 } else {
                     Destroy(clone);
                     nivelActual++;
+                    newTuto = true;
                     switch (tipoMecánica) {
                         case Pieza.PAWN:
                             nivelACargar = Resources.Load("Chess Levels/Pawn/Plevel" + nivelActual) as GameObject;

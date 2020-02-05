@@ -99,6 +99,7 @@ public class CSAT : MonoBehaviour {
     private bool loadingScene = false;
     private int cantidadImagenesGeneradas = 0;
     public bool tutorial;
+    public VideoClip secondClip;
 
 
     // Use this for initialization
@@ -152,10 +153,13 @@ public class CSAT : MonoBehaviour {
 
         switch (estado) {
             case CSATFSM.LOADING:
-                if(nivel > 1) {
-                    instruction.GetComponent<InstructionScreen>().startNoTutorial();
-                } else {
+                if(nivel == 29 ) {
+                    instruction.GetComponent<InstructionScreen>().setInstructionVideo(secondClip);
                     instruction.GetComponent<InstructionScreen>().startInstruction();
+                } else if(nivel == 0){
+                    instruction.GetComponent<InstructionScreen>().startInstruction();
+                } else {
+                    instruction.GetComponent<InstructionScreen>().startNoTutorial();
                 }
                 estado = CSATFSM.INSTRUCTION;
                 break;

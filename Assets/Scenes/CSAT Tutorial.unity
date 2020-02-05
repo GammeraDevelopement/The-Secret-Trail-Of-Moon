@@ -17280,6 +17280,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.204
       objectReference: {fileID: 0}
+    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 311
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_Depth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
+        type: 3}
+      propertyPath: far clip plane
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8638862890825957704, guid: bf97951d6415b824397ad28c7a5590e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17334,26 +17354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 311
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_Depth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: m_TargetDisplay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048410338186987817, guid: bf97951d6415b824397ad28c7a5590e6,
-        type: 3}
-      propertyPath: far clip plane
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8638862890815170696, guid: bf97951d6415b824397ad28c7a5590e6,
         type: 3}
@@ -19425,6 +19425,7 @@ MonoBehaviour:
   introCount: 0
   test: 1
   tutorial: 1
+  secondClip: {fileID: 32900000, guid: 301b9545bcbb79a4288892f2a1c9b60f, type: 3}
 --- !u!222 &222036599194889462
 CanvasRenderer:
   m_ObjectHideFlags: 0

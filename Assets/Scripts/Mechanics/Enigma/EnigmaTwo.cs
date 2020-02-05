@@ -138,7 +138,8 @@ public class EnigmaTwo : MonoBehaviour {
             particulas[i] = rueda[i].transform.GetChild(3).gameObject;
         }
 
-        codigoPared = shuffleList(new List<Sprite>(codigoPared)).ToArray(); //Se obtiene la clave de la traducción y se aleatoriza
+        //Se obtiene la clave de la traducción y se aleatoriza
+        codigoPared = shuffleList(new List<Sprite>(codigoPared)).ToArray(); 
         for (int j = 0; j < numeroElementos; j++) {
             imagesObjects[j].gameObject.SetActive(true);
             imagesObjects[j].sprite = codigoPared[j];
@@ -149,8 +150,6 @@ public class EnigmaTwo : MonoBehaviour {
             // Get chess images
             int childrenOfTheWheel = rueda[i].transform.childCount - 1;
             chessCodeImage[i] = rueda[i].transform.GetChild(childrenOfTheWheel).GetChild(0).GetComponent<Image>();
-
-
 
             //Selecciona las imágenes que aparecerán en la rueda
             for (int j = 0; j < numeroElementos; j++) {
@@ -202,6 +201,7 @@ public class EnigmaTwo : MonoBehaviour {
                     source.Play();
                     estado = EnimgaFSM.NEWSERIE;
                 }
+                
                 break;
 
             case EnimgaFSM.NEWSERIE:
@@ -210,6 +210,21 @@ public class EnigmaTwo : MonoBehaviour {
                     chessCodeImage[i].sprite = chessImages[solucion[i]-1].sprite;
                 }
                 estado = EnimgaFSM.PLAYING;
+
+                /*
+                //Randomizar las posiciones de las imágenes de la naturaleza en las ruedas
+                for (int i = 0; i < rueda.Length; i++) {
+                    GameObject[] ruedasACambiarDePosicion = new GameObject[numeroElementos];
+                    for (int j = 0; j < numeroElementos; j++) {
+                        ruedasACambiarDePosicion[j] = rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject;
+                        Debug.Log(rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject.name);
+                    }
+                    ruedasACambiarDePosicion = randomizeTargetPosition(ruedasACambiarDePosicion);
+                    for (int j = 0; j < numeroElementos; j++) {
+                        rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).position = ruedasACambiarDePosicion[j].transform.position;
+                        rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).rotation = ruedasACambiarDePosicion[j].transform.rotation;
+                    }
+                }*/
                 break;
 
             case EnimgaFSM.PLAYING:
@@ -314,6 +329,19 @@ public class EnigmaTwo : MonoBehaviour {
             inputList.RemoveAt(randomIndex); //remove to avoid duplicates
         }
         return randomList; //return the new random list
+    }
+
+    //Randomiza la posición de cada imagen dentro de la rueda para que no vayan en orden
+    private GameObject[] randomizeTargetPosition(GameObject[] targets) {
+        Debug.Log("is randomizing!!!");
+        List<GameObject> listaTargets = new List<GameObject>();
+        for (int i = 0; i < targets.Length ; i++) {
+            listaTargets.Add(targets[i]);
+        }
+        listaTargets = shuffleList(listaTargets);
+
+        targets = listaTargets.ToArray();
+        return targets;
     }
 
 }
