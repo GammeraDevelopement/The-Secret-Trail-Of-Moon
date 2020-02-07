@@ -209,21 +209,25 @@ public class EnigmaTwo : MonoBehaviour {
                     solucion[i] = Random.Range(1, numeroElementos + 1);
                     chessCodeImage[i].sprite = chessImages[solucion[i]-1].sprite;
                 }
+
                 GameObject[] ruedasACambiarDePosicion = new GameObject[numeroElementos];
                 //Randomizar las posiciones de las imágenes de la naturaleza en las ruedas
-                for (int i = 0; i < rueda.Length; i++) {
+                for (int i = 0; i < numeroRuedas; i++) {
                     
                     for (int j = 0; j < numeroElementos; j++) {
                         ruedasACambiarDePosicion[j] = rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject;
                     }
-                    ruedasACambiarDePosicion = randomizeTargetPosition(ruedasACambiarDePosicion);
-                    for (int j = 0; j < numeroElementos; j++) {
-                        Vector3 vector = new Vector3();
-                        vector += ruedasACambiarDePosicion[j].transform.position;
-                        rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).position = vector;
-                        rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).rotation = ruedasACambiarDePosicion[j].transform.rotation;
-                        Debug.Log(rueda[i].transform.GetChild(0).GetChild(0).position + rueda[i].transform.GetChild(0).GetChild(0).name);
-                    }
+ 
+                    Vector3 aux;
+                    Quaternion aux2;
+                    System.Random rand = new System.Random();
+                    int max = rand.Next(numeroElementos - 1);
+                    aux = ruedasACambiarDePosicion[0].transform.position;
+                    ruedasACambiarDePosicion[0].transform.position = ruedasACambiarDePosicion[max].transform.position;
+                    ruedasACambiarDePosicion[max].transform.position = aux;
+                    aux2 = ruedasACambiarDePosicion[0].transform.rotation;
+                    ruedasACambiarDePosicion[0].transform.rotation = ruedasACambiarDePosicion[max].transform.rotation;
+                    ruedasACambiarDePosicion[max].transform.rotation = aux2;
                 }
 
                 estado = EnimgaFSM.PLAYING;
@@ -348,9 +352,9 @@ public class EnigmaTwo : MonoBehaviour {
 
 
     //Randomiza la posición de cada imagen dentro de la rueda para que no vayan en orden
-    private GameObject[] randomizeTargetPosition(GameObject[] targets) {
+    private Vector3[] randomizeTargetPosition(Vector3[] targets) {
         Debug.Log("is randomizing!!!");
-        List<GameObject> listaTargets = new List<GameObject>();
+        List<Vector3> listaTargets = new List<Vector3>();
         for (int i = 0; i < targets.Length ; i++) {
             listaTargets.Add(targets[i]);
         }
