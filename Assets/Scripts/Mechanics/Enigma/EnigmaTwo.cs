@@ -209,22 +209,24 @@ public class EnigmaTwo : MonoBehaviour {
                     solucion[i] = Random.Range(1, numeroElementos + 1);
                     chessCodeImage[i].sprite = chessImages[solucion[i]-1].sprite;
                 }
-                estado = EnimgaFSM.PLAYING;
-
-                /*
+                GameObject[] ruedasACambiarDePosicion = new GameObject[numeroElementos];
                 //Randomizar las posiciones de las imágenes de la naturaleza en las ruedas
                 for (int i = 0; i < rueda.Length; i++) {
-                    GameObject[] ruedasACambiarDePosicion = new GameObject[numeroElementos];
+                    
                     for (int j = 0; j < numeroElementos; j++) {
                         ruedasACambiarDePosicion[j] = rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject;
-                        Debug.Log(rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject.name);
                     }
                     ruedasACambiarDePosicion = randomizeTargetPosition(ruedasACambiarDePosicion);
                     for (int j = 0; j < numeroElementos; j++) {
-                        rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).position = ruedasACambiarDePosicion[j].transform.position;
+                        Vector3 vector = new Vector3();
+                        vector += ruedasACambiarDePosicion[j].transform.position;
+                        rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).position = vector;
                         rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).rotation = ruedasACambiarDePosicion[j].transform.rotation;
+                        Debug.Log(rueda[i].transform.GetChild(0).GetChild(0).position + rueda[i].transform.GetChild(0).GetChild(0).name);
                     }
-                }*/
+                }
+
+                estado = EnimgaFSM.PLAYING;
                 break;
 
             case EnimgaFSM.PLAYING:
@@ -330,6 +332,20 @@ public class EnigmaTwo : MonoBehaviour {
         }
         return randomList; //return the new random list
     }
+
+    public static System.Random rand = new System.Random();
+    //Randomiza los elementos a traducir del código
+    private List<E> shuffleList2<E>(List<E> inputList) {
+        List<E> lst = new List<E>(inputList);
+        for (int i = lst.Count - 1; i >= 1; i--) {
+            int j = rand.Next(0, i + 1);
+            E tmp = lst[j];
+            lst[j] = lst[i];
+            lst[i] = tmp;
+        }
+        return lst;
+    }
+
 
     //Randomiza la posición de cada imagen dentro de la rueda para que no vayan en orden
     private GameObject[] randomizeTargetPosition(GameObject[] targets) {
