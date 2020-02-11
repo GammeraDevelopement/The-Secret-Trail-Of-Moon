@@ -5932,7 +5932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
-  nmaxMovs: 0a0000000a000000080000000800000007000000080000000600000008000000090000000a000000070000000600000008000000070000000a0000000d000000090000000c0000000c0000000d0000000a0000000b0000000800000007000000080000000900000009000000
+  nmaxMovs: 0a0000000a000000080000000800000007000000080000000600000008000000090000000a00000007000000060000000c000000070000000a0000000d000000090000000c0000000c0000000d0000000a0000000b0000000800000007000000080000000900000009000000
   blockSpeed: 0.3
   raycastLength: 10000
   cameraVR: {fileID: 575380897}
@@ -7597,6 +7597,56 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_WalkSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_RunSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_JumpSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_IsWalking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_JumpSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414921721707540495, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418484019438453283, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433921106565119275, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433921106565119275, guid: aa0f4104de693ab43aa1753fbd99b0fd,
+        type: 3}
+      propertyPath: far clip plane
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4032237382191236481, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_RootOrder
@@ -7737,46 +7787,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_WalkSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_RunSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_JumpSound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_IsWalking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032237383566466186, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_JumpSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418484019438453283, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.256
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414921721707540495, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4032237383573331114, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_Enabled
@@ -7861,16 +7871,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433921106565119275, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: m_Depth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433921106565119275, guid: aa0f4104de693ab43aa1753fbd99b0fd,
-        type: 3}
-      propertyPath: far clip plane
-      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1414921723397228065, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}

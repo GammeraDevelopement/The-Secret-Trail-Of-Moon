@@ -217,17 +217,19 @@ public class EnigmaTwo : MonoBehaviour {
                     for (int j = 0; j < numeroElementos; j++) {
                         ruedasACambiarDePosicion[j] = rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject;
                     }
- 
-                    Vector3 aux;
-                    Quaternion aux2;
-                    System.Random rand = new System.Random();
-                    int max = rand.Next(numeroElementos - 1);
-                    aux = ruedasACambiarDePosicion[0].transform.position;
-                    ruedasACambiarDePosicion[0].transform.position = ruedasACambiarDePosicion[max].transform.position;
-                    ruedasACambiarDePosicion[max].transform.position = aux;
-                    aux2 = ruedasACambiarDePosicion[0].transform.rotation;
-                    ruedasACambiarDePosicion[0].transform.rotation = ruedasACambiarDePosicion[max].transform.rotation;
-                    ruedasACambiarDePosicion[max].transform.rotation = aux2;
+
+                    if (nivel > 13) {
+                        Vector3 aux;
+                        Quaternion aux2;
+                        System.Random rand = new System.Random();
+                        int max = rand.Next(numeroElementos - 1);
+                        aux = ruedasACambiarDePosicion[0].transform.position;
+                        ruedasACambiarDePosicion[0].transform.position = ruedasACambiarDePosicion[max].transform.position;
+                        ruedasACambiarDePosicion[max].transform.position = aux;
+                        aux2 = ruedasACambiarDePosicion[0].transform.rotation;
+                        ruedasACambiarDePosicion[0].transform.rotation = ruedasACambiarDePosicion[max].transform.rotation;
+                        ruedasACambiarDePosicion[max].transform.rotation = aux2;
+                    }
                 }
 
                 estado = EnimgaFSM.PLAYING;

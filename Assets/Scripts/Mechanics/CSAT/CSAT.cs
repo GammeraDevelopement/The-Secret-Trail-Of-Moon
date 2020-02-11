@@ -156,7 +156,7 @@ public class CSAT : MonoBehaviour {
                 if(nivel == 29 ) {
                     instruction.GetComponent<InstructionScreen>().setInstructionVideo(secondClip);
                     instruction.GetComponent<InstructionScreen>().startInstruction();
-                } else if(nivel == 0){
+                } else if(nivel == 1){
                     instruction.GetComponent<InstructionScreen>().startInstruction();
                 } else {
                     instruction.GetComponent<InstructionScreen>().startNoTutorial();
