@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 //using UnityEngine.UI;
 //using UnityEngine.UI;
 
@@ -33,9 +34,9 @@ public class cgSquareScript : MonoBehaviour
         //gobj.transform.localPosition.Set(0, 0, 0);
         gobj.transform.position = Camera.main.WorldToViewportPoint(this.transform.position);
         gobj.transform.position = new Vector3(gobj.transform.position.x - .02f, gobj.transform.position.y + .05f, gobj.transform.position.z);
-        gobj.AddComponent<GUIText>();
-        gobj.GetComponent<GUIText>().text = uniqueName+" "+i;
-        gobj.GetComponent<GUIText>().color = Color.yellow;
+        gobj.AddComponent<Text>();
+        gobj.GetComponent<Text>().text = uniqueName+" "+i;
+        gobj.GetComponent<Text>().color = Color.yellow;
     }
 
     /// <summary>

@@ -6,6 +6,7 @@ using System.Threading;
 using System.ComponentModel;
 using System.Timers;
 using System.Diagnostics;
+using UnityEngine.UI;
 
 /// <summary>
 /// The script attached to the chessboard prefab, should have gameobjects with squarescripts, this class: verifies if the player can drag and drop pieces, handles whether or not the engine should make move, checks whether or not the game is over(and if so shows the game over prefab), flips the board, resets the board etc.
@@ -41,7 +42,7 @@ public class cgChessBoardScript : MonoBehaviour {
     /// <summary>
     /// The textfield to log all moves made.
     /// </summary>
-    public GUIText moveLog;
+    public Text moveLog;
 
     /// <summary>
     /// The provided loadbar to display how far the analysis is.

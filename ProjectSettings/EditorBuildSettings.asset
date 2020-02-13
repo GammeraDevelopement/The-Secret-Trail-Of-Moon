@@ -53,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_LargeTutorial.unity
     guid: ec280c8a06cb4704cb8c1b0815f0d322
+  - enabled: 1
+    path: Assets/Scenes/Chess Levels/chess_Repaso1.unity
+    guid: 833447a700be53348828fa515da7c380
   - enabled: 0
     path: Assets/Scenes/Tutorial1.unity
     guid: df7a63696aecba941a77f26e86c577a2

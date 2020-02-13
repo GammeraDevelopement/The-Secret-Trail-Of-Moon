@@ -19426,6 +19426,7 @@ MonoBehaviour:
   test: 1
   tutorial: 1
   secondClip: {fileID: 32900000, guid: 301b9545bcbb79a4288892f2a1c9b60f, type: 3}
+  firstClip: {fileID: 32900000, guid: 5066e39c0a603b94fb8a3757c7e47b1c, type: 3}
 --- !u!222 &222036599194889462
 CanvasRenderer:
   m_ObjectHideFlags: 0

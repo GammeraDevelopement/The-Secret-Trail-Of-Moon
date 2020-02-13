@@ -31,7 +31,8 @@ public class Chess_GameController : MonoBehaviour
         TOWER,
         QUEEN,
         KING,
-        CHECKS
+        CHECKS,
+        REPASO1
     }
     public Pieza tipoMecánica;
 
@@ -89,6 +90,9 @@ public class Chess_GameController : MonoBehaviour
                 break;
             case Pieza.CHECKS:
                 nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
+                break;
+            case Pieza.REPASO1:
+                nivelACargar = Resources.Load("Chess Levels/Repaso/REPlevel" + nivelActual) as GameObject;
                 break;
             default:
                 break;
@@ -194,11 +198,10 @@ public class Chess_GameController : MonoBehaviour
                                 
 
                             } else if (hit.collider.tag == "back" && movingPiece != null && movingPiece.tag == "whitePiece") {
-                                //movingPiece.transform.position = new Vector3(hit.collider.transform.position.x, movingPiece.transform.position.y, hit.collider.transform.position.z);
-                                //recalcular posibilidad de movimiento de la/las piezas
+                                movingPiece = null;
 
 
-                            } else if (hit.collider.tag != "blackPiece" && hit.collider.tag != "targetBlackPiece") {
+                            } else if (hit.collider.tag != "blackPiece" && hit.collider.tag != "targetBlackPiece"  && hit.collider.tag != "back") {
                                 movingPiece = hit.collider.gameObject;
 
                                 //Light material

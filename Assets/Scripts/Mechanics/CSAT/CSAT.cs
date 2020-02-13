@@ -100,6 +100,7 @@ public class CSAT : MonoBehaviour {
     private int cantidadImagenesGeneradas = 0;
     public bool tutorial;
     public VideoClip secondClip;
+    public VideoClip firstClip;
 
 
     // Use this for initialization
@@ -157,6 +158,7 @@ public class CSAT : MonoBehaviour {
                     instruction.GetComponent<InstructionScreen>().setInstructionVideo(secondClip);
                     instruction.GetComponent<InstructionScreen>().startInstruction();
                 } else if(nivel == 1){
+                    instruction.GetComponent<InstructionScreen>().setInstructionVideo(firstClip);
                     instruction.GetComponent<InstructionScreen>().startInstruction();
                 } else {
                     instruction.GetComponent<InstructionScreen>().startNoTutorial();
