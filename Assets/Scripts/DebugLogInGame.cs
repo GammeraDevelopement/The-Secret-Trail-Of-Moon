@@ -40,11 +40,13 @@ public class DebugLogInGame : MonoBehaviour {
     GUIContent collapseLabel = new GUIContent("Collapse", "Hide repeated messages.");
 
     void OnEnable() {
+        #pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         Application.RegisterLogCallback(HandleLog);
     }
 
     void OnDisable() {
         Application.RegisterLogCallback(null);
+        #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
     }
 
     void Update() {

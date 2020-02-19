@@ -94,7 +94,7 @@ public class CSAT : MonoBehaviour {
     private bool comienza = false;
     private bool seHaDisparado = false;
     private bool cdPiedra = false;
-    private bool distractorOn = false;
+    //private bool distractorOn = false;
     private AudioSource source;
     private bool loadingScene = false;
     private int cantidadImagenesGeneradas = 0;

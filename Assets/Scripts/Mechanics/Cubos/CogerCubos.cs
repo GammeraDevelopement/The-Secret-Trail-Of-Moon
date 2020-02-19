@@ -21,7 +21,7 @@ public class CogerCubos : MonoBehaviour {
     private bool flag = true;
     private bool x_isAxisInUse = false;
     private bool y_isAxisInUse = false;
-    private bool cooldown = false;
+    //private bool cooldown = false;
     private Transform pickedCube;
     private Quaternion targetRotation;  //Rotación real del cubo
 
@@ -111,6 +111,6 @@ public class CogerCubos : MonoBehaviour {
             yield return null;
         }
         pickedCube.transform.rotation = to;
-        cooldown = false;
+        //cooldown = false;
     }
 }

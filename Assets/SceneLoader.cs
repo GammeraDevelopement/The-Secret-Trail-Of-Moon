@@ -8,9 +8,9 @@ public class SceneLoader : MonoBehaviour {
     private bool loadScene = false;
 
     [SerializeField]
-    private int scene;
+    private int scene = 0;
     [SerializeField]
-    private Text loadingText;
+    public Text loadingText;
 
     private void Start() {
 
