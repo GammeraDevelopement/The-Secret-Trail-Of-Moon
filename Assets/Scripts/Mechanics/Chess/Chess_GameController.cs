@@ -32,7 +32,8 @@ public class Chess_GameController : MonoBehaviour
         QUEEN,
         KING,
         CHECKS,
-        REPASO1
+        REPASO1,
+        REPASO2
     }
     public Pieza tipoMecánica;
 
@@ -92,7 +93,10 @@ public class Chess_GameController : MonoBehaviour
                 nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
                 break;
             case Pieza.REPASO1:
-                nivelACargar = Resources.Load("Chess Levels/Repaso/REPlevel" + nivelActual) as GameObject;
+                nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
+                break;
+            case Pieza.REPASO2:
+                nivelACargar = Resources.Load("Chess Levels/Repaso2/REPlevel" + nivelActual) as GameObject;
                 break;
             default:
                 break;
@@ -259,6 +263,12 @@ public class Chess_GameController : MonoBehaviour
                             break;
                         case Pieza.CHECKS:
                             nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
+                            break;
+                        case Pieza.REPASO1:
+                            nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
+                            break;
+                        case Pieza.REPASO2:
+                            nivelACargar = Resources.Load("Chess Levels/Repaso2/REPlevel" + nivelActual) as GameObject;
                             break;
                         default:
                             break;
