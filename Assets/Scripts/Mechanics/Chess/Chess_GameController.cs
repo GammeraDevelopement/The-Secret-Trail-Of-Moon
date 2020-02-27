@@ -31,7 +31,9 @@ public class Chess_GameController : MonoBehaviour
         TOWER,
         QUEEN,
         KING,
-        CHECKS,
+        CHECKS1,
+        CHECKS2,
+        CHECKS3,
         REPASO1,
         REPASO2
     }
@@ -89,8 +91,14 @@ public class Chess_GameController : MonoBehaviour
             case Pieza.KING:
                 nivelACargar = Resources.Load("Chess Levels/King/Klevel" + nivelActual) as GameObject;
                 break;
-            case Pieza.CHECKS:
+            case Pieza.CHECKS1:
                 nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
+                break;
+            case Pieza.CHECKS2:
+                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 10)) as GameObject;
+                break;
+            case Pieza.CHECKS3:
+                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 20)) as GameObject;
                 break;
             case Pieza.REPASO1:
                 nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
@@ -261,8 +269,14 @@ public class Chess_GameController : MonoBehaviour
                         case Pieza.KING:
                             nivelACargar = Resources.Load("Chess Levels/King/Klevel" + nivelActual) as GameObject;
                             break;
-                        case Pieza.CHECKS:
+                        case Pieza.CHECKS1:
                             nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
+                            break;
+                        case Pieza.CHECKS2:
+                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 10)) as GameObject;
+                            break;
+                        case Pieza.CHECKS3:
+                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 20)) as GameObject;
                             break;
                         case Pieza.REPASO1:
                             nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;

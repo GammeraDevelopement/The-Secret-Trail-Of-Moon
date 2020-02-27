@@ -1,0 +1,18 @@
+{ 
+"Capitulos":[{
+	"Capitulo": [{
+		"id": 1,
+		"Escena":[{
+			"id": 1,
+			"Mensajes":[{
+				"id":1,
+			   "Cadena": "jhjyfjcualquiercosa",
+			   "Audio": "kjgjgj",
+			   "x": 2.5,
+			   "y": 30.5,
+			   "Duracion": 60.5
+				}]
+			}]
+		}]
+	}]
+}
