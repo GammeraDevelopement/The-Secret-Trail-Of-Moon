@@ -56,15 +56,12 @@ public class GenerateElements_Controller : MonoBehaviour
         elemRandomSecondRound = Random.Range(0, data.getDificultad(gng.nivelActual).NElementos);
     }
 
-    public IEnumerator GenerateFirstRound(byte min, byte max)
-    {
-        while (gng.get_stateFirstRound() || gng.get_stateSecondRound())
-        {
-            
-            if(gng.get_stateFirstRound() == true)
-            {
+    public IEnumerator GenerateFirstRound(byte min, byte max){
+        while (gng.get_stateFirstRound() || gng.get_stateSecondRound()) {
+
+            if (gng.get_stateFirstRound() == true) {
                 numRandom = Random.Range(min, max);
-                
+
                 GameObject targetPrefab = TargetList[numRandom];
 
                 if (numRandom == 1)
@@ -73,27 +70,24 @@ public class GenerateElements_Controller : MonoBehaviour
                 else
                     Instantiate(targetPrefab, position, Quaternion.Euler(0, 90, 0));
 
-            }
-            else
-            {
+            } else {
                 //do
                 //{
-                    numRandom = GetRandomValue(
-                        new RandomSelection(min, max, lessProbabTarget),
-                        new RandomSelection(elemRandomSecondRound,elemRandomSecondRound, moreProbabTarget)
-                         );
+                numRandom = GetRandomValue(
+                    new RandomSelection(min, max, lessProbabTarget),
+                    new RandomSelection(elemRandomSecondRound, elemRandomSecondRound, moreProbabTarget)
+                     );
                 //} while ((data.getDificultad(gng.nivelActual).NElementos) == 2 && (numRandom == 2 || numRandom == 5));
 
                 print(numRandom);
 
                 GameObject targetPrefab = TargetList[numRandom + 5];
 
-                if (numRandom == 1 || numRandom == 4)
+                if (numRandom == 1 || numRandom == 4) { 
                     Instantiate(targetPrefab, position, Quaternion.identity);
-
-                else
+                } else {
                     Instantiate(targetPrefab, position, Quaternion.Euler(0, 90, 0));
-
+                }
             }
 
             gng.set_plus_elemCounter();

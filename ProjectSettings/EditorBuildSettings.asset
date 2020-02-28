@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chess Levels/chess_Tutorial.unity
     guid: 2c7dea1adc4dfcc4682131ce453a6bdb
   - enabled: 1
-    path: Assets/Scenes/Chess Levels/chess_Checks.unity
+    path: Assets/Scenes/Chess Levels/chess_Checks1.unity
     guid: f6d4ee4067393844ab384dd3cfdaf967
   - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_LargeTutorial.unity
@@ -56,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Repaso1.unity
     guid: 833447a700be53348828fa515da7c380
+  - enabled: 1
+    path: Assets/Scenes/Chess Levels/chess_Repaso2.unity
+    guid: 4242713985310a2488bfbedc8b032e44
   - enabled: 0
     path: Assets/Scenes/Tutorial1.unity
     guid: df7a63696aecba941a77f26e86c577a2
@@ -65,4 +68,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ChessGame/cgGenerator.unity
     guid: 51b9706d7a521f147bd3a91bde428968
+  - enabled: 1
+    path: Assets/Scenes/Chess Levels/chess_Checks2.unity
+    guid: 48cdacdd28f89654fafcab5a227dfa9c
+  - enabled: 1
+    path: Assets/Scenes/Chess Levels/chess_Checks3.unity
+    guid: 705a70893212ab74ab2a05c7f09e0f55
   m_configObjects: {}

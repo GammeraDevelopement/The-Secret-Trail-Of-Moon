@@ -8,7 +8,7 @@ using TMPro;
 
 public class GoNoGo : MonoBehaviour {
 
-    enum GonogoFSM {
+    public enum GonogoFSM {
         LOADING,
         INSTRUCTION,
         FIRSTROUND,
@@ -16,7 +16,8 @@ public class GoNoGo : MonoBehaviour {
         FINISHED_WIN,
         FINISHED_LOSE
     }
-    GonogoFSM estado = GonogoFSM.LOADING;
+    public GonogoFSM estado = GonogoFSM.LOADING;
+    public InstructionScreen instruction;
 
     public float speed = 10F;
     public Terrain[] terrenos;
@@ -26,60 +27,58 @@ public class GoNoGo : MonoBehaviour {
     public delegate void ControllerDelegate();
     ControllerDelegate CDelegate;
 
-    [SerializeField] GenerateElements_Controller geC;
+    public GenerateElements_Controller geC;
 
-    bool corrutinaActive = false;
-
-    byte elemCounter;
+    private bool corrutinaActive = false;
+    private byte elemCounter;
 
     /// <summary>
     /// Referencia del script GoNoGo_SetData
     /// </summary>
-    [SerializeField] GoNoGo_SetData data;
-    [SerializeField] GonoGoData_Save dataSave;
-    [SerializeField] DataManager dataManager;
+    [Header("DataManager")]
+    public GoNoGo_SetData data;
+    public GonoGoData_Save dataSave;
+    public DataManager dataManager;
 
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip acierto;
-    [SerializeField] AudioClip error;
+    [Header("GUI")]
+    public Canvas canvasStart;
+    public Canvas canvasGame;
+    public TextMeshProUGUI textState;
+    public Image black;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip acierto;
+    public AudioClip error;
     public int nivelActual = 1;
 
-    byte elemMaxSpawn;
+    private byte elemMaxSpawn;
+    private int errorCount;
+    private int aciertoCount;
+    private int aciertoOutput = 0;
+    private int comodines = 0;
+    private float timeReaction;
 
-    int errorCount;
-
-    int aciertoCount;
-
-    int aciertoOutput = 0;
-
-    int comodines = 0;
-
-    float timeReaction;
     public float sizeZ;
 
-    bool startGame = false;
-
-    [SerializeField] Canvas canvasStart;
-    [SerializeField] Canvas canvasGame;
-
-    [SerializeField] TextMeshProUGUI textState;
+    private bool startGame = false;
 
     /// <summary>
     /// Variable que lleva la cuenta de cuántos elementos has atravesado
     /// </summary>
-    int elemRun;
+    private int elemRun;
 
     #region progressBar
-    float distanceBar;
-    float distanceToRun;
-    float distanceToRunFox;
-    float barStartPosition;
-    float barStartPositionFox;
-    [SerializeField] Transform movi; //raccon
-    [SerializeField] Transform one; //fox
+    private float distanceBar;
+    private float distanceToRun;
+    private float distanceToRunFox;
+    private float barStartPosition;
+    private float barStartPositionFox;
 
-    [SerializeField] RectTransform bar;
+    [Header("Progress Bar")]
+    public Transform movi; //raccon
+    public Transform one; //fox
+    public RectTransform bar;
     #endregion progressBar
 
     void Start() {
@@ -106,34 +105,86 @@ public class GoNoGo : MonoBehaviour {
         //Fox position is the beggining of the bar + max errors
         one.localPosition = new Vector3(barStartPositionFox, one.localPosition.y, one.localPosition.z);
 
+        estado = GonogoFSM.LOADING;
+    }
 
-        estado = GonogoFSM.INSTRUCTION;
+    private void StartPlaying() {
+
+        textState.text = "PRIMERA RONDA";
+        textState.gameObject.SetActive(true);
+
+        //Animación de texto que aparece aquí y se va ocultando.
+        /*dataManager.Save();
+        print("Se ha guardado");*/
+        estado = GonogoFSM.FIRSTROUND;
     }
 
     // Update is called once per frame
     void Update() {
 
         #region Estados
-        if (estado == GonogoFSM.INSTRUCTION) {
-            Time.timeScale = 0;
-            if (Input.GetButtonDown("Square") || Input.GetKeyDown(KeyCode.Space)) {
-                canvasStart.gameObject.SetActive(false);
-                canvasGame.gameObject.SetActive(true);
 
-                textState.text = "PRIMERA RONDA";
-                textState.gameObject.SetActive(true);
+        switch (estado) {
+            case GonogoFSM.LOADING:
+                black.CrossFadeAlpha(0, 0.5F, true);
+                estado = GonogoFSM.INSTRUCTION;
+                break;
+            case GonogoFSM.INSTRUCTION:
+                break;
+            case GonogoFSM.FIRSTROUND:
+                Terrenos();
+                if (corrutinaActive == false) {
+                    StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));
+                    corrutinaActive = true;
 
-                startGame = true;
-            }
-            if (startGame == true) {
-                Time.timeScale = 1;
+                }
+                if ((elemRun) == data.getDificultad(nivelActual).NElemXRonda) {
+                    elemCounter = 0;
+                    errorCount = 0; //Se cuentan por ronda. 
+                    elemRun = 0;
 
-                //Animación de texto que aparece aquí y se va ocultando.
-                estado = GonogoFSM.FIRSTROUND;
+                    textState.text = "SEGUNDA RONDA";
+                    textState.gameObject.SetActive(true);
+                    //Animación de texto que aparece aquí y se va ocultando.
+                    estado = GonogoFSM.SECONDROUND;
+
+                    /*
+                    dataManager.Save();
+                    print("Se ha guardado");*/
+                }
+                break;
+            case GonogoFSM.SECONDROUND:
+                Terrenos();
+
+                if (corrutinaActive == true) {
+                    print("Hemos cambiado a la segunda ronda");
+                    StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));    //Se vuelve a invocar porque le dimos false cuando spawneó todos los elementos de la primera ronda
+                    corrutinaActive = false;
+                }
+                if (elemRun == data.getDificultad(nivelActual).NElemXRonda) {
+                    textState.text = "¡HAS GANADO!";
+                    textState.gameObject.SetActive(true);
+
+                    //Animación de texto que aparece aquí y se va ocultando.
+                    estado = GonogoFSM.FINISHED_WIN;
+                    /*
+                    dataManager.Save();
+                    print("Se ha guardado");*/
+                }
+                break;
+            case GonogoFSM.FINISHED_WIN:
+                break;
+            case GonogoFSM.FINISHED_LOSE:
+                //Recargamos la escena
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 dataManager.Save();
                 print("Se ha guardado");
-            }
-        } else if (estado == GonogoFSM.FIRSTROUND) {
+                break;
+            default:
+                break;
+        }
+
+        if (estado == GonogoFSM.FIRSTROUND) {
             Terrenos();
             if (corrutinaActive == false) {
                 StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));

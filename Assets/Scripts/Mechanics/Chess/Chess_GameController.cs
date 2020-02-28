@@ -31,8 +31,11 @@ public class Chess_GameController : MonoBehaviour
         TOWER,
         QUEEN,
         KING,
-        CHECKS,
-        REPASO1
+        CHECKS1,
+        CHECKS2,
+        CHECKS3,
+        REPASO1,
+        REPASO2
     }
     public Pieza tipoMecánica;
 
@@ -63,8 +66,9 @@ public class Chess_GameController : MonoBehaviour
     private GameObject[,] gameMatrix;
     private GameObject movingPiece;
     private bool loadingScene = false;
-    private int movimientoscorrectos = 0;
     private bool newTuto = true;
+    private int movimientoscorrectos = 0;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -88,11 +92,20 @@ public class Chess_GameController : MonoBehaviour
             case Pieza.KING:
                 nivelACargar = Resources.Load("Chess Levels/King/Klevel" + nivelActual) as GameObject;
                 break;
-            case Pieza.CHECKS:
+            case Pieza.CHECKS1:
                 nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
                 break;
+            case Pieza.CHECKS2:
+                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 10)) as GameObject;
+                break;
+            case Pieza.CHECKS3:
+                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 20)) as GameObject;
+                break;
             case Pieza.REPASO1:
-                nivelACargar = Resources.Load("Chess Levels/Repaso/REPlevel" + nivelActual) as GameObject;
+                nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
+                break;
+            case Pieza.REPASO2:
+                nivelACargar = Resources.Load("Chess Levels/Repaso2/REPlevel" + nivelActual) as GameObject;
                 break;
             default:
                 break;
@@ -122,7 +135,6 @@ public class Chess_GameController : MonoBehaviour
                 black.CrossFadeAlpha(0, 0.5F, true);
                 break;
             case ChessFSM.INSTRUCTION:
-                
                 break;
             case ChessFSM.PLAYING:
 
@@ -257,8 +269,20 @@ public class Chess_GameController : MonoBehaviour
                         case Pieza.KING:
                             nivelACargar = Resources.Load("Chess Levels/King/Klevel" + nivelActual) as GameObject;
                             break;
-                        case Pieza.CHECKS:
+                        case Pieza.CHECKS1:
                             nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
+                            break;
+                        case Pieza.CHECKS2:
+                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 10)) as GameObject;
+                            break;
+                        case Pieza.CHECKS3:
+                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 20)) as GameObject;
+                            break;
+                        case Pieza.REPASO1:
+                            nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
+                            break;
+                        case Pieza.REPASO2:
+                            nivelACargar = Resources.Load("Chess Levels/Repaso2/REPlevel" + nivelActual) as GameObject;
                             break;
                         default:
                             break;
