@@ -334,8 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77bd20a7214981b4386460759aa340b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capitulo: 1
-  escena: 1
+  capitulo: 0
+  escena: 0
+  id: 0
   source: {fileID: 592984917}
   clip: {fileID: 8300000, guid: c3b71f1bc610f684e8e077d02c68245b, type: 3}
   canvas: {fileID: 144708106}

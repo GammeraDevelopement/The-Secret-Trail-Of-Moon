@@ -1,17 +1,41 @@
 { 
 "Capitulos":[{
 	"Capitulo": [{
-		"id": 1,
+		"id": 0,
 		"Escena":[{
-			"id": 1,
+			"id": 0,
 			"Mensajes":[{
+				"id":0,
+				"Cadena": "111",
+				"Audio": "kjgjgj",
+				"x": 2.5,
+				"y": 30.5,
+				"Duracion": 1,
+				"Silencio":1},
+				{
 				"id":1,
-			   "Cadena": "jhjyfjcualquiercosa",
-			   "Audio": "kjgjgj",
-			   "x": 2.5,
-			   "y": 30.5,
-			   "Duracion": 60.5
-				}]
+				"Cadena": "112",
+				"Audio": "kjgjgj",
+				"x": 2.5,
+				"y": 30.5,
+				"Duracion": 3,
+				"Silencio":1},
+				{
+				"id":2,
+				"Cadena": "113",
+				"Audio": "kjgjgj",
+				"x": 2.5,
+				"y": 30.5,
+				"Duracion": 1,
+				"Silencio":1},
+				{
+				"id":3,
+				"Cadena": "114",
+				"Audio": "kjgjgj",
+				"x": 2.5,
+				"y": 30.5,
+				"Duracion": 3,
+				"Silencio":1}]
 			}]
 		}]
 	}]
