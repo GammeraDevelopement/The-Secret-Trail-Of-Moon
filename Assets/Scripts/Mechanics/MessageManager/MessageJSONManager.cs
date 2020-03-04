@@ -8,6 +8,7 @@ public class MessageJSONManager : MonoBehaviour
     public TextAsset json;
 
     private string encodedString;
+    private ArrayList list = new ArrayList();
     private Root root;
 
     [Serializable]
@@ -35,6 +36,7 @@ public class MessageJSONManager : MonoBehaviour
         public float x;
         public float y;
         public float Duracion;
+        public float Silencio;
     }
 
     [Serializable]
@@ -51,8 +53,19 @@ public class MessageJSONManager : MonoBehaviour
         root = JsonUtility.FromJson<Root>(encodedString);
     }
 
-    public Mensajes GetMensajes(int id_capitulo, int id_escena, int id_mensaje) {
-        return root.Capitulos[0].Capitulo[id_capitulo-1].Escena[id_escena-1].Mensajes[id_mensaje-1];
+    public ArrayList getList(int id_capitulo,int id_escena) {
+        int length = getLength(id_capitulo, id_escena);
+        for (int i = 0; i < length; i++) {
+            list.Add(GetMensajes(id_capitulo, id_escena, i));
+        }
+        return list;
+    }
 
+    public Mensajes GetMensajes(int id_capitulo, int id_escena, int id_mensaje) {
+        return root.Capitulos[0].Capitulo[id_capitulo].Escena[id_escena].Mensajes[id_mensaje];
+    }
+
+    public int getLength(int capitulo, int escena) {
+        return root.Capitulos[0].Capitulo[capitulo].Escena[escena].Mensajes.Length;
     }
 }
