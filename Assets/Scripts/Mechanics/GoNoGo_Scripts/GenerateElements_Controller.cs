@@ -3,50 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //This script is contained by GeneradorDe
-public class GenerateElements_Controller : MonoBehaviour
-{
-    /// <summary>
-    /// Tiempo en milisegundos entre cada aparición de elementos
-    /// </summary>
-    float timeSpawn;
+public class GenerateElements_Controller : MonoBehaviour {
 
-    /// <summary>
-    /// Todos los targets que deberán aparecer de manera aleatoria
-    /// </summary>
-    [SerializeField] List<GameObject> TargetList;
+    public List<GameObject> TargetList;           /// Todos los targets que deberán aparecer de manera aleatoria
+    public Transform positionSpawn;               /// Posición en la que van a Spawnear
+    public GoNoGo gng;                            /// Referencia del script GoNoGo
+    public Terrain parent;
 
-    /// <summary>
-    /// Posición random en la lista 
-    /// </summary>
-    int numRandom;
+    private float timeSpawn;                      /// Tiempo en milisegundos entre cada aparición de elementos
+    private int numRandom;                        /// Posición random en la lista  
+    private Vector3 position;                     /// Como cogemos una referencia de posición que se va a ir moviendo, asignamos su posición en el start en esta variable.
+    private float moreProbabTarget;
+    private float lessProbabTarget;
+    private int elemRandomSecondRound;
 
-    /// <summary>
-    /// Posición en la que van a Spawnear 
-    /// </summary>
-    [SerializeField] Transform positionSpawn;
+    private GoNoGo_SetData data;         /// Referencia del script GoNoGo_SetData
 
-    /// <summary>
-    /// Como cogemos una referencia de posición que se va a ir moviendo, asignamos su posición en el start en esta variable.
-    /// </summary>
-    Vector3 position;
 
-    /// <summary>
-    /// Referencia del script GoNoGo
-    /// </summary>
-    [SerializeField] GoNoGo gng;
-
-    float moreProbabTarget;
-    float lessProbabTarget;
-
-    /// <summary>
-    /// Referencia del script GoNoGo_SetData
-    /// </summary>
-    [SerializeField] GoNoGo_SetData data;
-
-    int elemRandomSecondRound;
-
-    void Start()
-    {
+    void Start() {
         timeSpawn = data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000;
         moreProbabTarget = data.getDificultad(gng.nivelActual).FrecuenciaAparRonda2;
         lessProbabTarget = 1 - moreProbabTarget;
@@ -56,37 +30,30 @@ public class GenerateElements_Controller : MonoBehaviour
         elemRandomSecondRound = Random.Range(0, data.getDificultad(gng.nivelActual).NElementos);
     }
 
-    public IEnumerator GenerateFirstRound(byte min, byte max){
+    public IEnumerator GenerateFirstRound(int min, int max) {
         while (gng.get_stateFirstRound() || gng.get_stateSecondRound()) {
-
             if (gng.get_stateFirstRound() == true) {
                 numRandom = Random.Range(min, max);
 
                 GameObject targetPrefab = TargetList[numRandom];
 
-                if (numRandom == 1)
-                    Instantiate(targetPrefab, position, Quaternion.identity);
-
-                else
-                    Instantiate(targetPrefab, position, Quaternion.Euler(0, 90, 0));
+                if (numRandom == 1) {
+                    Instantiate(targetPrefab, position, Quaternion.identity, parent.transform);
+                }
 
             } else {
-                //do
-                //{
                 numRandom = GetRandomValue(
                     new RandomSelection(min, max, lessProbabTarget),
                     new RandomSelection(elemRandomSecondRound, elemRandomSecondRound, moreProbabTarget)
                      );
-                //} while ((data.getDificultad(gng.nivelActual).NElementos) == 2 && (numRandom == 2 || numRandom == 5));
 
                 print(numRandom);
-
                 GameObject targetPrefab = TargetList[numRandom + 5];
 
-                if (numRandom == 1 || numRandom == 4) { 
-                    Instantiate(targetPrefab, position, Quaternion.identity);
+                if (numRandom == 1 || numRandom == 4) {
+                    Instantiate(targetPrefab, position, Quaternion.identity,parent.transform);
                 } else {
-                    Instantiate(targetPrefab, position, Quaternion.Euler(0, 90, 0));
+                    Instantiate(targetPrefab, position, Quaternion.Euler(0, 90, 0),parent.transform);
                 }
             }
 
@@ -97,48 +64,15 @@ public class GenerateElements_Controller : MonoBehaviour
 
     }
 
-    /*
-    public IEnumerator GenerateSecondRound()
-    {
-        while (gng.get_stateSecondRound())
-        {
-            yield return new WaitForSeconds(timeSpawn);
-            //Si tenemos más elementos de los permitidos en el nivel, volvemos a buscar un número random.
-            do
-            {
-                numRandom = GetRandomValue(
-                    new RandomSelection(0, 2, lessProbabTarget),
-                    new RandomSelection(3, 5, moreProbabTarget)
-                     );
-            }while((data.getDificultad(gng.nivelActual).NElementos) == 2 && (numRandom == 2 || numRandom == 5));
-
-            GameObject targetPrefab = TargetList[numRandom];
-            gng.targetPrefabs.Add(targetPrefab);
-
-            if (numRandom == 1 || numRandom == 4)
-                Instantiate(targetPrefab, position, Quaternion.identity);
-
-            else
-                Instantiate(targetPrefab, position, Quaternion.Euler(0, 90, 0));
-
-
-            gng.set_plus_elemCounter();
-            
-        }
-
-    }
-    */
 
     #region RandomStructure
     //Estructura para generar el random
-    struct RandomSelection
-    {
+    struct RandomSelection {
         private int minValue;
         private int maxValue;
         public float probability;
 
-        public RandomSelection(int minValue, int maxValue, float probability)
-        {
+        public RandomSelection(int minValue, int maxValue, float probability) {
             this.minValue = minValue;
             this.maxValue = maxValue;
             this.probability = probability;
@@ -148,12 +82,10 @@ public class GenerateElements_Controller : MonoBehaviour
     }
 
 
-    private int GetRandomValue(params RandomSelection[] selections)
-    {
+    private int GetRandomValue(params RandomSelection[] selections) {
         float rand = Random.value;
         float currentProb = 0;
-        foreach (var selection in selections)
-        {
+        foreach (var selection in selections) {
             currentProb += selection.probability;
             if (rand <= currentProb)
                 return selection.GetValue();

@@ -171,6 +171,7 @@ public class GoNoGo : MonoBehaviour {
                     dataManager.Save();
                     print("Se ha guardado");*/
                 }
+
                 break;
             case GonogoFSM.FINISHED_WIN:
                 break;
