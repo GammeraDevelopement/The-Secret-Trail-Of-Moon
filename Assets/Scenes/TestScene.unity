@@ -337,8 +337,9 @@ MonoBehaviour:
   capitulo: 0
   escena: 0
   id: 0
+  duracionTotal: 0
+  velocidad: 1
   source: {fileID: 592984917}
-  clip: {fileID: 8300000, guid: c3b71f1bc610f684e8e077d02c68245b, type: 3}
   canvas: {fileID: 144708106}
   text: {fileID: 795087311}
 --- !u!4 &567746826

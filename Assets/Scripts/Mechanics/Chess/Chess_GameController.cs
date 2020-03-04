@@ -95,10 +95,12 @@ public class Chess_GameController : MonoBehaviour
                 nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
                 break;
             case Pieza.CHECKS2:
-                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 10)) as GameObject;
+                nivelActual = nivelActual + 10;
+                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual)) as GameObject;
                 break;
             case Pieza.CHECKS3:
-                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 20)) as GameObject;
+                nivelActual = nivelActual + 20;
+                nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual)) as GameObject;
                 break;
             case Pieza.REPASO1:
                 nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
@@ -195,7 +197,8 @@ public class Chess_GameController : MonoBehaviour
                                     }
                                 }
                                 if (movimientoscorrectos == GameObject.FindGameObjectsWithTag("whitePiece").Length) {
-                                    //WIN CONDITION
+                                    Debug.Log("nivel actual" + nivelActual);
+                                    Debug.Log("niveles totales" + nivelesTotales);
                                     if (nivelActual == nivelesTotales) {
                                         winCartel.SetActive(true);
                                         state = ChessFSM.FINISHED;
@@ -240,6 +243,7 @@ public class Chess_GameController : MonoBehaviour
                 break;
 
             case ChessFSM.NEXT_LEVEL:
+                
                 if (nivelActual == nivelesTotales) {
                     if (Input.GetButtonDown("Square") && !loadingScene) {
                         black.CrossFadeAlpha(1, 0.5F, true);
@@ -273,10 +277,10 @@ public class Chess_GameController : MonoBehaviour
                             nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + nivelActual) as GameObject;
                             break;
                         case Pieza.CHECKS2:
-                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 10)) as GameObject;
+                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual)) as GameObject;
                             break;
                         case Pieza.CHECKS3:
-                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual + 20)) as GameObject;
+                            nivelACargar = Resources.Load("Chess Levels/CheckMates/CMlevel" + (nivelActual)) as GameObject;
                             break;
                         case Pieza.REPASO1:
                             nivelACargar = Resources.Load("Chess Levels/Repaso1/REPlevel" + nivelActual) as GameObject;
@@ -289,6 +293,7 @@ public class Chess_GameController : MonoBehaviour
                     }
                     movimientoscorrectos = 0;
                     clone = Instantiate(nivelACargar, piecePlace.transform.position, piecePlace.transform.rotation);
+                    Debug.Log("Nivel Actual " + clone.name);
                     state = ChessFSM.PLAYING;
                 }
                 break;
