@@ -66,8 +66,9 @@ public class Chess_GameController : MonoBehaviour
     private GameObject[,] gameMatrix;
     private GameObject movingPiece;
     private bool loadingScene = false;
-    private int movimientoscorrectos = 0;
     private bool newTuto = true;
+    private int movimientoscorrectos = 0;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -136,7 +137,6 @@ public class Chess_GameController : MonoBehaviour
                 black.CrossFadeAlpha(0, 0.5F, true);
                 break;
             case ChessFSM.INSTRUCTION:
-                
                 break;
             case ChessFSM.PLAYING:
 

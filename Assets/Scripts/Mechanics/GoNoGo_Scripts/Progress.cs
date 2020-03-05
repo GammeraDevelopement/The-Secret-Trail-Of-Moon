@@ -14,9 +14,9 @@ public class Progress : MonoBehaviour
 
     [SerializeField] RectTransform bar;
 
-    [SerializeField] GoNoGo gng;
+    [SerializeField] GNG_GameController gng;
 
-    [SerializeField] GoNoGo_SetData data;
+    [SerializeField] GNG_DifficultyJSON data;
 
     void Start()
     {

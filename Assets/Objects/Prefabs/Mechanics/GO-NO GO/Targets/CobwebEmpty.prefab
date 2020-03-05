@@ -54,6 +54,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -65,6 +66,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -123,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2323699991172951937}
   - component: {fileID: 3344754612038313157}
+  - component: {fileID: 9040895210802271596}
   m_Layer: 0
   m_Name: tiempo reacc
   m_TagString: Web
@@ -155,8 +158,22 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15.6936035, y: 0.9999999, z: 30}
+  m_Size: {x: 15, y: 15, z: 30}
   m_Center: {x: -0.113375686, y: 0, z: -15}
+--- !u!114 &9040895210802271596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5998807051591806647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7901e0ddf52e246489f7cf1b624be405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipoInput: 0
+  instruccionInversa: 1
 --- !u!1001 &2292411989553552587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,11 +331,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2292411991230754881}
     m_Modifications:
-    - target: {fileID: 6418703141717274375, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
-        type: 3}
-      propertyPath: m_Name
-      value: Abedul
-      objectReference: {fileID: 0}
     - target: {fileID: 6418703141716941191, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,6 +401,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.6855025
       objectReference: {fileID: 0}
+    - target: {fileID: 6418703141717274375, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
+        type: 3}
+      propertyPath: m_Name
+      value: Abedul
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c9132be8f26c1479ce5c6ae76e2b54, type: 3}
 --- !u!4 &8345641141436548820 stripped
@@ -404,11 +421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2292411991230754881}
     m_Modifications:
-    - target: {fileID: 6418703141717274375, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
-        type: 3}
-      propertyPath: m_Name
-      value: Abedul
-      objectReference: {fileID: 0}
     - target: {fileID: 6418703141716941191, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.6855042
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418703141717274375, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
+        type: 3}
+      propertyPath: m_Name
+      value: Abedul
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c9132be8f26c1479ce5c6ae76e2b54, type: 3}
@@ -584,11 +601,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2292411991230754881}
     m_Modifications:
-    - target: {fileID: 6418703141717274375, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
-        type: 3}
-      propertyPath: m_Name
-      value: Abedul
-      objectReference: {fileID: 0}
     - target: {fileID: 6418703141716941191, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -658,6 +670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1515034
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418703141717274375, guid: 17c9132be8f26c1479ce5c6ae76e2b54,
+        type: 3}
+      propertyPath: m_Name
+      value: Abedul
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c9132be8f26c1479ce5c6ae76e2b54, type: 3}

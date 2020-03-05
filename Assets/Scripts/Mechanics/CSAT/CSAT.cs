@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using NaughtyAttributes;
 
 /*
  * La mecánica consiste en que cuando coincida el patrón de imágenes propuesto, en la segunda imagen se deba pulsar el botón de disparo.
@@ -52,32 +53,38 @@ public class CSAT : MonoBehaviour {
     public float cooldownAnimacion = 0.5F;
     public bool tresTarget = false;
 
-    [Header("Variables del editor")]
     //VARIABLES DEL EDITOR
-    public Canvas psicohud;
-    public GameObject instruction;
-    public Image imagenACambiar;
-    public Image imagenGanador;
-    public TMP_Text textoGanador;
-    public Image barraFuerza;
-    public Image barraRoca;
-    public Text textoRoca;
-    public Text textFuerza;
-    public Text tiempo;
-    public GameObject player;
-    public GameObject piedra;
-    public GameObject moon;
-    public GameObject lanzadorPiedra;
-    public GameObject distractorGenerator1;
-    public GameObject distractor1;
-    public GameObject distractorGenerator2;
-    public GameObject distractor2;
-    public GameObject roca;
-    public GameObject roturaRoca;
-    public AudioClip rightSound;
-    public AudioClip wrongClip;
-    public GameObject squareButton;
-    public GameObject videoPlayer;
+    [BoxGroup("GUI")] public Canvas psicohud;
+    [BoxGroup("GUI")] public GameObject instruction;
+    [BoxGroup("GUI")] public TMP_Text textoGanador;
+    [BoxGroup("GUI")] public Image imagenACambiar;
+    [BoxGroup("GUI")] public Image imagenGanador;
+    [BoxGroup("GUI")] public Image barraFuerza;
+    [BoxGroup("GUI")] public Image barraRoca;
+    [BoxGroup("GUI")] public Text textoRoca;
+    [BoxGroup("GUI")] public Text textFuerza;
+    [BoxGroup("GUI")] public Text tiempo;
+
+    [BoxGroup("Elementos del juego")] public GameObject player;
+    [BoxGroup("Elementos del juego")] public GameObject piedra;
+    [BoxGroup("Elementos del juego")] public GameObject moon;
+    [BoxGroup("Elementos del juego")] public GameObject lanzadorPiedra;
+    [BoxGroup("Elementos del juego")] public GameObject roca;
+    [BoxGroup("Elementos del juego")] public GameObject roturaRoca;
+
+    [BoxGroup("Distractores")] public GameObject distractorGenerator1;
+    [BoxGroup("Distractores")] public GameObject distractor1;
+    [BoxGroup("Distractores")] public GameObject distractorGenerator2;
+    [BoxGroup("Distractores")] public GameObject distractor2;
+
+    [BoxGroup("Audio/Video")] private AudioSource source;
+    [BoxGroup("Audio/Video")] public AudioClip rightSound;
+    [BoxGroup("Audio/Video")] public AudioClip wrongClip;
+    [BoxGroup("Audio/Video")] public VideoClip secondClip;
+    [BoxGroup("Audio/Video")] public VideoClip firstClip;
+    [BoxGroup("Audio/Video")] public GameObject squareButton;
+    [BoxGroup("Audio/Video")] public GameObject videoPlayer;
+
     public Image black;
     public int introCount;
     public bool test;
@@ -95,12 +102,10 @@ public class CSAT : MonoBehaviour {
     private bool seHaDisparado = false;
     private bool cdPiedra = false;
     //private bool distractorOn = false;
-    private AudioSource source;
     private bool loadingScene = false;
     private int cantidadImagenesGeneradas = 0;
     public bool tutorial;
-    public VideoClip secondClip;
-    public VideoClip firstClip;
+
 
 
     // Use this for initialization

@@ -23,7 +23,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
     /// <summary>
     /// Referencia del script GoNoGo
     /// </summary>
-    [SerializeField] GoNoGo gng;
+    [SerializeField] GNG_GameController gng;
     [SerializeField] GonoGoData_Save dataSave;
 
     /// <summary>
@@ -144,7 +144,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         {
             print("GoNoGoC --> Está dentro del trigger y se ha adelantado");
 
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
 
             other.gameObject.GetComponent<Animator>().SetBool("SpiderJumping", true);
 
@@ -160,7 +160,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         if (other.gameObject.tag == "Web" && Input.GetAxis(inputWeb) > 0 && controlJoystick == false)
         {
             print("GoNoGoC --> No tiene arañita!");
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
             Destroy(other.transform.parent.gameObject);
             outT = false;
 
@@ -182,7 +182,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         //Caso en el que está a rango pero se ha adelantado:
         else if (other.gameObject.tag == "Rock" && (other.transform.position.x - tr.position.x) > distanceGoodSkill && (Input.GetAxis(inputRoca) > 0 || Input.GetKey(KeyCode.X)) && controlJoystick == false)
         {
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
             print("muy rápido");
             outT = false;
             Destroy(other);
@@ -194,7 +194,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         #region TwoRocks
         if (other.gameObject.tag == "TwoRocks" && Input.GetAxis(inputRoca) > 0)
         {
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
             Destroy(other);
 
             outT = false;
@@ -216,7 +216,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
 
         else if (other.gameObject.tag == "TroncoEntero" && (other.transform.position.x - tr.position.x) > distanceGoodSkill && Input.GetAxis(inputTronco) > 0 && controlJoystick == false)
         {
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
 
             outT = false;
             Destroy(other);
@@ -229,7 +229,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         if (other.gameObject.tag == "TroncoPartido" && Input.GetAxis(inputTronco) > 0 && controlJoystick == false)
         {
             print("GoNoGoC --> No tiene arañita!");
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
             Destroy(other);
             outT = false;
 
@@ -254,7 +254,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         //Caso en el que está a rango pero se ha adelantado:
         else if (other.gameObject.tag == "BushBu" && (other.transform.position.x - tr.position.x) > distanceGoodSkill && Input.GetAxis(inputArbustos) > 0 && controlJoystick == false)
         {
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
 
             other.gameObject.GetComponent<Animator>().SetTrigger("Bushes");
 
@@ -279,7 +279,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         //Caso en el que está a rango pero se ha adelantado:
         else if (other.gameObject.tag == "ArbolFino" && (other.transform.position.x - tr.position.x) > distanceGoodSkill && Input.GetAxis(inputArbol) > 0 && controlJoystick == false)
         {
-            gng.set_plus_errorCount();           
+            gng.set_plus_errorCount(false);           
 
             outT = false;
             Destroy(other);
@@ -291,7 +291,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         #region BigTree
         if (other.gameObject.tag == "ArbolGordito" && Input.GetAxis(inputTronco) > 0 && controlJoystick == false)
         {
-            gng.set_plus_errorCount();
+            gng.set_plus_errorCount(false);
             Destroy(other);
             outT = false;
 
@@ -375,8 +375,8 @@ public class GoNoGo_TriggerController : MonoBehaviour
         if (time >= skipTime)
         {
             print("GoNoGoC --> Caso de omisión. Si se le da posteriormente es que ha reaccionado más tarde.");
-            gng.set_plus_errorCount();
-            dataSave.set_errorXOmision();
+            gng.set_plus_errorCount(false);
+            //dataSave.set_errorXOmision();
             outT = false;
         }
         yield return null;
@@ -390,7 +390,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
             if (Input.GetAxis(input) > 0  && controlJoystick == false)
             { //Si se golpea se saldrá del bucle       
                 print("Maaal");
-                gng.set_plus_errorCount();
+                gng.set_plus_errorCount(false);
                 Destroy(_other);
                 outT = false;
 
