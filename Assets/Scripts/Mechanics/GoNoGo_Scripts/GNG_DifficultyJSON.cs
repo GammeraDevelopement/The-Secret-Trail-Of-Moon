@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoNoGo_SetData : MonoBehaviour
+public class GNG_DifficultyJSON : MonoBehaviour
 {
     public TextAsset json;
     private string encodedString;

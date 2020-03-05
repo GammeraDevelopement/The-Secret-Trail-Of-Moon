@@ -23,7 +23,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
     /// <summary>
     /// Referencia del script GoNoGo
     /// </summary>
-    [SerializeField] GoNoGo gng;
+    [SerializeField] GNG_GameController gng;
     [SerializeField] GonoGoData_Save dataSave;
 
     /// <summary>
@@ -376,7 +376,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         {
             print("GoNoGoC --> Caso de omisión. Si se le da posteriormente es que ha reaccionado más tarde.");
             gng.set_plus_errorCount();
-            dataSave.set_errorXOmision();
+            //dataSave.set_errorXOmision();
             outT = false;
         }
         yield return null;
