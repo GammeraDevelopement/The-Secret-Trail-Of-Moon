@@ -20,7 +20,7 @@ public class GNG_GenerateTargets : MonoBehaviour {
 
 
     void Start() {
-        timeSpawn = 2;//data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000; //MAAAAAAAAAAAAAL
+        timeSpawn = 5;//data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000; //MAAAAAAAAAAAAAL
         moreProbabTarget = 2;// data.getDificultad(gng.nivelActual).FrecuenciaAparRonda2;
         lessProbabTarget = 1 - moreProbabTarget;
         //elemRandomSecondRound = Random.Range(0, data.getDificultad(gng.nivelActual).NElementos);

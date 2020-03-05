@@ -53,8 +53,9 @@ public class GNG_GameController : MonoBehaviour {
     public int nivelActual = 1;
 
     private byte elemMaxSpawn;
-    private int errorCount;
-    private int aciertoCount;
+    private int errorCount { get; set; } = 0;
+    private int errorOmisionCount { get; set; } = 0;
+    private int aciertoCount { get; set; }
     private int aciertoOutput = 0;
     private int comodines = 0;
     private float timeReaction;
@@ -240,7 +241,7 @@ public class GNG_GameController : MonoBehaviour {
         elemCounter++;
     }
 
-    public void set_plus_errorCount() {
+    public void set_plus_errorCount(bool omision) {
         if (comodines > 0)   //Como si hubieses acertado.
         {
             audioSource.clip = error;
@@ -253,13 +254,13 @@ public class GNG_GameController : MonoBehaviour {
         } else {
             audioSource.clip = error;
             audioSource.Play();
-
-            errorCount++;
+            if (omision) {
+                errorOmisionCount++;
+            } else {
+                errorCount++;
+            }
             aciertoCount = 0;
         }
-
-        if (estado == GonogoFSM.SECONDROUND)
-            dataSave.set_errorXContinuacion();
     }
     public void set_plus_aciertoCount() {
         audioSource.clip = acierto;
@@ -268,10 +269,6 @@ public class GNG_GameController : MonoBehaviour {
         aciertoCount++;
         aciertoOutput++;
         movementAnimalsUI(one, distanceToRunFox);
-        if (estado == GonogoFSM.FIRSTROUND)
-            dataSave.set_aciertosRonda1();
-        else if (estado == GonogoFSM.SECONDROUND)
-            dataSave.set_aciertosRonda2();
 
     }
     public void set_elemRunCount()  //Elements crossed

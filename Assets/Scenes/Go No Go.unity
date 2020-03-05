@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   estado: 0
   instruction: {fileID: 1141742805}
-  speed: 20
+  speed: 10
   terrenos:
   - {fileID: 674533447}
   - {fileID: 1616076481}
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
   - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
   - {fileID: 2292411991230754883, guid: f3f8bd44629c3cf4983bfa44702ee639, type: 3}
-  - {fileID: 1697351315170325118, guid: aa3465691033d274eb756505f5b57bfa, type: 3}
+  - {fileID: 1714791227879632083, guid: aa3465691033d274eb756505f5b57bfa, type: 3}
   - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
   - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
   - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}

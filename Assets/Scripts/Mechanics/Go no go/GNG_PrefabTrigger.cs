@@ -35,45 +35,59 @@ public class GNG_PrefabTrigger : MonoBehaviour {
         box = gameObject.GetComponent<BoxCollider>();
 
         //Resize the box trigger regarding the size calculated on gng_gameController
+        /*
         box.size = new Vector3(box.size.x, box.size.y, gng.sizeZ);
         box.center = new Vector3(box.center.x, box.center.y, -gng.sizeZ / 2);
+        */
     }
-
-    private void OnTriggerEnter(Collider other) {
+   
+    private void OnTriggerStay(Collider other) {
         if (other.tag == "Player") {
             switch (tipoInput) {
                 case InputGNG.WEB:
                     if (Input.GetButton(CROSS)) {
-                        Debug.Log(Enum.GetName(typeof(InputGNG), tipoInput));
                         Debug.Log("Botón Correcto");
-                        Debug.Log("Acierto");
-                        box.gameObject.SetActive(false);
-                        noInput = false;
+                        Acierto();
                     } else if (Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
                         Debug.Log("Botón Incorrecto");
-                        Debug.Log(Input.inputString);
-                        noInput = false;
+                        Error(false);
                     }
                     break;
                 case InputGNG.ROCK:
                     if (Input.GetButton(SQUARE)) {
-                        Debug.Log(Enum.GetName(typeof(InputGNG), tipoInput));
                         Debug.Log("Botón Correcto");
-                        Debug.Log("Acierto");
-                        box.gameObject.SetActive(false);
-                        noInput = false;
+                        Acierto();
                     } else if (Input.GetButton(CROSS) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
                         Debug.Log("Botón Incorrecto");
-                        Debug.Log(Input.inputString);
-                        noInput = false;
+                        Error(false);
                     }
                     break;
                 case InputGNG.TREE:
-
+                    if (Input.GetButton(CIRCLE)) {
+                        Debug.Log("Botón Correcto");
+                        Acierto();
+                    } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
+                        Debug.Log("Botón Incorrecto");
+                        Error(false);
+                    }
                     break;
                 case InputGNG.BUSH:
+                    if (Input.GetButton(TRIANGLE)) {
+                        Debug.Log("Botón Correcto");
+                        Acierto();
+                    } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(R1)) {
+                        Debug.Log("Botón Incorrecto");
+                        Error(false);
+                    }
                     break;
                 case InputGNG.STUMP:
+                    if (Input.GetButton(R1)) {
+                        Debug.Log("Botón Correcto");
+                        Acierto();
+                    } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE)) {
+                        Debug.Log("Botón Incorrecto");
+                        Error(false);
+                    }
                     break;
                 default:
                     break;
@@ -82,17 +96,50 @@ public class GNG_PrefabTrigger : MonoBehaviour {
         }
     }
 
+    private void Acierto() {
+        gng.set_plus_aciertoCount();
+        SpecificAnimation(tipoInput);
+        box.gameObject.SetActive(false);
+        noInput = false;
+    }
+
+    private void Error(bool omision) {
+        gng.set_plus_errorCount(omision);
+        noInput = false;
+    }
+
+    private void SpecificAnimation(InputGNG input) {
+        switch (input) {
+            case InputGNG.WEB:
+                Debug.Log("Mata a la arañita");
+                break;
+            case InputGNG.ROCK:
+                Debug.Log("Esquiva la roca");
+                break;
+            case InputGNG.TREE:
+                Debug.Log("Se agacha en el árbol");
+                break;
+            case InputGNG.BUSH:
+                Debug.Log("Aparta la maleza");
+                break;
+            case InputGNG.STUMP:
+                Debug.Log("Salta el árbol");
+                break;
+            default:
+                break;
+        }
+    }
+
     private void OnTriggerExit(Collider other) {
         if(other.tag == "Player") {
             if (!instruccionInversa) {
                 if (noInput) {
                     Debug.Log("Error de omisión");
-                } else {
-                    //Posible error de comisión
+                    Error(true);
                 }
             } else {
                 if (noInput) {
-                    Debug.Log("Acierto");
+                    Acierto();
                 } else {
 
                 }
