@@ -16,6 +16,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private const string CIRCLE = "Circle";
     private const string TRIANGLE = "Triangle";
     private const string R1 = "R1";
+    private const string ANIM_WEB = "SpiderJumping";
 
     public enum InputGNG {
         WEB, ROCK, TREE, BUSH, STUMP
@@ -26,13 +27,10 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     public bool instruccionInversa = false;
 
     private GNG_GameController gng;
-    private BoxCollider box;
     private bool noInput = true;
     
     void Start() {
         gng = GameObject.FindGameObjectWithTag("GameController").GetComponent<GNG_GameController>();
-
-        box = gameObject.GetComponent<BoxCollider>();
 
         //Resize the box trigger regarding the size calculated on gng_gameController
         /*
@@ -99,7 +97,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private void Acierto() {
         gng.set_plus_aciertoCount();
         SpecificAnimation(tipoInput);
-        box.gameObject.SetActive(false);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         noInput = false;
     }
 
@@ -111,6 +109,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private void SpecificAnimation(InputGNG input) {
         switch (input) {
             case InputGNG.WEB:
+                GetComponent<Animator>().SetBool(ANIM_WEB, true);
                 Debug.Log("Mata a la arañita");
                 break;
             case InputGNG.ROCK:

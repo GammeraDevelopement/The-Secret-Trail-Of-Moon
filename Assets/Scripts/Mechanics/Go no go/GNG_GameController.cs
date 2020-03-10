@@ -43,6 +43,7 @@ public class GNG_GameController : MonoBehaviour {
     [Header("GUI")]
     public Canvas canvasStart;
     public Canvas canvasGame;
+    public GameObject initialPopup;
     public TextMeshProUGUI textState;
     public Image black;
 
@@ -117,6 +118,7 @@ public class GNG_GameController : MonoBehaviour {
 
         estado = GonogoFSM.FIRSTROUND;
         StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));
+        initialPopup.SetActive(true);
     }
 
     // Update is called once per frame
