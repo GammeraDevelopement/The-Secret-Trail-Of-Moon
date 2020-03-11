@@ -17,6 +17,10 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private const string TRIANGLE = "Triangle";
     private const string R1 = "R1";
     private const string ANIM_WEB = "SpiderJumping";
+    private const string ANIM_ROCK = "Esquivar";
+    private const string ANIM_TREE = "Agacharse";
+    private const string ANIM_BUSH = "Apartar";
+    private const string ANIM_STUMP = "Saltar";
 
     public enum InputGNG {
         WEB, ROCK, TREE, BUSH, STUMP
@@ -27,10 +31,14 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     public bool instruccionInversa = false;
 
     private GNG_GameController gng;
+    private Animator player;
+    private Animator thisObjectAnim;
     private bool noInput = true;
     
     void Start() {
         gng = GameObject.FindGameObjectWithTag("GameController").GetComponent<GNG_GameController>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        thisObjectAnim = GetComponent<Animator>();
 
         //Resize the box trigger regarding the size calculated on gng_gameController
         /*
@@ -109,19 +117,23 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private void SpecificAnimation(InputGNG input) {
         switch (input) {
             case InputGNG.WEB:
-                GetComponent<Animator>().SetBool(ANIM_WEB, true);
+                thisObjectAnim.SetBool(ANIM_WEB, true);
                 Debug.Log("Mata a la arañita");
                 break;
             case InputGNG.ROCK:
+                player.SetTrigger(ANIM_ROCK);
                 Debug.Log("Esquiva la roca");
                 break;
             case InputGNG.TREE:
+                player.SetTrigger(ANIM_TREE);
                 Debug.Log("Se agacha en el árbol");
                 break;
             case InputGNG.BUSH:
+                thisObjectAnim.SetBool(ANIM_BUSH, true);
                 Debug.Log("Aparta la maleza");
                 break;
             case InputGNG.STUMP:
+                player.SetTrigger(ANIM_STUMP);
                 Debug.Log("Salta el árbol");
                 break;
             default:
