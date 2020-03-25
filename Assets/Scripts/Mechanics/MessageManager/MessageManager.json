@@ -393,8 +393,16 @@
 				"Silencio":1},
 				{
 				"id":10,
-				"Cadena": "No podemos obligarte a venir con nosotros,
-							pero si te unes al equipo Moon te estaremos muy agradecidos.",
+				"Cadena": "De todas maneras ahora tenemos un miembro extra en el equipo.
+							Seguro que nos irá bien",
+				"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+				"x": 2.5,
+				"y": 30.5,
+				"Duracion": 5.5,
+				"Silencio":1},
+				{
+				"id":10,
+				"Cadena": "Decidido entonces, vamos al río Lethe, hogar de los osos.",
 				"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 				"x": 2.5,
 				"y": 30.5,
