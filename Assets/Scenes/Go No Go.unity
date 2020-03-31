@@ -993,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &547196545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1607,6 +1607,7 @@ MonoBehaviour:
   - {fileID: 1824519495}
   deathPlace: {fileID: 307855804}
   birthPlace: {fileID: 670244919}
+  nMaxElemRonda: 10
   geC: {fileID: 1527270334}
   data: {fileID: 814784314}
   dataSave: {fileID: 0}

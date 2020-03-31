@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
-
+using UnityEngine.UI;
 
 public class GNG_GameController : MonoBehaviour {
 
@@ -24,6 +21,9 @@ public class GNG_GameController : MonoBehaviour {
     public Transform deathPlace;
     public Transform birthPlace;
 
+    [Header("Variables del psicólogo")]
+    public int nMaxElemRonda = 20;
+
     public delegate void ControllerDelegate();
     ControllerDelegate CDelegate;
 
@@ -32,9 +32,6 @@ public class GNG_GameController : MonoBehaviour {
     private bool corrutinaActive = false;
     private byte elemCounter;
 
-    /// <summary>
-    /// Referencia del script GoNoGo_SetData
-    /// </summary>
     [Header("DataManager")]
     public GNG_DifficultyJSON data;
     public GonoGoData_Save dataSave;
@@ -44,7 +41,7 @@ public class GNG_GameController : MonoBehaviour {
     public Canvas canvasStart;
     public Canvas canvasGame;
     public GameObject initialPopup;
-    public TextMeshProUGUI textState;
+    public TMP_Text textState;
     public Image black;
 
     [Header("Audio")]
@@ -54,8 +51,9 @@ public class GNG_GameController : MonoBehaviour {
     public int nivelActual = 1;
 
     private byte elemMaxSpawn;
-    private int errorCount { get; set; } = 0;
-    private int errorOmisionCount { get; set; } = 0;
+    public int targetsPassed = 0;
+    private int errorCount { get; set; }
+    private int errorOmisionCount { get; set; }
     private int aciertoCount { get; set; }
     private int aciertoOutput = 0;
     private int comodines = 0;
@@ -88,8 +86,6 @@ public class GNG_GameController : MonoBehaviour {
         sizeZ = speed * timeReaction;
 
         elemMaxSpawn = (byte)(data.getDificultad(nivelActual).NElementos);
-        canvasGame.gameObject.SetActive(false);
-
 
         distanceBar = bar.sizeDelta.x;
 
@@ -100,8 +96,8 @@ public class GNG_GameController : MonoBehaviour {
         distanceToRun = distanceBar / data.getDificultad(nivelActual).NElemTotal;
         distanceToRunFox = (distanceBar + barStartPositionFox / 2) / data.getDificultad(nivelActual).NElemTotal;
 
-        print(barStartPosition);
-        print(barStartPositionFox);
+        /*print(barStartPosition);
+        print(barStartPositionFox);*/
 
         movi.localPosition = new Vector3(barStartPosition, movi.localPosition.y, movi.localPosition.z);
         //Fox position is the beggining of the bar + max errors
@@ -113,6 +109,7 @@ public class GNG_GameController : MonoBehaviour {
 
         textState.text = "PRIMERA RONDA";
         textState.gameObject.SetActive(true);
+        textState.CrossFadeAlpha(0, 2.5F, true);
 
         //TODO: Animación de texto que aparece aquí y se va ocultando.
 
@@ -137,17 +134,18 @@ public class GNG_GameController : MonoBehaviour {
             case GonogoFSM.FIRSTROUND:
                 Terrenos(); //Movimiento del terreno
 
-                if ((elemRun) == data.getDificultad(nivelActual).NElemXRonda) {
+                if (targetsPassed == nMaxElemRonda) {
                     elemCounter = 0;
                     errorCount = 0; //Se cuentan por ronda. 
                     elemRun = 0;
-
+                    
                     textState.text = "SEGUNDA RONDA";
                     textState.gameObject.SetActive(true);
+                    textState.CrossFadeAlpha(1, 0, true);
+                    textState.CrossFadeAlpha(0, 2.5F, true);
 
                     //TODO: Animación de texto que aparece aquí y se va ocultando.
 
-                    
                     estado = GonogoFSM.SECONDROUND;
                     StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));
 
@@ -156,7 +154,7 @@ public class GNG_GameController : MonoBehaviour {
             case GonogoFSM.SECONDROUND:
                 Terrenos();
 
-                if (elemRun == data.getDificultad(nivelActual).NElemXRonda) {
+                if (elemRun == nMaxElemRonda) {
                     textState.text = "¡HAS GANADO!";
                     textState.gameObject.SetActive(true);
 
@@ -227,7 +225,7 @@ public class GNG_GameController : MonoBehaviour {
         return estado == GonogoFSM.LOADING;
     }
     public bool get_stateFirstRound() {
-        if (elemCounter == data.getDificultad(nivelActual).NElemXRonda) return false;
+        if (elemCounter == nMaxElemRonda) return false;
 
         else return estado == GonogoFSM.FIRSTROUND;
     }
