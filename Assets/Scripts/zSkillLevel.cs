@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class zSkillLevel : MonoBehaviour
 
@@ -8,6 +9,7 @@ public class zSkillLevel : MonoBehaviour
     public int lvlMemTrabajo { get; set; }
     public float expMemTrabajo = 0f;
     public float expMaxMemTrabajo = 100.0f;
+    public Slider sliderMemTrabajo;
 
     public int lvlPlanificacion = 0;
     public float expPlanificacion = 0f;
@@ -25,6 +27,8 @@ public class zSkillLevel : MonoBehaviour
     public float expProcVisoEspacial = 0f;
     public float expMaxProcVisoEspacial = 100.0f;
 
+    public float receivedExp = 1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,23 +38,47 @@ public class zSkillLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //addExp();
+        
+        addExp(expMemTrabajo, 5.0f, sliderMemTrabajo);
+
         if (expMemTrabajo >= expMaxMemTrabajo)
         {
-            lvlUp(lvlMemTrabajo);
+            lvlUp(lvlMemTrabajo, expMaxMemTrabajo, expMemTrabajo);
+        }
+        if (expPlanificacion >= expMaxPlanificacion)
+        {
+            lvlUp(lvlPlanificacion, expMaxPlanificacion, expPlanificacion);
+        }
+        if (expPlanificacion >= expMaxPlanificacion)
+        {
+            lvlUp(lvlPlanificacion, expMaxPlanificacion, expPlanificacion);
+        }
+        if (expControlInhibitorio >= expMaxControlInhibitorio)
+        {
+            lvlUp(lvlControlInhibitorio, expMaxControlInhibitorio, expControlInhibitorio);
+        }
+        if (expAtencionSostenida >= expMaxAtencionSostenida)
+        {
+            lvlUp(lvlAtencionSostenida, expMaxAtencionSostenida, expAtencionSostenida);
+        }
+        if (expProcVisoEspacial >= expMaxProcVisoEspacial)
+        {
+            lvlUp(lvlProcVisoEspacial, expMaxProcVisoEspacial, expProcVisoEspacial);
         }
     }
 
-    public void addExp( float skill)
+    public void addExp( float skillExp, float receivedExp, Slider sli)
     {
-
+        skillExp += 5.0f;
+        sliderMemTrabajo.value = skillExp; 
 
     }
 
-    public void lvlUp(int skillLvl)
+    public void lvlUp(int skillLvl, float maxExpSkill, float expSkill)
     {
         skillLvl += 1;
+        maxExpSkill += 25.0f;
+        expSkill = 0.0f;
     }
 
-    
 }

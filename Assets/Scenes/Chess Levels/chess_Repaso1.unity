@@ -8751,7 +8751,7 @@ MonoBehaviour:
   state: 0
   nivel: 0
   winningPosition: 
-  "tipoMec\xE1nica": 7
+  "tipoMec\xE1nica": 9
   nivelesTotales: 10
   nivelActual: 1
   player: {fileID: 1291503589}

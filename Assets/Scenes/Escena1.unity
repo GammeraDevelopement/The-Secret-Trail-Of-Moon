@@ -916,6 +916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388490739}
   - component: {fileID: 388490738}
+  - component: {fileID: 388490740}
   m_Layer: 0
   m_Name: DialogueController
   m_TagString: Untagged
@@ -957,6 +958,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388490740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388490737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628cdb9f993791b4aa5eade82d148889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: {fileID: 4900000, guid: 62927f36df3f2294b935a92b1256498e, type: 3}
 --- !u!1 &459934238
 GameObject:
   m_ObjectHideFlags: 0

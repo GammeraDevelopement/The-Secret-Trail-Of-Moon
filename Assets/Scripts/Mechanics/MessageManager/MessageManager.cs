@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+[RequireComponent(typeof(MessageJSONManager))]
 public class MessageManager : MonoBehaviour
 {
     public int capitulo;
@@ -43,7 +43,8 @@ public class MessageManager : MonoBehaviour
         
 
         if (!wait) {
-            StartCoroutine(waiting(messageJSONManager.GetMensajes(0, 0, id).Duracion * velocidad, messageJSONManager.GetMensajes(0, 0, id).Silencio * velocidad));
+            StartCoroutine(waiting(messageJSONManager.GetMensajes(capitulo, escena, id).Duracion * velocidad, 
+                messageJSONManager.GetMensajes(capitulo, escena, id).Silencio * velocidad));
             wait = true;
         }
 
