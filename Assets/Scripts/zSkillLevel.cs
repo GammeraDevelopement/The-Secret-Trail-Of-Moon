@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class zSkillLevel : MonoBehaviour
 
 {
-    public int lvlMemTrabajo { get; set; }
-    public float expMemTrabajo = 0f;
+    public int lvlMemTrabajo = 1;
+    public float expMemTrabajo = 0;
     public float expMaxMemTrabajo = 100.0f;
     public Slider sliderMemTrabajo;
+    public TMP_Text textMemTrabajo;
 
     public int lvlPlanificacion = 0;
     public float expPlanificacion = 0f;
@@ -32,53 +34,41 @@ public class zSkillLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        expMaxMemTrabajo = 100.0f;
+        expMemTrabajo = 0;
+
+        sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
+        textMemTrabajo.text = lvlMemTrabajo + "";
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
-        addExp(expMemTrabajo, 5.0f, sliderMemTrabajo);
+    {// imagen.fill = calculate;
+        sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
+        textMemTrabajo.text = lvlMemTrabajo + "";
 
         if (expMemTrabajo >= expMaxMemTrabajo)
         {
-            lvlUp(lvlMemTrabajo, expMaxMemTrabajo, expMemTrabajo);
-        }
-        if (expPlanificacion >= expMaxPlanificacion)
-        {
-            lvlUp(lvlPlanificacion, expMaxPlanificacion, expPlanificacion);
-        }
-        if (expPlanificacion >= expMaxPlanificacion)
-        {
-            lvlUp(lvlPlanificacion, expMaxPlanificacion, expPlanificacion);
-        }
-        if (expControlInhibitorio >= expMaxControlInhibitorio)
-        {
-            lvlUp(lvlControlInhibitorio, expMaxControlInhibitorio, expControlInhibitorio);
-        }
-        if (expAtencionSostenida >= expMaxAtencionSostenida)
-        {
-            lvlUp(lvlAtencionSostenida, expMaxAtencionSostenida, expAtencionSostenida);
-        }
-        if (expProcVisoEspacial >= expMaxProcVisoEspacial)
-        {
-            lvlUp(lvlProcVisoEspacial, expMaxProcVisoEspacial, expProcVisoEspacial);
+            lvlUpMemTrabajo(1, 0, 25);
         }
     }
 
-    public void addExp( float skillExp, float receivedExp, Slider sli)
+    public float calculate(float expAct, float expMax)
     {
-        skillExp += 5.0f;
-        sliderMemTrabajo.value = skillExp; 
+        return expAct / expMax;
+    }
+
+    public void addExp()
+    {
+
 
     }
 
-    public void lvlUp(int skillLvl, float maxExpSkill, float expSkill)
+    public void lvlUpMemTrabajo(int skillLvl, float currentExp, float maxExp)
     {
-        skillLvl += 1;
-        maxExpSkill += 25.0f;
-        expSkill = 0.0f;
+        lvlMemTrabajo += skillLvl;
+        expMemTrabajo = currentExp;
+        expMaxMemTrabajo += maxExp;
     }
 
 }
