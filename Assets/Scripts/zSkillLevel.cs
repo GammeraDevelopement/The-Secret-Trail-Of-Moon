@@ -12,6 +12,7 @@ public class zSkillLevel : MonoBehaviour
     public float expMaxMemTrabajo = 100.0f;
     public Slider sliderMemTrabajo;
     public TMP_Text textMemTrabajo;
+    public Image imagenMemTrabajo;
 
     public int lvlPlanificacion = 0;
     public float expPlanificacion = 0f;
@@ -34,9 +35,6 @@ public class zSkillLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        expMaxMemTrabajo = 100.0f;
-        expMemTrabajo = 0;
-
         sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
         textMemTrabajo.text = lvlMemTrabajo + "";
     }
@@ -44,7 +42,8 @@ public class zSkillLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {// imagen.fill = calculate;
-        sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
+        //sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
+        imagenMemTrabajo.fillAmount = calculate(expMemTrabajo, expMaxMemTrabajo);
         textMemTrabajo.text = lvlMemTrabajo + "";
 
         if (expMemTrabajo >= expMaxMemTrabajo)
@@ -69,6 +68,34 @@ public class zSkillLevel : MonoBehaviour
         lvlMemTrabajo += skillLvl;
         expMemTrabajo = currentExp;
         expMaxMemTrabajo += maxExp;
+    }
+
+    public void lvlUpPlanificacion(int skillLvl, float currentExp, float maxExp)
+    {
+        lvlPlanificacion += skillLvl;
+        expPlanificacion = currentExp;
+        expMaxPlanificacion += maxExp;
+    }
+
+    public void lvlUpControlInhibitorio(int skillLvl, float currentExp, float maxExp)
+    {
+        lvlControlInhibitorio += skillLvl;
+        expControlInhibitorio = currentExp;
+        expMaxControlInhibitorio += maxExp;
+    }
+
+    public void lvlUpAtencionSostenida(int skillLvl, float currentExp, float maxExp)
+    {
+        lvlAtencionSostenida += skillLvl;
+        expAtencionSostenida = currentExp;
+        expMaxAtencionSostenida += maxExp;
+    }
+
+    public void lvlUpProcVisoEspacial(int skillLvl, float currentExp, float maxExp)
+    {
+        lvlProcVisoEspacial += skillLvl;
+        expProcVisoEspacial = currentExp;
+        expMaxProcVisoEspacial += maxExp;
     }
 
 }

@@ -3671,6 +3671,11 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20000014196932956, guid: 181631a6d571e304688779b738767faf,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23000010072687116, guid: 181631a6d571e304688779b738767faf,
         type: 3}
       propertyPath: m_CastShadows
