@@ -10,7 +10,7 @@ public class zSkillLevel : MonoBehaviour
 {
     public int lvlMemTrabajo = 1;
     public float expMemTrabajo = 0;
-    public float expMaxMemTrabajo = 100.0f; // TODO Json
+    public float expMaxMemTrabajo;
     public TMP_Text textMemTrabajo;
     public Image imagenMemTrabajo;
 
@@ -39,8 +39,10 @@ public class zSkillLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        levelJSONManager = gameObject.GetComponent<LevelJSONManager>();
+
+        expMaxMemTrabajo = levelJSONManager.getExperienciaMax(1);
+
     }
 
     // Update is called once per frame
@@ -63,14 +65,13 @@ public class zSkillLevel : MonoBehaviour
     public void addExpMT()
     {
         expMemTrabajo += levelJSONManager.getExperienciaCSAT(1);
-
     }
 
     public void lvlUpMemTrabajo(int skillLvl, float currentExp, float maxExp)
     {
         lvlMemTrabajo += skillLvl;
         expMemTrabajo = currentExp;
-        expMaxMemTrabajo = levelJSONManager.getExperienciaCSAT(1);
+        expMaxMemTrabajo = levelJSONManager.getExperienciaCSAT(skillLvl);
     }
 
     public void lvlUpPlanificacion(int skillLvl, float currentExp, float maxExp)

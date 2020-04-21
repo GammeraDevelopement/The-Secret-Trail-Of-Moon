@@ -69,6 +69,11 @@ public class LevelJSONManager : MonoBehaviour
         root = JsonUtility.FromJson<Root>(encodedString);
     }
 
+    public int getExperienciaMax(int nivel)
+    {
+        return root.ExpMax[nivel - 1].Experiencia;
+    }
+
     public int getExperienciaCSAT(int nivel)
     {
         return root.ExpCSAT[nivel - 1].Experiencia;
