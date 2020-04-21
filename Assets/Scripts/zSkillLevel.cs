@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+[RequireComponent(typeof(LevelJSONManager))]
 
 public class zSkillLevel : MonoBehaviour
 
 {
     public int lvlMemTrabajo = 1;
     public float expMemTrabajo = 0;
-    public float expMaxMemTrabajo = 100.0f;
-    public Slider sliderMemTrabajo;
+    public float expMaxMemTrabajo = 100.0f; // TODO Json
     public TMP_Text textMemTrabajo;
     public Image imagenMemTrabajo;
 
@@ -32,17 +32,20 @@ public class zSkillLevel : MonoBehaviour
 
     public float receivedExp = 1.0f;
 
+    public Button butCsat;
+
+    private LevelJSONManager levelJSONManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
-        textMemTrabajo.text = lvlMemTrabajo + "";
+        
+        
     }
 
     // Update is called once per frame
     void Update()
-    {// imagen.fill = calculate;
-        //sliderMemTrabajo.value = calculate(expMemTrabajo, expMaxMemTrabajo);
+    {
         imagenMemTrabajo.fillAmount = calculate(expMemTrabajo, expMaxMemTrabajo);
         textMemTrabajo.text = lvlMemTrabajo + "";
 
@@ -57,9 +60,9 @@ public class zSkillLevel : MonoBehaviour
         return expAct / expMax;
     }
 
-    public void addExp()
+    public void addExpMT()
     {
-
+        expMemTrabajo += levelJSONManager.getExperienciaCSAT(1);
 
     }
 
@@ -67,7 +70,7 @@ public class zSkillLevel : MonoBehaviour
     {
         lvlMemTrabajo += skillLvl;
         expMemTrabajo = currentExp;
-        expMaxMemTrabajo += maxExp;
+        expMaxMemTrabajo = levelJSONManager.getExperienciaCSAT(1);
     }
 
     public void lvlUpPlanificacion(int skillLvl, float currentExp, float maxExp)
@@ -98,4 +101,5 @@ public class zSkillLevel : MonoBehaviour
         expMaxProcVisoEspacial += maxExp;
     }
 
+    
 }
