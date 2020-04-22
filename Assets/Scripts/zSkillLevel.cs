@@ -14,25 +14,37 @@ public class zSkillLevel : MonoBehaviour
     public TMP_Text textMemTrabajo;
     public Image imagenMemTrabajo;
 
-    public int lvlPlanificacion = 0;
+    public int lvlPlanificacion = 1;
     public float expPlanificacion = 0f;
     public float expMaxPlanificacion = 100.0f;
+    public TMP_Text textPlanificacion;
+    public Image imagenPlanificacion;
 
-    public int lvlControlInhibitorio = 0;
+    public int lvlControlInhibitorio = 1;
     public float expControlInhibitorio = 0f;
     public float expMaxControlInhibitorio = 100.0f;
+    public TMP_Text textControlInhibitorio;
+    public Image imagenControlInhibitorio;
 
-    public int lvlAtencionSostenida = 0;
+    public int lvlAtencionSostenida = 1;
     public float expAtencionSostenida = 0f;
     public float expMaxAtencionSostenida = 100.0f;
+    public TMP_Text textAtencionSostenida;
+    public Image imagenAtencionSostenida;
 
-    public int lvlProcVisoEspacial = 0;
+    public int lvlProcVisoEspacial = 1;
     public float expProcVisoEspacial = 0f;
     public float expMaxProcVisoEspacial = 100.0f;
+    public TMP_Text textProcVisoEspacial;
+    public Image imagenProcVisoEspacial;
 
     public float receivedExp = 1.0f;
 
-    public Button butCsat;
+    public Button butCsat; 
+    public Button butEnigma;
+    public Button butCubos;
+    public Button butTekaTeki;
+    public Button butGoNoGo;
 
     private LevelJSONManager levelJSONManager;
 
@@ -42,6 +54,10 @@ public class zSkillLevel : MonoBehaviour
         levelJSONManager = gameObject.GetComponent<LevelJSONManager>();
 
         expMaxMemTrabajo = levelJSONManager.getExperienciaMax(1);
+        expMaxPlanificacion = levelJSONManager.getExperienciaMax(1);
+        expMaxControlInhibitorio = levelJSONManager.getExperienciaMax(1);
+        expMaxAtencionSostenida = levelJSONManager.getExperienciaMax(1);
+        expMaxProcVisoEspacial = levelJSONManager.getExperienciaMax(1);
 
     }
 
@@ -50,10 +66,39 @@ public class zSkillLevel : MonoBehaviour
     {
         imagenMemTrabajo.fillAmount = calculate(expMemTrabajo, expMaxMemTrabajo);
         textMemTrabajo.text = lvlMemTrabajo + "";
+        imagenPlanificacion.fillAmount = calculate(expPlanificacion, expMaxPlanificacion);
+        textPlanificacion.text = lvlPlanificacion + "";
+        imagenControlInhibitorio.fillAmount = calculate(expControlInhibitorio, expMaxControlInhibitorio);
+        textControlInhibitorio.text = lvlControlInhibitorio + "";
+        imagenAtencionSostenida.fillAmount = calculate(expAtencionSostenida, expMaxAtencionSostenida);
+        textAtencionSostenida.text = lvlAtencionSostenida + "";
+        imagenProcVisoEspacial.fillAmount = calculate(expProcVisoEspacial, expMaxProcVisoEspacial);
+        textProcVisoEspacial.text = lvlProcVisoEspacial + "";
+
 
         if (expMemTrabajo >= expMaxMemTrabajo)
         {
-            lvlUpMemTrabajo(1, 0, 25);
+            lvlUpMemTrabajo(1, 0);
+        }
+
+        if (expPlanificacion >= expMaxPlanificacion)
+        {
+            lvlUpPlanificacion(1, 0);
+        }
+
+        if (expControlInhibitorio >= expMaxControlInhibitorio)
+        {
+            lvlUpControlInhibitorio(1, 0);
+        }
+
+        if (expAtencionSostenida >= expMaxAtencionSostenida)
+        {
+            lvlUpAtencionSostenida(1, 0);
+        }
+
+        if (expProcVisoEspacial >= expMaxProcVisoEspacial)
+        {
+            lvlUpProcVisoEspacial(1, 0);
         }
     }
 
@@ -62,44 +107,69 @@ public class zSkillLevel : MonoBehaviour
         return expAct / expMax;
     }
 
-    public void addExpMT()
+    public void addExpCSAT()
     {
-        expMemTrabajo += levelJSONManager.getExperienciaCSAT(1);
+        expAtencionSostenida += levelJSONManager.getExperienciaCSAT(1) * 0.8f;
+        expControlInhibitorio += levelJSONManager.getExperienciaCSAT(1) * 0.2f;
     }
 
-    public void lvlUpMemTrabajo(int skillLvl, float currentExp, float maxExp)
+    public void addExpEnigma()
+    {
+        expMemTrabajo += levelJSONManager.getExperienciaEnigma(1) * 0.8f;
+        expPlanificacion += levelJSONManager.getExperienciaEnigma(1) * 0.2f;
+    }
+
+    public void addExpCubos()
+    {
+        expProcVisoEspacial += levelJSONManager.getExperienciaCubos(1) * 0.8f;
+        expAtencionSostenida += levelJSONManager.getExperienciaCubos(1) * 0.2f;
+    }
+
+    public void addExpTekaTeki(int level)
+    {
+        expPlanificacion += levelJSONManager.getExperienciaTekaTeki(level) * 0.9f;
+        expControlInhibitorio += levelJSONManager.getExperienciaTekaTeki(level) * 0.1f;
+    }
+
+    public void addExpGoNoGo()
+    {
+        expAtencionSostenida += levelJSONManager.getExperienciaGoNoGo(1) * 0.2f;
+        expControlInhibitorio += levelJSONManager.getExperienciaGoNoGo(1) * 0.8f;
+    }
+
+    public void lvlUpMemTrabajo(int skillLvl, float currentExp)
     {
         lvlMemTrabajo += skillLvl;
         expMemTrabajo = currentExp;
-        expMaxMemTrabajo = levelJSONManager.getExperienciaCSAT(skillLvl);
+        expMaxMemTrabajo = levelJSONManager.getExperienciaMax(lvlMemTrabajo);
     }
 
-    public void lvlUpPlanificacion(int skillLvl, float currentExp, float maxExp)
+    public void lvlUpPlanificacion(int skillLvl, float currentExp)
     {
         lvlPlanificacion += skillLvl;
         expPlanificacion = currentExp;
-        expMaxPlanificacion += maxExp;
+        expMaxPlanificacion = levelJSONManager.getExperienciaMax(lvlPlanificacion);
     }
 
-    public void lvlUpControlInhibitorio(int skillLvl, float currentExp, float maxExp)
+    public void lvlUpControlInhibitorio(int skillLvl, float currentExp)
     {
         lvlControlInhibitorio += skillLvl;
         expControlInhibitorio = currentExp;
-        expMaxControlInhibitorio += maxExp;
+        expMaxControlInhibitorio += levelJSONManager.getExperienciaMax(lvlControlInhibitorio); ;
     }
 
-    public void lvlUpAtencionSostenida(int skillLvl, float currentExp, float maxExp)
+    public void lvlUpAtencionSostenida(int skillLvl, float currentExp)
     {
         lvlAtencionSostenida += skillLvl;
         expAtencionSostenida = currentExp;
-        expMaxAtencionSostenida += maxExp;
+        expMaxAtencionSostenida = levelJSONManager.getExperienciaMax(lvlAtencionSostenida); ;
     }
 
-    public void lvlUpProcVisoEspacial(int skillLvl, float currentExp, float maxExp)
+    public void lvlUpProcVisoEspacial(int skillLvl, float currentExp)
     {
         lvlProcVisoEspacial += skillLvl;
         expProcVisoEspacial = currentExp;
-        expMaxProcVisoEspacial += maxExp;
+        expMaxProcVisoEspacial += levelJSONManager.getExperienciaMax(lvlProcVisoEspacial); ;
     }
 
     

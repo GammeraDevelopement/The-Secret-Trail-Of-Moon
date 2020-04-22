@@ -74,11 +74,31 @@ public class LevelJSONManager : MonoBehaviour
         return root.ExpMax[nivel - 1].Experiencia;
     }
 
-    public int getExperienciaCSAT(int nivel)
+    public float getExperienciaCSAT(int nivel)
     {
         return root.ExpCSAT[nivel - 1].Experiencia;
     }
-    
+
+    public float getExperienciaEnigma(int nivel)
+    {
+        return root.ExpEnigma[nivel - 1].Experiencia;
+    }
+
+    public float getExperienciaCubos(int nivel)
+    {
+        return root.ExpCubos[nivel - 1].Experiencia;
+    }
+
+    public float getExperienciaTekaTeki(int nivel)
+    {
+        return root.ExpTekaTeki[nivel - 1].Experiencia;
+    }
+
+    public float getExperienciaGoNoGo(int nivel)
+    {
+        return root.ExpGoNoGo[nivel - 1].Experiencia;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
