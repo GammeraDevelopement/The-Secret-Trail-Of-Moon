@@ -2296,29 +2296,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7546f2e2d94bf54a9a7f94d8933c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlMemTrabajo: 1
-  expMemTrabajo: 0
-  expMaxMemTrabajo: 100
+  levelManager: {fileID: 11400000, guid: 3f1333486b19ef84aa8ae957cbb2eadf, type: 2}
   textMemTrabajo: {fileID: 719929722}
   imagenMemTrabajo: {fileID: 836657182}
-  lvlPlanificacion: 1
-  expPlanificacion: 0
-  expMaxPlanificacion: 100
   textPlanificacion: {fileID: 495264887}
   imagenPlanificacion: {fileID: 1766761399}
-  lvlControlInhibitorio: 1
-  expControlInhibitorio: 0
-  expMaxControlInhibitorio: 100
   textControlInhibitorio: {fileID: 1572429800}
   imagenControlInhibitorio: {fileID: 820782999}
-  lvlAtencionSostenida: 1
-  expAtencionSostenida: 0
-  expMaxAtencionSostenida: 100
   textAtencionSostenida: {fileID: 358992455}
   imagenAtencionSostenida: {fileID: 1931863964}
-  lvlProcVisoEspacial: 1
-  expProcVisoEspacial: 0
-  expMaxProcVisoEspacial: 100
   textProcVisoEspacial: {fileID: 1546989322}
   imagenProcVisoEspacial: {fileID: 1039578698}
   receivedExp: 1

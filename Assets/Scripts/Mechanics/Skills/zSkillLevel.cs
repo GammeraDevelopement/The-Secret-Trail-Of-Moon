@@ -8,33 +8,23 @@ using TMPro;
 public class zSkillLevel : MonoBehaviour
 
 {
-    public int lvlMemTrabajo = 1;
-    public float expMemTrabajo = 0;
-    public float expMaxMemTrabajo;
+    public LevelManager levelManager;
+
     public TMP_Text textMemTrabajo;
     public Image imagenMemTrabajo;
 
-    public int lvlPlanificacion = 1;
-    public float expPlanificacion = 0f;
-    public float expMaxPlanificacion = 100.0f;
     public TMP_Text textPlanificacion;
     public Image imagenPlanificacion;
 
-    public int lvlControlInhibitorio = 1;
-    public float expControlInhibitorio = 0f;
-    public float expMaxControlInhibitorio = 100.0f;
+
     public TMP_Text textControlInhibitorio;
     public Image imagenControlInhibitorio;
 
-    public int lvlAtencionSostenida = 1;
-    public float expAtencionSostenida = 0f;
-    public float expMaxAtencionSostenida = 100.0f;
+
     public TMP_Text textAtencionSostenida;
     public Image imagenAtencionSostenida;
 
-    public int lvlProcVisoEspacial = 1;
-    public float expProcVisoEspacial = 0f;
-    public float expMaxProcVisoEspacial = 100.0f;
+
     public TMP_Text textProcVisoEspacial;
     public Image imagenProcVisoEspacial;
 
@@ -51,54 +41,68 @@ public class zSkillLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         levelJSONManager = gameObject.GetComponent<LevelJSONManager>();
+        levelManager.Instantiate(levelJSONManager);
 
-        expMaxMemTrabajo = levelJSONManager.getExperienciaMax(1);
-        expMaxPlanificacion = levelJSONManager.getExperienciaMax(1);
-        expMaxControlInhibitorio = levelJSONManager.getExperienciaMax(1);
-        expMaxAtencionSostenida = levelJSONManager.getExperienciaMax(1);
-        expMaxProcVisoEspacial = levelJSONManager.getExperienciaMax(1);
+        //Inicializar exp
+        /*levelManager.getSkill("MemTrabajo").maxSkillExp = levelJSONManager.getExperienciaMax(1);
+        levelManager.getSkill("Planificacion").maxSkillExp = levelJSONManager.getExperienciaMax(1);
+        levelManager.getSkill("ControlInhibitorio").maxSkillExp = levelJSONManager.getExperienciaMax(1);
+        levelManager.getSkill("AtencionSostenida").maxSkillExp = levelJSONManager.getExperienciaMax(1);
+        levelManager.getSkill("ProcVisoEspacial").maxSkillExp = levelJSONManager.getExperienciaMax(1);
+        */
 
+        foreach (Level item in levelManager.levels)
+        {
+            item.maxSkillExp = levelJSONManager.getExperienciaMax(1);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        imagenMemTrabajo.fillAmount = calculate(expMemTrabajo, expMaxMemTrabajo);
-        textMemTrabajo.text = lvlMemTrabajo + "";
-        imagenPlanificacion.fillAmount = calculate(expPlanificacion, expMaxPlanificacion);
-        textPlanificacion.text = lvlPlanificacion + "";
-        imagenControlInhibitorio.fillAmount = calculate(expControlInhibitorio, expMaxControlInhibitorio);
-        textControlInhibitorio.text = lvlControlInhibitorio + "";
-        imagenAtencionSostenida.fillAmount = calculate(expAtencionSostenida, expMaxAtencionSostenida);
-        textAtencionSostenida.text = lvlAtencionSostenida + "";
-        imagenProcVisoEspacial.fillAmount = calculate(expProcVisoEspacial, expMaxProcVisoEspacial);
-        textProcVisoEspacial.text = lvlProcVisoEspacial + "";
+        //Relleno de la exp de la skill y mostrar numero del nivel
+        imagenMemTrabajo.fillAmount = calculate(levelManager.getSkill("MemTrabajo").currentExp, levelManager.getSkill("MemTrabajo").maxSkillExp);
+        textMemTrabajo.text = levelManager.getSkill("MemTrabajo").lvlSkill + "";
 
+        imagenPlanificacion.fillAmount = calculate(levelManager.getSkill("planificacion").currentExp, levelManager.getSkill("Planificacion").maxSkillExp);
+        textPlanificacion.text = levelManager.getSkill("Planificacion").lvlSkill + "";
 
-        if (expMemTrabajo >= expMaxMemTrabajo)
+        imagenControlInhibitorio.fillAmount = calculate(levelManager.getSkill("ControlInhibitorio").currentExp, levelManager.getSkill("ControlInhibitorio").maxSkillExp);
+        textControlInhibitorio.text = levelManager.getSkill("ControlInhibitorio").lvlSkill + "";
+
+        imagenAtencionSostenida.fillAmount = calculate(levelManager.getSkill("AtencionSostenida").currentExp, levelManager.getSkill("AtencionSostenida").maxSkillExp);
+        textAtencionSostenida.text = levelManager.getSkill("AtencionSostenida").lvlSkill + "";
+
+        imagenProcVisoEspacial.fillAmount = calculate(levelManager.getSkill("ProcVisoEspacial").currentExp, levelManager.getSkill("ProcVisoEspacial").maxSkillExp);
+        textProcVisoEspacial.text = levelManager.getSkill("ProcVisoEspacial").lvlSkill + "";
+
+        //Condicion para subir de nivel
+        if (levelManager.getSkill("MemTrabajo").currentExp >= levelManager.getSkill("MemTrabajo").maxSkillExp)
         {
-            lvlUpMemTrabajo(1, 0);
+            lvlUpMemTrabajo();
         }
 
-        if (expPlanificacion >= expMaxPlanificacion)
+        if (levelManager.getSkill("planificacion").currentExp >= levelManager.getSkill("Planificacion").maxSkillExp)
         {
-            lvlUpPlanificacion(1, 0);
+            lvlUpPlanificacion();
         }
 
-        if (expControlInhibitorio >= expMaxControlInhibitorio)
+        if (levelManager.getSkill("ControlInhibitorio").currentExp >= levelManager.getSkill("ControlInhibitorio").maxSkillExp)
         {
-            lvlUpControlInhibitorio(1, 0);
+            lvlUpControlInhibitorio();
         }
 
-        if (expAtencionSostenida >= expMaxAtencionSostenida)
+        if (levelManager.getSkill("AtencionSostenida").currentExp >= levelManager.getSkill("AtencionSostenida").maxSkillExp)
         {
-            lvlUpAtencionSostenida(1, 0);
+            lvlUpAtencionSostenida();
         }
 
-        if (expProcVisoEspacial >= expMaxProcVisoEspacial)
+        if (levelManager.getSkill("ProcVisoEspacial").currentExp >= levelManager.getSkill("ProcVisoEspacial").maxSkillExp)
         {
-            lvlUpProcVisoEspacial(1, 0);
+            lvlUpProcVisoEspacial();
         }
     }
 
@@ -106,7 +110,7 @@ public class zSkillLevel : MonoBehaviour
     {
         return expAct / expMax;
     }
-
+    /*
     public void addExpCSAT()
     {
         expAtencionSostenida += levelJSONManager.getExperienciaCSAT(1) * 0.8f;
@@ -136,40 +140,73 @@ public class zSkillLevel : MonoBehaviour
         expAtencionSostenida += levelJSONManager.getExperienciaGoNoGo(1) * 0.2f;
         expControlInhibitorio += levelJSONManager.getExperienciaGoNoGo(1) * 0.8f;
     }
-
-    public void lvlUpMemTrabajo(int skillLvl, float currentExp)
+    */
+    public void lvlUpMemTrabajo()
     {
-        lvlMemTrabajo += skillLvl;
-        expMemTrabajo = currentExp;
-        expMaxMemTrabajo = levelJSONManager.getExperienciaMax(lvlMemTrabajo);
+       /* lvlMemTrabajo += 1;
+        expMemTrabajo = 0;
+        expMaxMemTrabajo = levelJSONManager.getExperienciaMax(lvlMemTrabajo);*/
+        foreach (Level item in levelManager.levels)
+        {
+            if (item.name == "MemTrabajo")
+            {
+                item.lvlSkill += 1;
+                item.currentExp = 0;
+                item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+            }
+        }
     }
 
-    public void lvlUpPlanificacion(int skillLvl, float currentExp)
+    public void lvlUpPlanificacion()
     {
-        lvlPlanificacion += skillLvl;
-        expPlanificacion = currentExp;
-        expMaxPlanificacion = levelJSONManager.getExperienciaMax(lvlPlanificacion);
+        foreach (Level item in levelManager.levels)
+        {
+            if (item.name == "Planificacion")
+            {
+                item.lvlSkill += 1;
+                item.currentExp = 0;
+                item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+            }
+        }
     }
 
-    public void lvlUpControlInhibitorio(int skillLvl, float currentExp)
+    public void lvlUpControlInhibitorio()
     {
-        lvlControlInhibitorio += skillLvl;
-        expControlInhibitorio = currentExp;
-        expMaxControlInhibitorio += levelJSONManager.getExperienciaMax(lvlControlInhibitorio); ;
+        foreach (Level item in levelManager.levels)
+        {
+            if (item.name == "ControlInhibitorio")
+            {
+                item.lvlSkill += 1;
+                item.currentExp = 0;
+                item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+            }
+        }
     }
 
-    public void lvlUpAtencionSostenida(int skillLvl, float currentExp)
+    public void lvlUpAtencionSostenida()
     {
-        lvlAtencionSostenida += skillLvl;
-        expAtencionSostenida = currentExp;
-        expMaxAtencionSostenida = levelJSONManager.getExperienciaMax(lvlAtencionSostenida); ;
+        foreach (Level item in levelManager.levels)
+        {
+            if (item.name == "AtencionSostenida")
+            {
+                item.lvlSkill += 1;
+                item.currentExp = 0;
+                item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+            }
+        }
     }
 
-    public void lvlUpProcVisoEspacial(int skillLvl, float currentExp)
+    public void lvlUpProcVisoEspacial()
     {
-        lvlProcVisoEspacial += skillLvl;
-        expProcVisoEspacial = currentExp;
-        expMaxProcVisoEspacial += levelJSONManager.getExperienciaMax(lvlProcVisoEspacial); ;
+        foreach (Level item in levelManager.levels)
+        {
+            if (item.name == "ProcVisoEspacial")
+            {
+                item.lvlSkill += 1;
+                item.currentExp = 0;
+                item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+            }
+        }
     }
 
     

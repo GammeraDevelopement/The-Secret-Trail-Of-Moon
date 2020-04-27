@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7535dbe4c7224bf45b5cc60c2d1ae615, type: 3}
-  m_Name: pepe
+  m_Name: NivelManager
   m_EditorClassIdentifier: 
+  levels: []
   levelJSONManager: {fileID: 0}
