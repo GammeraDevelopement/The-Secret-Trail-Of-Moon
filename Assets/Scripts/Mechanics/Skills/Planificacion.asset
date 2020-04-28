@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Planificacion
   m_EditorClassIdentifier: 
   name: Planificacion
-  lvlSkill: 0
+  lvlSkill: 1
   currentExp: 0
-  maxSkillExp: 0
+  maxSkillExp: 220
   skillText: 
   skillImage: {fileID: 0}

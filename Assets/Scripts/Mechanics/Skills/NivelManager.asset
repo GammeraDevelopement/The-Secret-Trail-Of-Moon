@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7535dbe4c7224bf45b5cc60c2d1ae615, type: 3}
   m_Name: NivelManager
   m_EditorClassIdentifier: 
-  levels: []
-  levelJSONManager: {fileID: 0}
+  levels:
+  - {fileID: 11400000, guid: b3f6468e254b40d469db696125672cbc, type: 2}
+  - {fileID: 11400000, guid: bc40da549cebeb741847826527b4539f, type: 2}
+  - {fileID: 11400000, guid: 8a01f44b0dd719443a2d702e13751008, type: 2}
+  - {fileID: 11400000, guid: 4373bce0104f44b42b81a007631e400b, type: 2}
+  - {fileID: 11400000, guid: b5af6b5b9f27f314095e8c21c55d9c2f, type: 2}

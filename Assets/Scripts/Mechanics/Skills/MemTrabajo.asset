@@ -15,6 +15,6 @@ MonoBehaviour:
   name: MemTrabajo
   lvlSkill: 1
   currentExp: 0
-  maxSkillExp: 0
+  maxSkillExp: 220
   skillText: 
-  skillImage: {fileID: 21300000, guid: 07ed686f539c2134aa883c2c580edeb6, type: 3}
+  skillImage: {fileID: 0}

@@ -9,12 +9,14 @@ public class LevelManager : ScriptableObject
 
     public List<Level> levels;
     private LevelJSONManager levelJSONManager;
-
-    public void addExp(string name, int mechanicLevel)
+    
+    public void AddExp(string name, int mechanicLevel)
     {
+        Debug.Log("Entro enaddExp de " + mechanicLevel);
         switch (name)
         {
             case "Smasher":
+                Debug.Log("He entrado en case " + name);
                 foreach (Level item in levels)
                 {
                     if (item.name == "AtencionSostenida")
@@ -86,6 +88,7 @@ public class LevelManager : ScriptableObject
 
 
     }
+
     public Level getSkill(string nombre) {
 
         foreach (Level item in levels)

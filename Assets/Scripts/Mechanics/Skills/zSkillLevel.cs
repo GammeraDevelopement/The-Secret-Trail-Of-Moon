@@ -30,11 +30,11 @@ public class zSkillLevel : MonoBehaviour
 
     public float receivedExp = 1.0f;
 
-    public Button butCsat; 
+    public Button butSmasher; 
     public Button butEnigma;
-    public Button butCubos;
+    public Button butKuburi;
     public Button butTekaTeki;
-    public Button butGoNoGo;
+    public Button butKitsune;
 
     private LevelJSONManager levelJSONManager;
 
@@ -67,7 +67,7 @@ public class zSkillLevel : MonoBehaviour
         imagenMemTrabajo.fillAmount = calculate(levelManager.getSkill("MemTrabajo").currentExp, levelManager.getSkill("MemTrabajo").maxSkillExp);
         textMemTrabajo.text = levelManager.getSkill("MemTrabajo").lvlSkill + "";
 
-        imagenPlanificacion.fillAmount = calculate(levelManager.getSkill("planificacion").currentExp, levelManager.getSkill("Planificacion").maxSkillExp);
+        imagenPlanificacion.fillAmount = calculate(levelManager.getSkill("Planificacion").currentExp, levelManager.getSkill("Planificacion").maxSkillExp);
         textPlanificacion.text = levelManager.getSkill("Planificacion").lvlSkill + "";
 
         imagenControlInhibitorio.fillAmount = calculate(levelManager.getSkill("ControlInhibitorio").currentExp, levelManager.getSkill("ControlInhibitorio").maxSkillExp);
@@ -78,14 +78,14 @@ public class zSkillLevel : MonoBehaviour
 
         imagenProcVisoEspacial.fillAmount = calculate(levelManager.getSkill("ProcVisoEspacial").currentExp, levelManager.getSkill("ProcVisoEspacial").maxSkillExp);
         textProcVisoEspacial.text = levelManager.getSkill("ProcVisoEspacial").lvlSkill + "";
-
+        
         //Condicion para subir de nivel
         if (levelManager.getSkill("MemTrabajo").currentExp >= levelManager.getSkill("MemTrabajo").maxSkillExp)
         {
             lvlUpMemTrabajo();
         }
 
-        if (levelManager.getSkill("planificacion").currentExp >= levelManager.getSkill("Planificacion").maxSkillExp)
+        if (levelManager.getSkill("Planificacion").currentExp >= levelManager.getSkill("Planificacion").maxSkillExp)
         {
             lvlUpPlanificacion();
         }
@@ -110,37 +110,32 @@ public class zSkillLevel : MonoBehaviour
     {
         return expAct / expMax;
     }
-    /*
-    public void addExpCSAT()
+    
+    public void addExpSmasher(int nivel)
     {
-        expAtencionSostenida += levelJSONManager.getExperienciaCSAT(1) * 0.8f;
-        expControlInhibitorio += levelJSONManager.getExperienciaCSAT(1) * 0.2f;
+        levelManager.AddExp("Smasher", nivel);
     }
 
-    public void addExpEnigma()
+    public void addExpEnigma(int nivel)
     {
-        expMemTrabajo += levelJSONManager.getExperienciaEnigma(1) * 0.8f;
-        expPlanificacion += levelJSONManager.getExperienciaEnigma(1) * 0.2f;
+        levelManager.AddExp("Enigma", nivel);
     }
 
-    public void addExpCubos()
+    public void addExpKuburi(int nivel)
     {
-        expProcVisoEspacial += levelJSONManager.getExperienciaCubos(1) * 0.8f;
-        expAtencionSostenida += levelJSONManager.getExperienciaCubos(1) * 0.2f;
+        levelManager.AddExp("Kuburi", nivel);
     }
 
-    public void addExpTekaTeki(int level)
+    public void addExpTekaTeki(int nivel)
     {
-        expPlanificacion += levelJSONManager.getExperienciaTekaTeki(level) * 0.9f;
-        expControlInhibitorio += levelJSONManager.getExperienciaTekaTeki(level) * 0.1f;
+        levelManager.AddExp("TekaTeki", nivel);
     }
 
-    public void addExpGoNoGo()
+    public void addExpKitsune(int nivel)
     {
-        expAtencionSostenida += levelJSONManager.getExperienciaGoNoGo(1) * 0.2f;
-        expControlInhibitorio += levelJSONManager.getExperienciaGoNoGo(1) * 0.8f;
+        levelManager.AddExp("Kitsune", nivel);
     }
-    */
+    
     public void lvlUpMemTrabajo()
     {
        /* lvlMemTrabajo += 1;

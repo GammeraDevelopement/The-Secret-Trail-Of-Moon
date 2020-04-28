@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Completar lvl 1 Cubos
+  m_Text: Completar lvl Kuburi
 --- !u!222 &189709588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Completar lvl 1 Kitsune
+  m_Text: Completar lvl Kitsune
 --- !u!222 &203143118
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Completar lvl 1 Sokoban
+  m_Text: Completar lvl TekaTeki
 --- !u!222 &413607590
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Completar lvl 1 CSAT
+  m_Text: Completar lvl Smasher
 --- !u!222 &851527586
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1358,13 +1358,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1681474215}
         m_MethodName: addExpEnigma
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Enigma
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1312755368
@@ -1486,14 +1486,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1681474215}
-        m_MethodName: addExpGoNoGo
-        m_Mode: 1
+        m_MethodName: addExpKitsune
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Kitsune
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1334843680
@@ -1600,7 +1600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Completar lvl 1 Enigma
+  m_Text: Completar lvl Enigma
 --- !u!222 &1353991386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1730,7 +1730,7 @@ GameObject:
   - component: {fileID: 1545362274}
   - component: {fileID: 1545362273}
   m_Layer: 5
-  m_Name: ButCSAT
+  m_Name: ButSmasher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1800,14 +1800,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1681474215}
-        m_MethodName: addExpCSAT
-        m_Mode: 1
+        m_MethodName: addExpSmasher
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Smasher
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1545362274
@@ -2308,11 +2308,11 @@ MonoBehaviour:
   textProcVisoEspacial: {fileID: 1546989322}
   imagenProcVisoEspacial: {fileID: 1039578698}
   receivedExp: 1
-  butCsat: {fileID: 1545362273}
+  butSmasher: {fileID: 1545362273}
   butEnigma: {fileID: 1312755367}
-  butCubos: {fileID: 1798017317}
+  butKuburi: {fileID: 1798017317}
   butTekaTeki: {fileID: 1789474704}
-  butGoNoGo: {fileID: 1334843679}
+  butKitsune: {fileID: 1334843679}
 --- !u!1 &1766761397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2400,7 @@ GameObject:
   - component: {fileID: 1789474705}
   - component: {fileID: 1789474704}
   m_Layer: 5
-  m_Name: ButSokoban
+  m_Name: ButTekaTeki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2471,13 +2471,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1681474215}
         m_MethodName: addExpTekaTeki
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: TekaTeki
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1789474705
@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 1798017318}
   - component: {fileID: 1798017317}
   m_Layer: 5
-  m_Name: ButCuburi
+  m_Name: ButKuburi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2599,14 +2599,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1681474215}
-        m_MethodName: addExpCubos
-        m_Mode: 1
+        m_MethodName: addExpKuburi
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Kuburi
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1798017318
