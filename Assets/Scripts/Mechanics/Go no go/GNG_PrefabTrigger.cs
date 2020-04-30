@@ -23,7 +23,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private const string ANIM_STUMP = "Saltar";
 
     public enum InputGNG {
-        WEB, ROCK, TREE, BUSH, STUMP
+        WEB, ROCK, TREE, BUSH, STUMP, NO_INPUT
     }
 
     [HorizontalLine(color: EColor.Blue)]
@@ -57,7 +57,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
             }
             switch (tipoInput) {
                 case InputGNG.WEB:
-                    if (Input.GetButton(CROSS)) {
+                    if (Input.GetButton(CROSS) || Input.GetKey(KeyCode.A)) {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
@@ -66,7 +66,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                     }
                     break;
                 case InputGNG.ROCK:
-                    if (Input.GetButton(SQUARE)) {
+                    if (Input.GetButton(SQUARE) || Input.GetKey(KeyCode.S)) {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(CROSS) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
@@ -75,28 +75,37 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                     }
                     break;
                 case InputGNG.TREE:
-                    if (Input.GetButton(CIRCLE)) {
+                    if (Input.GetButton(CIRCLE) || Input.GetKey(KeyCode.D)) {
                         Debug.Log("Botón Correcto");
                         Acierto();
-                    } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
+                    } else if (Input.GetButton(CROSS)  || Input.GetButton(SQUARE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
                         Debug.Log("Botón Incorrecto");
                         Error(false);
                     }
                     break;
                 case InputGNG.BUSH:
-                    if (Input.GetButton(TRIANGLE)) {
+                    if (Input.GetButton(TRIANGLE) || Input.GetKey(KeyCode.F)) {
                         Debug.Log("Botón Correcto");
                         Acierto();
-                    } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(R1)) {
+                    } else if (Input.GetButton(CROSS)  || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(R1)) {
                         Debug.Log("Botón Incorrecto");
                         Error(false);
                     }
                     break;
                 case InputGNG.STUMP:
-                    if (Input.GetButton(R1)) {
+                    if (Input.GetButton(R1) || Input.GetKey(KeyCode.G)) {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE)) {
+                        Debug.Log("Botón Incorrecto");
+                        Error(false);
+                    }
+                    break;
+                case InputGNG.NO_INPUT:
+                    if (!Input.anyKey) {
+
+
+                    } else {
                         Debug.Log("Botón Incorrecto");
                         Error(false);
                     }

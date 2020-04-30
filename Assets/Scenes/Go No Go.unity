@@ -1621,6 +1621,7 @@ MonoBehaviour:
   acierto: {fileID: 8300000, guid: 35cd60edcefbaf54487e9e7ca9a8dccc, type: 3}
   error: {fileID: 8300000, guid: db23cac90e65c0a44930dc09aef0a78b, type: 3}
   nivelActual: 2
+  targetsPassed: 0
   sizeZ: 0
   movi: {fileID: 740874329}
   one: {fileID: 373250269}
@@ -3322,15 +3323,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetList:
   - {fileID: 5664428308374933209, guid: f94fb675d31ae31439493c17dcb7acec, type: 3}
-  - {fileID: 1471810927331515814, guid: 81965e8405facf3488f0818c5e64791f, type: 3}
-  - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
-  - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
-  - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
+  - {fileID: 3447524606659637284, guid: 7d6acb52af73b6f4895aae4bd5ff30c1, type: 3}
+  - {fileID: 5101996137147161924, guid: 37005b9de132a4743a96c1efa2d3e0b0, type: 3}
   - {fileID: 2292411991230754883, guid: f3f8bd44629c3cf4983bfa44702ee639, type: 3}
+  - {fileID: 4699018411585280994, guid: 730526c6f1a499b4299c3725129ae4b7, type: 3}
+  - {fileID: 7073997555123729654, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
+  - {fileID: 8586057225002194335, guid: dd1d86b145812a44d88f8203ce9643c8, type: 3}
   - {fileID: 1714791227879632083, guid: aa3465691033d274eb756505f5b57bfa, type: 3}
-  - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
-  - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
-  - {fileID: 2242380960285874455, guid: 71a722f9a77f6cb4bb6333f2350cc513, type: 3}
+  - {fileID: 1748898014904676871, guid: 6019332abb01d8f46a3ba61d57b90bbd, type: 3}
+  - {fileID: 4699018411585280994, guid: 730526c6f1a499b4299c3725129ae4b7, type: 3}
   positionSpawn: {fileID: 1527270333}
   gng: {fileID: 814784312}
   parent: {fileID: 1606491728}

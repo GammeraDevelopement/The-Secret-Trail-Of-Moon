@@ -39,10 +39,11 @@ public class GNG_GenerateTargets : MonoBehaviour {
                 Instantiate(targetPrefab, positionSpawn.position, targetPrefab.transform.rotation, positionSpawn.transform);
 
             } else {
-                numRandom = GetRandomValue(
+                numRandom = Random.Range(min, max);
+                /*numRandom = GetRandomValue(
                     new RandomSelection(min, max, lessProbabTarget),
                     new RandomSelection(elemRandomSecondRound, elemRandomSecondRound, moreProbabTarget)
-                     );
+                     );*/
 
                 print(numRandom);
                 GameObject targetPrefab = TargetList[numRandom + 5];
