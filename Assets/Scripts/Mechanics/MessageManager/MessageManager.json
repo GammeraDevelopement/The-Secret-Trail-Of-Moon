@@ -6,7 +6,7 @@
 				"id": 0,
 				"Mensajes": [{
 					"id": 0,
-					"Cadena":"¡Hola! ¿Te has caído y te has quedado atrapado aquí?",
+					"Cadena":"\u00A1Hola! \u00BFTe has ca\u00EDdo y te has quedado atrapado aqu\u00ED?",
 					
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip1",
 					"x": 2.5,
@@ -16,7 +16,7 @@
 				 },
 				 {
 					"id":1,
-					"Cadena": "Pues ya somos dos. Cuando entré aquí una piedra me bloqueó el camino.",
+					"Cadena": "Pues ya somos dos. Cuando entr\u00E9 aqu\u00ED una piedra me bloque\u00F3 el camino.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -25,7 +25,7 @@
 				},
 				{
 					"id":2,
-					"Cadena": "Veo que eres un animal con manos como MOVI, ¿me ayudas a romperla?",
+					"Cadena": "Veo que eres un animal con manos como MOVI, \u00BFme ayudas a romperla?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -34,11 +34,20 @@
 				},
 				{
 					"id": 3,
-					"Cadena": "¡Muy bien! Un problema menos. Ahora queda salir de la zona prohibida. Ven, te presentaré a MOVI, si es capaz de quedarse quieta cinco segundos.",
+					"Cadena": "\u00A1Muy bien! Un problema menos. Ahora queda salir de la zona prohibida.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 9,
+					"Duracion": 4.5,
+					"Silencio": 0.1
+				},
+				{
+					"id": 4,
+					"Cadena": "Ven, te presentar\u00E9 a MOVI, si es capaz de quedarse quieta cinco segundos.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"x": 2.5,
+					"y": 30.5,
+					"Duracion": 4.5,
 					"Silencio": 1
 				}]
 			},
@@ -46,7 +55,7 @@
 				"id": 1,
 				"Mensajes": [{
 					"id": 0,
-					"Cadena": "¡Movi, por fin te encuentro!",
+					"Cadena": "\u00A1Movi, por fin te encuentro!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip1",
 					"x": 9,
 					"y": 30.5,
@@ -55,7 +64,7 @@
 				},
 				{
 					"id":1,
-					"Cadena": "¡ONE!¿Dónde te habías metido? Estaba hablando contigo.",
+					"Cadena": "\u00A1ONE!\u00BFD\u00F3nde te hab\u00EDas metido? Estaba hablando contigo.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -64,7 +73,7 @@
 				},
 				{
 					"id":2,
-					"Cadena": "Me había quedado encerrado... ¿Que estas haciendo?",
+					"Cadena": "Me hab\u00EDa quedado encerrado... \u00BFQu\u00E9 est\u00E1s haciendo?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -91,7 +100,7 @@
 				},
 				{
 					"id":5,
-					"Cadena": "Ayudémosle, si no, no nos va a hacer caso.",
+					"Cadena": "Ayud\u00E9mosle, si no, no nos va a hacer caso.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -100,7 +109,7 @@
 				},
 				{
 					"id":6,
-					"Cadena": "Sabía que había una llave oculta. ¡Oh, hola! Soy Movi.",
+					"Cadena": "Sab\u00EDa que hab\u00EDa una llave oculta. \u00A1Oh, hola! Soy Movi.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -109,7 +118,7 @@
 				},
 				{
 					"id":7,
-					"Cadena": "Ah, yo soy One, se me olvidó presentarme.",
+					"Cadena": "Ah, yo soy One, se me olvid\u00F3 presentarme.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -127,7 +136,7 @@
 				},
 				{
 					"id":9,
-					"Cadena": "Ahora tenemos una llave, ¡vamos a ver para qué sirve!",
+					"Cadena": "Ahora tenemos una llave, \u00A1vamos a ver para qu\u00E9 sirve!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -148,7 +157,7 @@
 				"id": 2,
 				"Mensajes": [{
 					"id":0,
-					"Cadena": "Aquí es, hemos llegado.",
+					"Cadena": "Aqu\u00ED es, hemos llegado.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -157,7 +166,7 @@
 				},
 				{
 					"id":1,
-					"Cadena": "Sí, de ahí arriba nos caímos y no hemos sabido volver a subir.",
+					"Cadena": "S\u00ED, de ah\u00ED arriba nos ca\u00EDmos y no hemos sabido volver a subir.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -175,7 +184,7 @@
 				},
 				{
 					"id":3,
-					"Cadena": "¡Já!¡Te dije que eso servía para algo! ¡Vamos, corred!",
+					"Cadena": "\u00A1Já!\u00A1Te dije que eso serv\u00EDa para algo! \u00A1Vamos, corred!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -184,7 +193,7 @@
 				},
 				{
 					"id":4,
-					"Cadena": "¿Qué ocurre, por qué tanta prisa?",
+					"Cadena": "\u00BFQu\u00E9 ocurre, por qu\u00E9 tanta prisa?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -205,7 +214,7 @@
 				"id": 3,
 				"Mensajes": [{
 					"id":0,
-					"Cadena": "Lo sabía, impostores.",
+					"Cadena": "Lo sab\u00EDa, impostores.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -214,7 +223,7 @@
 				},
 				{
 					"id":1,
-					"Cadena": "¿Ellos hacen la niebla?",
+					"Cadena": "\u00BFEllos hacen la niebla?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -223,7 +232,7 @@
 				},
 				{
 					"id":2,
-					"Cadena": "Segurísimo. Si están haciendo esto",
+					"Cadena": "Segur\u00EDsimo. Si est\u00E1n haciendo esto",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -232,7 +241,7 @@
 				},
 				{
 					"id":3,
-					"Cadena": "imagínate lo que están haciendo en el claro de los zorros.",
+					"Cadena": "imag\u00EDnate lo que est\u00E1n haciendo en el claro de los zorros.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -241,7 +250,7 @@
 				},
 				{
 					"id":4,
-					"Cadena": "¡Oh no, los zorros! Tenemos que ayudarlos.",
+					"Cadena": "\u00A1Oh no, los zorros! Tenemos que ayudarlos.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -250,7 +259,7 @@
 				},
 				{
 					"id":5,
-					"Cadena": "¡Corramos!",
+					"Cadena": "\u00A1Corramos!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -262,7 +271,7 @@
 				"id": 4,
 				"Mensajes": [{
 					"id":0,
-					"Cadena": "Nos lo están poniendo difícil. Esta piedra antes estaba abierta.",
+					"Cadena": "Nos lo est\u00E1n poniendo dif\u00EDcil. Esta piedra antes estaba abierta.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -280,7 +289,7 @@
 				},
 				{
 					"id":2,
-					"Cadena": "¿Por qué hacen esto los impostores?",
+					"Cadena": "\u00BFPor qu\u00E9 hacen esto los impostores?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -298,7 +307,7 @@
 				},
 				{
 					"id":4,
-					"Cadena": "Algunos dicen que son traviesos por naturaleza, pero esto se está pasando de la raya.",
+					"Cadena": "Algunos dicen que son traviesos por naturaleza, pero esto se est\u00E1 pasando de la raya.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -307,7 +316,7 @@
 				},
 				{
 					"id":5,
-					"Cadena": "¿Crees que tiene que ver con Cernunnos?",
+					"Cadena": "\u00BFCrees que tiene que ver con Cernunnos?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -325,7 +334,7 @@
 				},
 				{
 					"id":7,
-					"Cadena": "Vamos rápido. Déjame montar encima, iremos más rápido.",
+					"Cadena": "Vamos r\u00E1pido. D\u00E9jame montar encima, iremos m\u00E1s r\u00E1pido.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -356,7 +365,7 @@
 				},
 				{
 					"id":1,
-					"Cadena": "¡Aaaah! ¿Qué está pasando?",
+					"Cadena": "\u00A1Aaaah! \u00BFQu\u00E9 est\u00E1 pasando?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -365,7 +374,7 @@
 				},
 				{
 					"id":2,
-					"Cadena": "¿Estáis todos bien?",
+					"Cadena": "\u00BFEst\u00E1is todos bien?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -374,7 +383,7 @@
 				},
 				{
 					"id":3,
-					"Cadena": "Sí, sí. Ha sido a una trampa. Esto va más allá de travesuras.",
+					"Cadena": "S\u00ED, s\u00ED. Ha sido a una trampa. Esto va m\u00E1s all\u00E1 de travesuras.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -404,7 +413,7 @@
 				"id": 6,
 				"Mensajes": [{
 					"id":0,
-					"Cadena": "Algo raro está pasando.",
+					"Cadena": "Algo raro est\u00E1 pasando.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -413,7 +422,7 @@
 				},
 				{
 					"id":1,
-					"Cadena": "Creo que ya hemos visto pruebas suficientes de que hay impostores por aquí.",
+					"Cadena": "Creo que ya hemos visto pruebas suficientes de que hay impostores por aqu\u00ED.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -431,7 +440,7 @@
 				},
 				{
 					"id":3,
-					"Cadena": "Échanos una mano, por favor.",
+					"Cadena": "\u00E9chanos una mano, por favor.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -440,7 +449,7 @@
 				},
 				{
 					"id":4,
-					"Cadena": "¡Zuni! ¿Te encuentras bien?",
+					"Cadena": "\u00A1Zuni! \u00BFTe encuentras bien?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -449,7 +458,7 @@
 				},
 				{
 					"id":5,
-					"Cadena": "Ahora sí, Movi. Menos mal que estabais aquí.",
+					"Cadena": "Ahora s\u00ED, Movi. Menos mal que estabais aqu\u00ED.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -458,7 +467,7 @@
 				},
 				{
 					"id":6,
-					"Cadena": "Ya sabéis, equipo Moon al rescate.",
+					"Cadena": "Ya sab\u00E9is, equipo Moon al rescate.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -467,7 +476,7 @@
 				},
 				{
 					"id":7,
-					"Cadena": "Y menos mal, cuando nos enteramos de que había un impostor",
+					"Cadena": "Y menos mal, cuando nos enteramos de que hab\u00EDa un impostor",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -485,7 +494,7 @@
 				},
 				{
 					"id":9,
-					"Cadena": "Pero el zorro alque mandamos nunca regresó.",
+					"Cadena": "Pero el zorro alque mandamos nunca regres\u00F3.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -494,7 +503,7 @@
 				},
 				{
 					"id":10,
-					"Cadena": "Vale, creo que esto es más grande de lo que pensábamos.",
+					"Cadena": "Vale, creo que esto es m\u00E1s grande de lo que pens\u00E1bamos.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -503,7 +512,7 @@
 				},
 				{
 					"id":11,
-					"Cadena": "A lo mejor deberíamos ir al río a ver que pasa con Birna, el rey.",
+					"Cadena": "A lo mejor deber\u00EDamos ir al r\u00EDo a ver que pasa con Birna, el rey.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -521,16 +530,7 @@
 				},
 				{
 					"id":13,
-					"Cadena": "No se si es buena idea One, ya sabes que nos odian bastante.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
-					"x": 2.5,
-					"y": 30.5,
-					"Duracion": 3,
-					"Silencio":1
-				},
-				{
-					"id":14,
-					"Cadena": "¿Y qué podemos hacer si no?",
+					"Cadena": "\u00BFY qu\u00E9 podemos hacer si no?",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -538,7 +538,7 @@
 					"Silencio":1
 				},
 				{
-					"id":15,
+					"id":14,
 					"Cadena": "De todas maneras ahora tenemos un miembro extra en el equipo.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
@@ -547,8 +547,8 @@
 					"Silencio":1
 				},
 				{
-					"id":16,
-					"Cadena": "Seguro que nos irá bien",
+					"id":15,
+					"Cadena": "Seguro que nos ir\u00E1 bien",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
@@ -556,8 +556,8 @@
 					"Silencio":1
 				},
 				{
-					"id":17,
-					"Cadena": "Decidido entonces, vamos al río Lethe, hogar de los osos.",
+					"id":16,
+					"Cadena": "Decidido entonces, vamos al r\u00EDo Lethe, hogar de los osos.",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
 					"x": 2.5,
 					"y": 30.5,
