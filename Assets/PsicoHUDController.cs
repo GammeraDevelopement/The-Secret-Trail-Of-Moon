@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PsicoHUDController : MonoBehaviour
 {
-    public GameObject[] scenePrefabs;
 
     public List<GameObject> scenePool;
+
+    public Transform content;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scenePool = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,10 @@ public class PsicoHUDController : MonoBehaviour
     }
 
     public void AddToScenePool(GameObject mechanic) {
-        scenePool.Add(mechanic);
+        
+       GameObject clone = Instantiate(mechanic, content);
+        scenePool.Add(clone);
     }
+
+    
 }

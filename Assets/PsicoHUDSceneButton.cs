@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PsicoHUDSceneButton : MonoBehaviour
 {
@@ -18,8 +19,14 @@ public class PsicoHUDSceneButton : MonoBehaviour
 
     public void DeleteSceneOnClick() {
         PsicoHUDController psico = GameObject.FindGameObjectWithTag("GameController").GetComponent<PsicoHUDController>();
+        
         psico.scenePool.Remove(gameObject);
 
-        //borrar del componente
+        GameObject.Find("Dropdown").GetComponent<Dropdown>().Select();
+
+        Destroy(gameObject);
+        
+
+
     }
 }
