@@ -39,6 +39,9 @@ ModelImporter:
     100062: Fox_ Tail3
     100064: Fox_ Tail4
     100066: root
+    100068: Fox_ L Toe0
+    100070: Fox_ R Toe0
+    100072: Fox_ Tail5
     400000: //RootNode
     400002: Fox_
     400004: Fox_ Head
@@ -73,6 +76,9 @@ ModelImporter:
     400062: Fox_ Tail3
     400064: Fox_ Tail4
     400066: root
+    400068: Fox_ L Toe0
+    400070: Fox_ R Toe0
+    400072: Fox_ Tail5
     7400000: JumpBite_RM
     9500000: //RootNode
   materials:
