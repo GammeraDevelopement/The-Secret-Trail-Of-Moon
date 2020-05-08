@@ -451,8 +451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 239}
+  m_SizeDelta: {x: 0, y: 208}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &64012833
 MonoBehaviour:
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 428164187}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 52
+  m_MaxValue: 46
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
@@ -3900,6 +3900,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenePool: []
   content: {fileID: 881486972}
+  slider:
+  - {fileID: 1624259615}
+  - {fileID: 244923516}
+  - {fileID: 1500225371}
+  - {fileID: 1571173396}
+  - {fileID: 727589858}
+  dropdown: {fileID: 1027720041}
 --- !u!4 &588026867
 Transform:
   m_ObjectHideFlags: 0
@@ -4608,7 +4615,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 561281722}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 52
+  m_MaxValue: 50
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
@@ -6460,7 +6467,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1087119089}
-    characterCount: 2
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -8224,7 +8231,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 202816430}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 52
+  m_MaxValue: 31
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
@@ -8603,7 +8610,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 676455003}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 52
+  m_MaxValue: 25
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
@@ -8997,7 +9004,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1522190822}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 52
+  m_MaxValue: 53
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
@@ -11564,7 +11571,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1646128613}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.00000008313151
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
