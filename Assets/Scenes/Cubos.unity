@@ -28583,6 +28583,20 @@ MonoBehaviour:
   temporizador: {fileID: 1036532972}
   doyouwantcode: 0
   code: 
+--- !u!114 &1497561483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497561481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001dabd8da3e1c14987ac589822f26e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 0
+  loadingText: {fileID: 0}
 --- !u!4 &1497561484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 622cddf5f62a3ca4fa338e992818b1f0,

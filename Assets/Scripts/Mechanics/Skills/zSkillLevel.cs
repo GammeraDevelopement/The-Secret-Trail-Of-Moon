@@ -36,7 +36,20 @@ public class zSkillLevel : MonoBehaviour
     public Button butTekaTeki;
     public Button butKitsune;
 
+    public Image black;
+
     private LevelJSONManager levelJSONManager;
+
+    public void setMemTrabajoLevel(int level) { PlayerPrefs.SetInt("levelMemTrabajo", level); }
+    public void setMemTrabajoExp(float exp) { PlayerPrefs.SetFloat("expMemTrabajo", exp); }
+    public void setPlanificacionLevel(int level) { PlayerPrefs.SetInt("level`Planificacion", level); }
+    public void setPlanificacionExp(float exp) { PlayerPrefs.SetFloat("expPlanificacion", exp); }
+    public void setControlInhibitorioLevel(int level) { PlayerPrefs.SetInt("levelControlInhibitorio", level); }
+    public void setControlInhibitorioExp(float exp) { PlayerPrefs.SetFloat("expControlInhibitorio", exp); }
+    public void setAtencionSostenidaLevel(int level) { PlayerPrefs.SetInt("levelAtencionSostenida", level); }
+    public void setAtencionSostenidaExp(float exp) { PlayerPrefs.SetFloat("expAtencionSostenida", exp); }
+    public void setProcVisoEspacialLevel(int level) { PlayerPrefs.SetInt("levelProcVisoEspacial", level); }
+    public void setProcVisoEspacialExp(float exp) { PlayerPrefs.SetFloat("expProcVisoEspacial", exp); }
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +71,8 @@ public class zSkillLevel : MonoBehaviour
         {
             item.maxSkillExp = levelJSONManager.getExperienciaMax(1);
         }
+
+        StartCoroutine(waiting());
     }
 
     // Update is called once per frame
@@ -148,6 +163,8 @@ public class zSkillLevel : MonoBehaviour
                 item.lvlSkill += 1;
                 item.currentExp = 0;
                 item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+                setMemTrabajoExp(0);
+                setMemTrabajoLevel(item.lvlSkill);
             }
         }
     }
@@ -161,6 +178,8 @@ public class zSkillLevel : MonoBehaviour
                 item.lvlSkill += 1;
                 item.currentExp = 0;
                 item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+                setPlanificacionExp(0);
+                setPlanificacionLevel(item.lvlSkill);
             }
         }
     }
@@ -174,6 +193,8 @@ public class zSkillLevel : MonoBehaviour
                 item.lvlSkill += 1;
                 item.currentExp = 0;
                 item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+                setControlInhibitorioExp(0);
+                setControlInhibitorioLevel(item.lvlSkill);
             }
         }
     }
@@ -187,6 +208,8 @@ public class zSkillLevel : MonoBehaviour
                 item.lvlSkill += 1;
                 item.currentExp = 0;
                 item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+                setControlInhibitorioExp(0);
+                setControlInhibitorioLevel(item.lvlSkill);
             }
         }
     }
@@ -200,9 +223,26 @@ public class zSkillLevel : MonoBehaviour
                 item.lvlSkill += 1;
                 item.currentExp = 0;
                 item.maxSkillExp = levelJSONManager.getExperienciaMax(item.lvlSkill);
+                setProcVisoEspacialExp(0);
+                setProcVisoEspacialLevel(item.lvlSkill);
             }
         }
     }
 
-    
+    private IEnumerator waiting() {
+
+        yield return new WaitForSeconds(5);
+        int gamemode = PlayerPrefs.GetInt("Gamemode");
+        switch (gamemode){
+            case 1:
+                    black.CrossFadeAlpha(1, 0.5F, true);
+                    gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+    }
 }

@@ -3,12 +3,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class InstructionScreen : MonoBehaviour {
+public class InstructionScreen : MonoBehaviour
+{
 
     private const string CONFIRM_BUTTON = "Square";
     private const string ALTERNATE_CONFIRM_BUTTON = "h";
 
-    public enum InstructionFSM {
+    public enum InstructionFSM
+    {
         WAITING,
         TUTORIAL,
         NOTUTORIAL,
@@ -25,40 +27,65 @@ public class InstructionScreen : MonoBehaviour {
     private int introCount = 0;
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
-        switch (state) {
+        switch (state)
+        {
             case InstructionFSM.WAITING:
                 break;
             case InstructionFSM.TUTORIAL:
                 instruction.gameObject.SetActive(true);
 
                 //Se activa el video
-                if ((Input.GetButtonDown(CONFIRM_BUTTON) || Input.GetKey(ALTERNATE_CONFIRM_BUTTON)) && introCount == 0) {
+                if ((Input.GetButtonDown(CONFIRM_BUTTON) || Input.GetKey(ALTERNATE_CONFIRM_BUTTON)) && introCount == 0)
+                {
                     squareButton.SetActive(false);
                     videoPlayer.SetActive(true);
                     videoPlayer.transform.GetChild(0).gameObject.SetActive(false);
                     videoPlayer.GetComponent<VideoPlayer>().Play();
                     videoPlayer.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
-                } else if (introCount == 1) {
+                }
+                else if (introCount == 1)
+                {
                     videoPlayer.transform.GetChild(0).gameObject.SetActive(true);
                     introCount++;
                     videoPlayer.GetComponent<VideoPlayer>().loopPointReached -= CheckOver;
 
-                } else if (Input.GetButtonDown("Cross") && introCount >= 2) {
+                }
+                else if (Input.GetButtonDown("Cross") && introCount >= 2)
+                {
                     videoPlayer.SetActive(false);
                     instruction.gameObject.SetActive(false);
                     player.enabled = true;
-                    if (!tutoOnly) {
+                    if (!tutoOnly)
+                    {
                         GameObject.FindGameObjectWithTag("GameController").SendMessage("StartPlaying");
-                    } else {
+                    }
+                    else
+                    {
                         SceneManager.LoadScene("Intro");
+                        int gamemode = PlayerPrefs.GetInt("Gamemode");
+                        switch (gamemode)
+                        {
+                            case 0:
+                                SceneManager.LoadSceneAsync("Intro");
+                                break;
+                            case 1:
+                                gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                                break;
+                            case 2:
+                                break;
+                            default:
+                                break;
+                        }
                     }
                     state = InstructionFSM.FINISHED;
                 }
                 break;
             case InstructionFSM.NOTUTORIAL:
-                if ((Input.GetButtonDown(CONFIRM_BUTTON) || Input.GetKey(ALTERNATE_CONFIRM_BUTTON)) && introCount == 0) {
+                if ((Input.GetButtonDown(CONFIRM_BUTTON) || Input.GetKey(ALTERNATE_CONFIRM_BUTTON)) && introCount == 0)
+                {
                     squareButton.SetActive(false);
                     player.enabled = true;
                     GameObject.FindGameObjectWithTag("GameController").SendMessage("StartPlaying");
@@ -66,7 +93,7 @@ public class InstructionScreen : MonoBehaviour {
                 }
                 break;
             case InstructionFSM.FINISHED:
-                
+
 
                 break;
             default:
@@ -75,21 +102,25 @@ public class InstructionScreen : MonoBehaviour {
 
     }
 
-    public void startInstruction() {
+    public void startInstruction()
+    {
         introCount = 0;
         squareButton.SetActive(true);
         state = InstructionFSM.TUTORIAL;
     }
 
-    public void setInstructionVideo(VideoClip clip) {
+    public void setInstructionVideo(VideoClip clip)
+    {
         videoPlayer.GetComponent<VideoPlayer>().clip = clip;
     }
 
-    public void startNoTutorial() {
+    public void startNoTutorial()
+    {
         state = InstructionFSM.NOTUTORIAL;
     }
 
-    void CheckOver(VideoPlayer vp) {
+    void CheckOver(VideoPlayer vp)
+    {
         introCount++;
     }
 }

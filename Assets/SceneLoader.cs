@@ -46,6 +46,9 @@ public class SceneLoader : MonoBehaviour {
         string[] escena = currentScene[0].Split(':');
 
         switch (escena[0]) {
+            case "XpScene":
+                scene = 20;
+                break;
             case "smasher":
                 scene = 1;
                 setCSATLevel(int.Parse(escena[1]));
@@ -112,7 +115,7 @@ public class SceneLoader : MonoBehaviour {
                 break;
         }
 
-        Debug.Log("Loading Scene number:" + scene + " with level number:" + escena[1]);
+        //Debug.Log("Loading Scene number:" + scene + " with level number:" + escena[1]);
         StartCoroutine(LoadNewScene());
 
         sceneString = "";

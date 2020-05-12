@@ -74,4 +74,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ChessGame/cgGenerator.unity
     guid: 51b9706d7a521f147bd3a91bde428968
+  - enabled: 1
+    path: Assets/Scenes/PsicoHudScene.unity
+    guid: a53274bc6729c3340ae56ca09f15ff2f
+  - enabled: 1
+    path: Assets/Scenes/SkillLevel.unity
+    guid: 2bff254e102c7a64cbbedc91e102937b
   m_configObjects: {}
