@@ -158,6 +158,18 @@ public class Kuburi_GameController : MonoBehaviour
                 Debug.Log("Tiempo :" + temporizador.GetMilliseconds() + " Seconds:"+temporizador.GetSeconds());
                 winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = temporizador.GetMinutes() + temporizador.GetSeconds() + "";
                 temporizador.stopTimer();
+                int gamemode = PlayerPrefs.GetInt("Gamemode");
+                switch (gamemode)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
+                }
                 if (Input.GetButtonDown("Square") && !loadingScene) {
                     black.CrossFadeAlpha(1, 0.5F, true);
                     loadingScene = true;

@@ -117,7 +117,7 @@ public class SceneLoader : MonoBehaviour {
 
         sceneString = "";
         for (int i = 0; i < currentScene.Length; i++) {
-            if (i > 1) {
+            if (i > 0) {
                 sceneString += currentScene[i] + ";" ;
             }
         }
