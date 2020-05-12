@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PsicoHUDSceneButton : MonoBehaviour
 {
     public string name;
+    public string level;
 
     // Start is called before the first frame update
     void Start()

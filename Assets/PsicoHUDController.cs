@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PsicoHUDController : MonoBehaviour
 {
@@ -28,37 +29,51 @@ public class PsicoHUDController : MonoBehaviour
         
     }
 
+    public void LoadScenes() {
+        string sceneString = "";
+        foreach (GameObject item in scenePool) {
+            PsicoHUDSceneButton phsb = item.GetComponent<PsicoHUDSceneButton>();
+            sceneString += phsb.name + ":" + phsb.level + ";XpScene;";
+        }
+        Debug.Log(sceneString);
+        PlayerPrefs.SetString("SceneString", sceneString);
+        gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+    }
+
     public void AddToScenePool(GameObject mechanic) {
 
         string name = mechanic.GetComponent<PsicoHUDSceneButton>().name;
 
        GameObject clone = Instantiate(mechanic, content);
-
+        string value = "";
         switch (name)
         {
             case "smasher":
-                clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = slider[0].value +"";
+                value = slider[0].value + "";
                 break;
             case "tekateki":
-                clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = slider[1].value + "";
+                value = slider[1].value + "";
                 break;
             case "kuburi":
-                clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = slider[2].value + "";
+                value = slider[2].value + "";
                 break;
             case "enigma":
-                clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = slider[3].value + "";
+                value = slider[3].value + "";
                 break;
             case "kitsune":
-                clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = slider[4].value + "";
+                value = slider[4].value + "";
                 break;
             case "chess":
-                clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = dropdown.captionText.text + "";
+                value = dropdown.captionText.text + "";
                 break;
             default:
                 break;
         }
 
-        
+        //Se ha sacado el valor del componente al exterior para poder dar valor al atributo level de cada prefab
+        clone.transform.GetChild(clone.transform.childCount - 1).GetComponent<TMP_Text>().text = value;
+        clone.GetComponent<PsicoHUDSceneButton>().level = value;
+
         scenePool.Add(clone);
     }
 }
