@@ -73,11 +73,11 @@ public class LevelManager : ScriptableObject
                 {
                     if (item.name == "AtencionSostenida")
                     {
-                        item.currentExp += levelJSONManager.getExperienciaGoNoGo(mechanicLevel) * 0.8f;
+                        item.currentExp += levelJSONManager.getExperienciaGoNoGo(mechanicLevel) * 0.2f;
                     }
                     if (item.name == "ControlInhibitorio")
                     {
-                        item.currentExp += levelJSONManager.getExperienciaGoNoGo(mechanicLevel) * 0.2f;
+                        item.currentExp += levelJSONManager.getExperienciaGoNoGo(mechanicLevel) * 0.8f;
                     }
                 }
                 break;

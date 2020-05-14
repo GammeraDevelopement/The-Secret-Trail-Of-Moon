@@ -80,6 +80,7 @@ public class zSkillLevel : MonoBehaviour
     {
         //Relleno de la exp de la skill y mostrar numero del nivel
         imagenMemTrabajo.fillAmount = calculate(levelManager.getSkill("MemTrabajo").currentExp, levelManager.getSkill("MemTrabajo").maxSkillExp);
+        //imagenMemTrabajo.fillAmount = (Map(levelManager.getSkill("MemTrabajo").currentExp, 0, levelManager.getSkill("MemTrabajo").maxSkillExp, 0, 1));
         textMemTrabajo.text = levelManager.getSkill("MemTrabajo").lvlSkill + "";
 
         imagenPlanificacion.fillAmount = calculate(levelManager.getSkill("Planificacion").currentExp, levelManager.getSkill("Planificacion").maxSkillExp);
@@ -120,6 +121,11 @@ public class zSkillLevel : MonoBehaviour
             lvlUpProcVisoEspacial();
         }
     }
+
+    /*private float Map(float value, float inMin, float inMax, float outMin, float outMax) {
+
+        return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+    }*/
 
     public float calculate(float expAct, float expMax)
     {
@@ -227,6 +233,17 @@ public class zSkillLevel : MonoBehaviour
                 setProcVisoEspacialLevel(item.lvlSkill);
             }
         }
+    }
+
+    public void resetSkills() {
+
+        setMemTrabajoLevel(1);
+        setPlanificacionLevel(1);
+        setControlInhibitorioLevel(1);
+        setProcVisoEspacialLevel(1);
+        setAtencionSostenidaLevel(1);
+        setAtencionSostenidaExp(0);
+       
     }
 
     private IEnumerator waiting() {
