@@ -30,10 +30,6 @@ public class GNG_GameController : MonoBehaviour {
     public int aciertosParaComodin;
     public int targetsPassed = 0;
 
-
-    /*public delegate void ControllerDelegate();
-    ControllerDelegate CDelegate;*/
-
     public GNG_GenerateTargets geC;
 
     private bool corrutinaActive = false;
@@ -118,8 +114,9 @@ public class GNG_GameController : MonoBehaviour {
         textState.gameObject.SetActive(true);
         textState.CrossFadeAlpha(0, 2.5F, true);
 
-        StartCoroutine(geC.GenerateRound());
+        
         estado = GonogoFSM.FIRSTROUND;
+        StartCoroutine(geC.GenerateRound());
         initialPopup.SetActive(true);
     }
 
@@ -191,10 +188,7 @@ public class GNG_GameController : MonoBehaviour {
         if (aciertoCount >= data.getDificultad(nivelActual).NAciertosSeguidosComodin && comodines != data.getDificultad(nivelActual).NComodines) {
             comodines++;
             aciertoCount -= 3;
-        }/*
-        if (CDelegate != null && (Input.GetAxis("RightStickY") >= 1 && Input.GetAxis("LeftStickY_Test") >= 1)) {//Mientras está jugando, se estará comprobando todo el rato si se está golpeando.
-            CDelegate();
-        }   //Aquí estamos llamando al delegado para saber si estamos dentro del rango del Trigger del FPS*/
+        }
 
     }
 
