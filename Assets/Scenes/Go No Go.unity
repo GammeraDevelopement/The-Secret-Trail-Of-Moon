@@ -1607,7 +1607,13 @@ MonoBehaviour:
   - {fileID: 1824519495}
   deathPlace: {fileID: 307855804}
   birthPlace: {fileID: 670244919}
+  nivelActual: 2
   nMaxElemRonda: 10
+  nElementos: 2
+  erroresMaxRonda: 10
+  comodinesRonda: 0
+  aciertosParaComodin: 0
+  targetsPassed: 0
   geC: {fileID: 1527270334}
   data: {fileID: 814784314}
   dataSave: {fileID: 0}
@@ -1620,8 +1626,6 @@ MonoBehaviour:
   audioSource: {fileID: 8638862891125763155}
   acierto: {fileID: 8300000, guid: 35cd60edcefbaf54487e9e7ca9a8dccc, type: 3}
   error: {fileID: 8300000, guid: db23cac90e65c0a44930dc09aef0a78b, type: 3}
-  nivelActual: 2
-  targetsPassed: 0
   sizeZ: 0
   movi: {fileID: 740874329}
   one: {fileID: 373250269}
@@ -3287,7 +3291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1527270333}
   - component: {fileID: 1527270334}
-  - component: {fileID: 1527270335}
   m_Layer: 0
   m_Name: TargetGenerator
   m_TagString: Untagged
@@ -3335,20 +3338,6 @@ MonoBehaviour:
   positionSpawn: {fileID: 1527270333}
   gng: {fileID: 814784312}
   parent: {fileID: 1606491728}
---- !u!114 &1527270335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527270332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5cdff31811019548a3f92500f30f63d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objPrefab: {fileID: 0}
-  poolSize: 0
 --- !u!1 &1549503433
 GameObject:
   m_ObjectHideFlags: 0
