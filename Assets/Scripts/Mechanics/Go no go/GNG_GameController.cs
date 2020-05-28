@@ -22,10 +22,17 @@ public class GNG_GameController : MonoBehaviour {
     public Transform birthPlace;
 
     [Header("Variables del psicólogo")]
+    public int nivelActual = 1;
     public int nMaxElemRonda = 20;
+    public int nElementos = 2;
+    public int erroresMaxRonda = 10;
+    public int comodinesRonda;
+    public int aciertosParaComodin;
+    public int targetsPassed = 0;
 
-    public delegate void ControllerDelegate();
-    ControllerDelegate CDelegate;
+
+    /*public delegate void ControllerDelegate();
+    ControllerDelegate CDelegate;*/
 
     public GNG_GenerateTargets geC;
 
@@ -48,10 +55,7 @@ public class GNG_GameController : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip acierto;
     public AudioClip error;
-    public int nivelActual = 1;
-
-    private byte elemMaxSpawn;
-    public int targetsPassed = 0;
+    
     private int errorCount { get; set; }
     private int errorOmisionCount { get; set; }
     private int aciertoCount { get; set; }
@@ -82,26 +86,29 @@ public class GNG_GameController : MonoBehaviour {
     #endregion progressBar
 
     void Start() {
-        timeReaction = data.getDificultad(nivelActual).TiempoReaccionMax / 1000;
-        sizeZ = speed * timeReaction;
+        /*timeReaction = data.getDificultad(nivelActual).TiempoReaccionMax / 1000;
+        sizeZ = speed * timeReaction;*/
 
-        elemMaxSpawn = (byte)(data.getDificultad(nivelActual).NElementos);
+        //Inicialización de elementos mediante JSON
+        nElementos = data.getDificultad(nivelActual).NElementos;
+        nMaxElemRonda = data.getDificultad(nivelActual).NElemXRonda;
+        erroresMaxRonda = data.getDificultad(nivelActual).NErroresMaxXRonda;
+        comodinesRonda = data.getDificultad(nivelActual).NComodines;
+        aciertosParaComodin = data.getDificultad(nivelActual).NAciertosSeguidosComodin;
+
 
         distanceBar = bar.sizeDelta.x;
-
-
         barStartPosition = (-distanceBar / 2);
         barStartPositionFox = barStartPosition + (distanceBar / data.getDificultad(nivelActual).NErroresMaxXRonda);
 
         distanceToRun = distanceBar / data.getDificultad(nivelActual).NElemTotal;
         distanceToRunFox = (distanceBar + barStartPositionFox / 2) / data.getDificultad(nivelActual).NElemTotal;
 
-        /*print(barStartPosition);
-        print(barStartPositionFox);*/
-
         movi.localPosition = new Vector3(barStartPosition, movi.localPosition.y, movi.localPosition.z);
         //Fox position is the beggining of the bar + max errors
         one.localPosition = new Vector3(barStartPositionFox, one.localPosition.y, one.localPosition.z);
+
+
         estado = GonogoFSM.LOADING;
     }
 
@@ -111,10 +118,8 @@ public class GNG_GameController : MonoBehaviour {
         textState.gameObject.SetActive(true);
         textState.CrossFadeAlpha(0, 2.5F, true);
 
-        //TODO: Animación de texto que aparece aquí y se va ocultando.
-
+        StartCoroutine(geC.GenerateRound());
         estado = GonogoFSM.FIRSTROUND;
-        StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));
         initialPopup.SetActive(true);
     }
 
@@ -135,6 +140,7 @@ public class GNG_GameController : MonoBehaviour {
                 Terrenos(); //Movimiento del terreno
 
                 if (targetsPassed == nMaxElemRonda) {
+                    StopCoroutine(geC.GenerateRound());
                     elemCounter = 0;
                     errorCount = 0; //Se cuentan por ronda. 
                     elemRun = 0;
@@ -147,14 +153,14 @@ public class GNG_GameController : MonoBehaviour {
                     //TODO: Animación de texto que aparece aquí y se va ocultando.
 
                     estado = GonogoFSM.SECONDROUND;
-                    StartCoroutine(geC.GenerateFirstRound(0, elemMaxSpawn));
+                    StartCoroutine(geC.GenerateRound());
 
                 }
                 break;
             case GonogoFSM.SECONDROUND:
                 Terrenos();
 
-                if (elemRun == nMaxElemRonda) {
+                if (targetsPassed == nMaxElemRonda) {
                     textState.text = "¡HAS GANADO!";
                     textState.gameObject.SetActive(true);
 
@@ -185,10 +191,10 @@ public class GNG_GameController : MonoBehaviour {
         if (aciertoCount >= data.getDificultad(nivelActual).NAciertosSeguidosComodin && comodines != data.getDificultad(nivelActual).NComodines) {
             comodines++;
             aciertoCount -= 3;
-        }
+        }/*
         if (CDelegate != null && (Input.GetAxis("RightStickY") >= 1 && Input.GetAxis("LeftStickY_Test") >= 1)) {//Mientras está jugando, se estará comprobando todo el rato si se está golpeando.
             CDelegate();
-        }   //Aquí estamos llamando al delegado para saber si estamos dentro del rango del Trigger del FPS
+        }   //Aquí estamos llamando al delegado para saber si estamos dentro del rango del Trigger del FPS*/
 
     }
 
@@ -204,18 +210,18 @@ public class GNG_GameController : MonoBehaviour {
         #endregion Terrenos
     }
 
-    void movementAnimalsUI(Transform animal, float _distanceToRun) {
+    public void movementAnimalsUI(Transform animal, float _distanceToRun) {
         animal.localPosition += new Vector3(_distanceToRun, 0, 0);
     }
 
 
-
+    /*
     public void SuscribeDelegate(ControllerDelegate function) {
         CDelegate += function;
     }
     public void DeSuscribeDelegate(ControllerDelegate function) {
         CDelegate -= function;
-    }
+    }*/
 
     #region Getters
     public bool get_introduction() {
@@ -225,13 +231,11 @@ public class GNG_GameController : MonoBehaviour {
         return estado == GonogoFSM.LOADING;
     }
     public bool get_stateFirstRound() {
-        if (elemCounter == nMaxElemRonda) return false;
-
+        if (estado!=GonogoFSM.FIRSTROUND) return false;
         else return estado == GonogoFSM.FIRSTROUND;
     }
     public bool get_stateSecondRound() {
-        if (elemCounter == data.getDificultad(nivelActual).NElemXRonda) return false;
-
+        if (estado != GonogoFSM.SECONDROUND) return false;
         else return estado == GonogoFSM.SECONDROUND;
     }
     #endregion Getters

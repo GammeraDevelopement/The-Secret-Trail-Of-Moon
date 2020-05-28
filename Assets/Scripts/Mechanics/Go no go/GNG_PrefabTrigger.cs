@@ -61,7 +61,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
-                        Debug.Log("Botón Incorrecto");
+                        Debug.Log("Botón Incorrecto, es Cruz/A");
                         Error(false);
                     }
                     break;
@@ -70,7 +70,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(CROSS) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
-                        Debug.Log("Botón Incorrecto");
+                        Debug.Log("Botón Incorrecto, es Cuadrado/S");
                         Error(false);
                     }
                     break;
@@ -79,7 +79,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(CROSS)  || Input.GetButton(SQUARE) || Input.GetButton(TRIANGLE) || Input.GetButton(R1)) {
-                        Debug.Log("Botón Incorrecto");
+                        Debug.Log("Botón Incorrecto,es Círculo/D");
                         Error(false);
                     }
                     break;
@@ -88,7 +88,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(CROSS)  || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(R1)) {
-                        Debug.Log("Botón Incorrecto");
+                        Debug.Log("Botón Incorrecto, es Triángulo/F");
                         Error(false);
                     }
                     break;
@@ -97,7 +97,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                         Debug.Log("Botón Correcto");
                         Acierto();
                     } else if (Input.GetButton(CROSS) || Input.GetButton(SQUARE) || Input.GetButton(CIRCLE) || Input.GetButton(TRIANGLE)) {
-                        Debug.Log("Botón Incorrecto");
+                        Debug.Log("Botón Incorrecto, es R1/G");
                         Error(false);
                     }
                     break;

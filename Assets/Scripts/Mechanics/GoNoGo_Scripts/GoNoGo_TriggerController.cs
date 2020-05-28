@@ -60,7 +60,7 @@ public class GoNoGo_TriggerController : MonoBehaviour
         skipTime = 1;
         
         //Suscribimos la función al delegado
-        gng.SuscribeDelegate(CheckControls);
+        /*gng.SuscribeDelegate(CheckControls);*/
 
 
     }
