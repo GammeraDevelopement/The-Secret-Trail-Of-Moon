@@ -36,19 +36,6 @@ public class MessageManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        
-
-        if (!wait) {
-            StartCoroutine(waiting(messageJSONManager.GetMensajes(capitulo, escena, id).Duracion * velocidad, 
-                messageJSONManager.GetMensajes(capitulo, escena, id).Silencio * velocidad));
-            wait = true;
-        }
-
-    }
     
     private IEnumerator waiting(float duracion, float silencio) {
         clip = Resources.Load(messageJSONManager.GetMensajes(capitulo, escena, id).Audio) as AudioClip;
@@ -67,5 +54,10 @@ public class MessageManager : MonoBehaviour
             wait = true;
         }
             yield return null;
+    }
+
+    public void message() {
+        StartCoroutine(waiting(messageJSONManager.GetMensajes(capitulo, escena, id).Duracion * velocidad,
+                messageJSONManager.GetMensajes(capitulo, escena, id).Silencio * velocidad));
     }
 }
