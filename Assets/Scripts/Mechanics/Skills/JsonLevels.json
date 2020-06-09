@@ -1,0 +1,685 @@
+{
+	"ExpMax": [{
+			"Experiencia": 220
+		},
+		{
+			"Experiencia": 545
+		},
+		{
+			"Experiencia": 985
+		},
+		{
+			"Experiencia": 1575
+		},
+		{
+			"Experiencia": 2355
+		},
+		{
+			"Experiencia": 3350
+		},
+		{
+			"Experiencia": 4575
+		},
+		{
+			"Experiencia": 6030
+		},
+		{
+			"Experiencia": 7660
+		},
+		{
+			"Experiencia": 9400
+		},
+		{
+			"Experiencia": 11120
+		},
+		{
+			"Experiencia": 12750
+		},
+		{
+			"Experiencia": 14200
+		},
+		{
+			"Experiencia": 15430
+		},
+		{
+			"Experiencia": 16425
+		},
+		{
+			"Experiencia": 17200
+		},
+		{
+			"Experiencia": 17795
+		},
+		{
+			"Experiencia": 18235
+		},
+		{
+			"Experiencia": 18560
+		},
+		{
+			"Experiencia": 18800
+		}
+	],
+
+	"ExpCSAT": [{
+			"Experiencia": 173	
+		},
+		{
+			"Experiencia": 205
+		},
+		{
+			"Experiencia": 242
+		},
+		{
+			"Experiencia": 286
+		},
+		{
+			"Experiencia": 337
+		},
+		{
+			"Experiencia": 397
+		},
+		{
+			"Experiencia": 466
+		},
+		{
+			"Experiencia": 545
+		},
+		{
+			"Experiencia": 636
+		},
+		{
+			"Experiencia": 740
+		},
+		{
+			"Experiencia": 857
+		},
+		{
+			"Experiencia": 989
+		},
+		{
+			"Experiencia": 1135
+		},
+		{
+			"Experiencia": 1296
+		},
+		{
+			"Experiencia": 1471
+		},
+		{
+			"Experiencia": 1659
+		},
+		{
+			"Experiencia": 1858
+		},
+		{
+			"Experiencia": 2066
+		},
+		{
+			"Experiencia": 2281
+		},
+		{
+			"Experiencia": 2500
+		},
+		{
+			"Experiencia": 2718
+		},
+		{
+			"Experiencia": 2933
+		},
+		{
+			"Experiencia": 3141
+		},
+		{
+			"Experiencia": 3340
+		},
+		{
+			"Experiencia": 3528
+		},
+		{
+			"Experiencia": 3703
+		},
+		{
+			"Experiencia": 3864
+		},
+		{
+			"Experiencia": 4010
+		},
+		{
+			"Experiencia": 4142
+		},
+		{
+			"Experiencia": 4259
+		},
+		{
+			"Experiencia": 4363
+		},
+		{
+			"Experiencia": 4454
+		},
+		{
+			"Experiencia": 4533
+		},
+		{
+			"Experiencia": 4602
+		},
+		{
+			"Experiencia": 4662
+		},
+		{
+			"Experiencia": 4713
+		},
+		{
+			"Experiencia": 4757
+		},
+		{
+			"Experiencia": 4794
+		},
+		{
+			"Experiencia": 4826
+		},
+		{
+			"Experiencia": 4853
+		},
+		{
+			"Experiencia": 4876
+		},
+		{
+			"Experiencia": 4895
+		},
+		{
+			"Experiencia": 4912
+		},
+		{
+			"Experiencia": 4926
+		},
+		{
+			"Experiencia": 4937
+		},
+		{
+			"Experiencia": 4947
+		},
+		{
+			"Experiencia": 4956
+		},
+		{
+			"Experiencia": 4963
+		},
+		{
+			"Experiencia": 4968
+		},
+		{
+			"Experiencia": 4973
+		},
+		{
+			"Experiencia": 4978
+		},
+		{
+			"Experiencia": 4981
+		},
+		{
+			"Experiencia": 4984
+		}
+	],
+
+	"ExpEnigma": [{
+		"Experiencia": 410
+		},
+		{
+			"Experiencia": 573
+		},
+		{
+			"Experiencia": 794
+		},
+		{
+			"Experiencia": 1090
+		},
+		{
+			"Experiencia": 1480
+		},
+		{
+			"Experiencia": 1978
+		},
+		{
+			"Experiencia": 2592
+		},
+		{
+			"Experiencia": 3318
+		},
+		{
+			"Experiencia": 4133
+		},
+		{
+			"Experiencia": 5000
+		},
+		{
+			"Experiencia": 5866
+		},
+		{
+			"Experiencia": 6681
+		},
+		{
+			"Experiencia": 7407
+		},
+		{
+			"Experiencia": 8021
+		},
+		{
+			"Experiencia": 8519
+		},
+		{
+			"Experiencia": 8909
+		},
+		{
+			"Experiencia": 9205
+		},
+		{
+			"Experiencia": 9426
+		},
+		{
+			"Experiencia": 9589
+		},
+		{
+			"Experiencia": 9706
+		},
+		{
+			"Experiencia": 9852
+		},
+		{
+			"Experiencia": 9895
+		},
+		{
+			"Experiencia": 9926
+		},
+		{
+			"Experiencia": 9947
+		}
+	],
+
+	"ExpCubos": [{
+		"Experiencia": 308
+		},
+		{
+			"Experiencia": 429
+		},
+		{
+			"Experiencia": 595
+		},
+		{
+			"Experiencia": 818
+		},
+		{
+			"Experiencia": 1110
+		},
+		{
+			"Experiencia": 1483
+		},
+		{
+			"Experiencia": 1944
+		},
+		{
+			"Experiencia": 2488
+		},
+		{
+			"Experiencia": 3100
+		},
+		{
+			"Experiencia": 3750
+		},
+		{
+			"Experiencia": 4399
+		},
+		{
+			"Experiencia": 5011
+		},
+		{
+			"Experiencia": 5555
+		},
+		{
+			"Experiencia": 6016
+		},
+		{
+			"Experiencia": 6389
+		},
+		{
+			"Experiencia": 6681
+		},
+		{
+			"Experiencia": 6904
+		},
+		{
+			"Experiencia": 7070
+		},
+		{
+			"Experiencia": 7191
+		},
+		{
+			"Experiencia": 7280
+		},
+		{
+			"Experiencia": 7343
+		},
+		{
+			"Experiencia": 7389
+		},
+		{
+			"Experiencia": 7421
+		},
+		{
+			"Experiencia": 7444
+		},
+		{
+			"Experiencia": 7460
+		},
+		{
+			"Experiencia": 7472
+		},
+		{
+			"Experiencia": 7480
+		},
+		{
+			"Experiencia": 7486
+		},
+		{
+			"Experiencia": 7490
+		},
+		{
+			"Experiencia": 7493
+		},
+		{
+			"Experiencia": 7495
+		}
+	],
+
+	"ExpTekaTeki": [{
+		"Experiencia": 208
+		},
+		{
+			"Experiencia": 246
+		},
+		{
+			"Experiencia": 291
+		},
+		{
+			"Experiencia": 343
+		},
+		{
+			"Experiencia": 405
+		},
+		{
+			"Experiencia": 476
+		},
+		{
+			"Experiencia": 559
+		},
+		{
+			"Experiencia": 654
+		},
+		{
+			"Experiencia": 763
+		},
+		{
+			"Experiencia": 888
+		},
+		{
+			"Experiencia": 1029
+		},
+		{
+			"Experiencia": 1186
+		},
+		{
+			"Experiencia": 1362
+		},
+		{
+			"Experiencia": 1555
+		},
+		{
+			"Experiencia": 1765
+		},
+		{
+			"Experiencia": 1990
+		},
+		{
+			"Experiencia": 2230
+		},
+		{
+			"Experiencia": 2480
+		},
+		{
+			"Experiencia": 2738
+		},
+		{
+			"Experiencia": 3000
+		},
+		{
+			"Experiencia": 3261
+		},
+		{
+			"Experiencia": 3519
+		},
+		{
+			"Experiencia": 3769
+		},
+		{
+			"Experiencia": 4009
+		},
+		{
+			"Experiencia": 4234
+		},
+		{
+			"Experiencia": 4444
+		},
+		{
+			"Experiencia": 4637
+		},
+		{
+			"Experiencia": 4813
+		},
+		{
+			"Experiencia": 4970
+		},
+		{
+			"Experiencia": 5111
+		},
+		{
+			"Experiencia": 5236
+		},
+		{
+			"Experiencia": 5345
+		},
+		{
+			"Experiencia": 5440
+		},
+		{
+			"Experiencia": 5523
+		},
+		{
+			"Experiencia": 5594
+		},
+		{
+			"Experiencia": 5656
+		},
+		{
+			"Experiencia": 5708
+		},
+		{
+			"Experiencia": 5753
+		},
+		{
+			"Experiencia": 5791
+		},
+		{
+			"Experiencia": 5824
+		},
+		{
+			"Experiencia": 5851
+		},
+		{
+			"Experiencia": 5874
+		},
+		{
+			"Experiencia": 5894
+		},
+		{
+			"Experiencia": 5911
+		},
+		{
+			"Experiencia": 5925
+		},
+		{
+			"Experiencia": 5937
+		}
+	],
+
+	"ExpGoNoGo": [{
+		"Experiencia": 190
+		},
+		{
+			"Experiencia": 226
+		},
+		{
+			"Experiencia": 267
+		},
+		{
+			"Experiencia": 315
+		},
+		{
+			"Experiencia": 371
+		},
+		{
+			"Experiencia": 436
+		},
+		{
+			"Experiencia": 512
+		},
+		{
+			"Experiencia": 600
+		},
+		{
+			"Experiencia": 700
+		},
+		{
+			"Experiencia": 814
+		},
+		{
+			"Experiencia": 943
+		},
+		{
+			"Experiencia": 1087
+		},
+		{
+			"Experiencia": 1248
+		},
+		{
+			"Experiencia": 1425
+		},
+		{
+			"Experiencia": 1618
+		},
+		{
+			"Experiencia": 1824
+		},
+		{
+			"Experiencia": 2044
+		},
+		{
+			"Experiencia": 2273
+		},
+		{
+			"Experiencia": 2509
+		},
+		{
+			"Experiencia": 2750
+		},
+		{
+			"Experiencia": 2990
+		},
+		{
+			"Experiencia": 3226
+		},
+		{
+			"Experiencia": 3455
+		},
+		{
+			"Experiencia": 3675
+		},
+		{
+			"Experiencia": 3881
+		},
+		{
+			"Experiencia": 4074
+		},
+		{
+			"Experiencia": 4251
+		},
+		{
+			"Experiencia": 4412
+		},
+		{
+			"Experiencia": 4556
+		},
+		{
+			"Experiencia": 4685
+		},
+		{
+			"Experiencia": 4799
+		},
+		{
+			"Experiencia": 4899
+		},
+		{
+			"Experiencia": 4987
+		},
+		{
+			"Experiencia": 5063
+		},
+		{
+			"Experiencia": 5128
+		},
+		{
+			"Experiencia": 5184
+		},
+		{
+			"Experiencia": 5232
+		},
+		{
+			"Experiencia": 5273
+		},
+		{
+			"Experiencia": 5309
+		},
+		{
+			"Experiencia": 5338
+		},
+		{
+			"Experiencia": 5364
+		},
+		{
+			"Experiencia": 5385
+		},
+		{
+			"Experiencia": 5403
+		},
+		{
+			"Experiencia": 5418
+		},
+		{
+			"Experiencia": 5431
+		},
+		{
+			"Experiencia": 5442
+		},
+		{
+			"Experiencia": 5451
+		},
+		{
+			"Experiencia": 5459
+		},
+		{
+			"Experiencia": 5465
+		},
+		{
+			"Experiencia": 5471
+		}
+	]
+}

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: cd536858e900a2e46bcbd905a326fab5
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -110,15 +110,18 @@ ModelImporter:
     second: root
   - first:
       1: 100070
-    second: SK_Boar_LOD0
+    second: SK_Boar
   - first:
       1: 100072
-    second: SK_Boar_LOD1
+    second: SK_Boar_LOD0
   - first:
       1: 100074
-    second: SK_Boar_LOD2
+    second: SK_Boar_LOD1
   - first:
       1: 100076
+    second: SK_Boar_LOD2
+  - first:
+      1: 100078
     second: SK_Boar_LOD3
   - first:
       4: 400000
@@ -227,27 +230,33 @@ ModelImporter:
     second: root
   - first:
       4: 400070
-    second: SK_Boar_LOD0
+    second: SK_Boar
   - first:
       4: 400072
-    second: SK_Boar_LOD1
+    second: SK_Boar_LOD0
   - first:
       4: 400074
-    second: SK_Boar_LOD2
+    second: SK_Boar_LOD1
   - first:
       4: 400076
+    second: SK_Boar_LOD2
+  - first:
+      4: 400078
     second: SK_Boar_LOD3
   - first:
       43: 4300000
-    second: SK_Boar_LOD0
+    second: SK_Boar
   - first:
       43: 4300002
-    second: SK_Boar_LOD1
+    second: SK_Boar_LOD0
   - first:
       43: 4300004
-    second: SK_Boar_LOD2
+    second: SK_Boar_LOD1
   - first:
       43: 4300006
+    second: SK_Boar_LOD2
+  - first:
+      43: 4300008
     second: SK_Boar_LOD3
   - first:
       74: 7400000
@@ -257,15 +266,18 @@ ModelImporter:
     second: //RootNode
   - first:
       137: 13700000
-    second: SK_Boar_LOD0
+    second: SK_Boar
   - first:
       137: 13700002
-    second: SK_Boar_LOD1
+    second: SK_Boar_LOD0
   - first:
       137: 13700004
-    second: SK_Boar_LOD2
+    second: SK_Boar_LOD1
   - first:
       137: 13700006
+    second: SK_Boar_LOD2
+  - first:
+      137: 13700008
     second: SK_Boar_LOD3
   - first:
       205: 20500000
@@ -282,7 +294,7 @@ ModelImporter:
       name: M_BoarFur
     second: {fileID: 2100000, guid: efbf8251943a68545963200d8edc7e93, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -307,36 +319,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      internalID: 7400000
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages:
@@ -348,6 +331,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -373,7 +357,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
@@ -382,16 +366,26 @@ ModelImporter:
   - 2e6ff96c4a3ebd54f94ebe3e50e4beaf
   - 9ecfe39303b3d5944afc44f7f184595b
   - 60d1ea28f3f346d4dbc5ac9a5a2d9e85
+  - fecfbbf2fd78b5046af3a460829f277f
   - 3c819b6925985414faf086bd977fc50d
   - c64ad2d124e99c143b2adab01d7904ba
   - 2c1d1a849ec20464082197178df9bc60
   - 0321e929a6c8877438e02c1f4994795d
+  - 9d736e90a338c5d4c9c885048070466d
+  - 82dd10aa4c1c7704f80f3a5b1d766428
   - 546f482ffaeee3145a8adb0fe266b9b9
   - a2cb66a333d1b134ca16f9667ab35d79
+  - a0ece9691f6b5154999b9b4e3a429188
+  - 5b23aa67e42890042bd29a4dc3d6fcfd
+  - b0d57dd224a24a743866eb743feedf11
+  - 3f6b39995854443419e62f2c893b8244
   - 1a8483e13a2c70e449741a5c73d9be88
   - 043e8ba2dd1ee6f47a77a7cb4e2f1316
+  - 1d75bf1e3e1b02446b70572447e86e7b
+  - 95b2db89943ca084bb7fb88c818634ec
+  - 5f6d8bb86c222004eb4705cd8c27d3f6
+  - 0734a408145a3794394dcc8fc786de7a
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -409,8 +403,10 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+[RequireComponent(typeof(MessageJSONManager))]
 public class MessageManager : MonoBehaviour
 {
     public int capitulo;
@@ -36,18 +36,6 @@ public class MessageManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        
-
-        if (!wait) {
-            StartCoroutine(waiting(messageJSONManager.GetMensajes(0, 0, id).Duracion * velocidad, messageJSONManager.GetMensajes(0, 0, id).Silencio * velocidad));
-            wait = true;
-        }
-
-    }
     
     private IEnumerator waiting(float duracion, float silencio) {
         clip = Resources.Load(messageJSONManager.GetMensajes(capitulo, escena, id).Audio) as AudioClip;
@@ -66,5 +54,10 @@ public class MessageManager : MonoBehaviour
             wait = true;
         }
             yield return null;
+    }
+
+    public void message() {
+        StartCoroutine(waiting(messageJSONManager.GetMensajes(capitulo, escena, id).Duracion * velocidad,
+                messageJSONManager.GetMensajes(capitulo, escena, id).Silencio * velocidad));
     }
 }

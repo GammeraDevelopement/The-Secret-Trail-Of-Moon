@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 42ee9c8df16c70346899ee06feb1c41b
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -101,15 +101,18 @@ ModelImporter:
     second: root
   - first:
       1: 100064
-    second: SK_DeerDoe_LOD0
+    second: SK_DeerDoe
   - first:
       1: 100066
-    second: SK_DeerDoe_LOD1
+    second: SK_DeerDoe_LOD0
   - first:
       1: 100068
-    second: SK_DeerDoe_LOD2
+    second: SK_DeerDoe_LOD1
   - first:
       1: 100070
+    second: SK_DeerDoe_LOD2
+  - first:
+      1: 100072
     second: SK_DeerDoe_LOD3
   - first:
       4: 400000
@@ -209,27 +212,33 @@ ModelImporter:
     second: root
   - first:
       4: 400064
-    second: SK_DeerDoe_LOD0
+    second: SK_DeerDoe
   - first:
       4: 400066
-    second: SK_DeerDoe_LOD1
+    second: SK_DeerDoe_LOD0
   - first:
       4: 400068
-    second: SK_DeerDoe_LOD2
+    second: SK_DeerDoe_LOD1
   - first:
       4: 400070
+    second: SK_DeerDoe_LOD2
+  - first:
+      4: 400072
     second: SK_DeerDoe_LOD3
   - first:
       43: 4300000
-    second: SK_DeerDoe_LOD0
+    second: SK_DeerDoe
   - first:
       43: 4300002
-    second: SK_DeerDoe_LOD1
+    second: SK_DeerDoe_LOD0
   - first:
       43: 4300004
-    second: SK_DeerDoe_LOD2
+    second: SK_DeerDoe_LOD1
   - first:
       43: 4300006
+    second: SK_DeerDoe_LOD2
+  - first:
+      43: 4300008
     second: SK_DeerDoe_LOD3
   - first:
       74: 7400000
@@ -239,15 +248,18 @@ ModelImporter:
     second: //RootNode
   - first:
       137: 13700000
-    second: SK_DeerDoe_LOD0
+    second: SK_DeerDoe
   - first:
       137: 13700002
-    second: SK_DeerDoe_LOD1
+    second: SK_DeerDoe_LOD0
   - first:
       137: 13700004
-    second: SK_DeerDoe_LOD2
+    second: SK_DeerDoe_LOD1
   - first:
       137: 13700006
+    second: SK_DeerDoe_LOD2
+  - first:
+      137: 13700008
     second: SK_DeerDoe_LOD3
   - first:
       205: 20500000
@@ -257,14 +269,14 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_DeerDoe
-    second: {fileID: 2100000, guid: 9e0a2d04d054a454e9aef6dce87f67c1, type: 2}
+    second: {fileID: 2100000, guid: 1cb8a527abeb24c4da6d6f09eb243d37, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_DeerDoeFur
     second: {fileID: 2100000, guid: 534f1263f9444b44bbf8c0a6dc56ae53, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -289,36 +301,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      internalID: 7400000
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages:
@@ -330,6 +313,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -355,20 +339,33 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
   - 84e500e7bcf26ba4792001b5f6f4392f
   - 33ae9110a908dc0448e8c24807606e16
+  - c6f5b8eebb28ac542a86d66a72e4b00c
+  - 4f8091bb58ef3f84a8c22680644bd50b
   - ced1ee43ead8a274f9b9d89cd9aec02c
+  - 02990329eb9b79e43ad4c70680627e4a
+  - 826c868e602a9d145bf62aa5d1b54dd3
   - 2becd3218c3b8f64e91bc667c437103c
+  - 67ba73621491ef54a972d8cdb5f71a35
+  - 511c4c8de63fd044d817900ffed82cae
+  - e0e14ca095996ea42876f2f8cbfc334e
   - 7d1c7433546b73540849bbfc32477da5
   - 66c32c69b63cf8647830f8e2c332e9a6
+  - f447d3359b7cf2740a02fac86de892e5
   - d9077945e9632014c97b05175f0a2698
   - e51ab266dbfb4b344888614512af1540
+  - a1862f34a2f6b1a4487781292d1cd47c
+  - bb27c5c6296750f47861b3126e4e96fc
+  - 90c5ba0b1a530f14882996210167b478
+  - 4c24856408c87a04c90133d86159ce8e
+  - a206c093fd80ca64e8cf67c67d17601e
+  - 4eb99bd2da6b1f144b84f0d6b498e592
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -386,8 +383,10 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

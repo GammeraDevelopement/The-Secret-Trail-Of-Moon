@@ -7,48 +7,49 @@ public class GNG_GenerateTargets : MonoBehaviour {
 
     public List<GameObject> TargetList;           /// Todos los targets que deberán aparecer de manera aleatoria
     public Transform positionSpawn;               /// Posición en la que van a Spawnear
-    public GNG_GameController gng;                            /// Referencia del script GoNoGo
-    public Terrain parent;
+
+    [SerializeField]private GNG_GameController gng;                            /// Referencia del script GoNoGo
+    [SerializeField]private Terrain parent;
 
     private float timeSpawn;                      /// Tiempo en milisegundos entre cada aparición de elementos
     private int numRandom;                        /// Posición random en la lista
-    private float moreProbabTarget;
-    private float lessProbabTarget;
-    private int elemRandomSecondRound = 2;
+    private int firstTarget = 0;
+    private int secondTarget = 0;
 
     private GNG_DifficultyJSON data;         /// Referencia del script GoNoGo_SetData
 
 
     void Start() {
-        timeSpawn = 5;//data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000; //MAAAAAAAAAAAAAL
-        moreProbabTarget = 2;// data.getDificultad(gng.nivelActual).FrecuenciaAparRonda2;
-        lessProbabTarget = 1 - moreProbabTarget;
-        //elemRandomSecondRound = Random.Range(0, data.getDificultad(gng.nivelActual).NElementos);
+        data = gng.GetComponent<GNG_DifficultyJSON>();
+        timeSpawn = data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000;
+
+        firstTarget = 0;
+        secondTarget = 0;
+        do {
+            firstTarget = Random.Range(0, 5);
+            secondTarget = Random.Range(0, 5);
+        } while (firstTarget == secondTarget);
     }
 
-    public IEnumerator GenerateFirstRound(int min, int max) {
-        Debug.Log("generate coroutine");
-        while (gng.get_stateFirstRound() || gng.get_stateSecondRound()) {
+    public IEnumerator GenerateRound() {
+        
 
-            if (gng.get_stateFirstRound() == true) {
-                numRandom = Random.Range(min, max);
+        while (gng.estado == GNG_GameController.GonogoFSM.FIRSTROUND || gng.estado == GNG_GameController.GonogoFSM.SECONDROUND) {
 
-                GameObject targetPrefab = TargetList[numRandom];
-
-
-                Instantiate(targetPrefab, positionSpawn.position, targetPrefab.transform.rotation, positionSpawn.transform);
-
+            numRandom = Random.Range(0, 2);
+            Debug.Log(numRandom);
+            GameObject targetPrefab;
+            if (numRandom == 0) {
+                targetPrefab = TargetList[firstTarget];
             } else {
-                numRandom = GetRandomValue(
-                    new RandomSelection(min, max, lessProbabTarget),
-                    new RandomSelection(elemRandomSecondRound, elemRandomSecondRound, moreProbabTarget)
-                     );
-
-                print(numRandom);
-                GameObject targetPrefab = TargetList[numRandom + 5];
-
-                Instantiate(targetPrefab, positionSpawn.position, targetPrefab.transform.rotation, positionSpawn.transform);
+                if (gng.get_stateFirstRound() == true) {
+                    targetPrefab = TargetList[secondTarget];
+                } else {
+                    targetPrefab = TargetList[secondTarget+5];
+                }
             }
+
+            Instantiate(targetPrefab, positionSpawn.position, targetPrefab.transform.rotation, positionSpawn.transform);
 
             gng.set_plus_elemCounter();
 

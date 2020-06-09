@@ -5953,6 +5953,20 @@ MonoBehaviour:
   winSound: {fileID: 8300000, guid: 1d4039490c3b82e4680db13b68500f50, type: 3}
   black: {fileID: 1571686475}
   tutorial: 1
+--- !u!114 &575380900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575380896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001dabd8da3e1c14987ac589822f26e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 0
+  loadingText: {fileID: 0}
 --- !u!114 &575380905
 MonoBehaviour:
   m_ObjectHideFlags: 0

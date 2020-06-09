@@ -227,10 +227,29 @@ public class CSAT : MonoBehaviour {
                 break;
             case CSATFSM.FINISHED:
                 //Debug.Log("Finished");
-                if (Input.GetButtonDown("Square") && !loadingScene) {
-                    black.CrossFadeAlpha(1, 0.5F, true);
-                    loadingScene = true;
-                    AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                int gamemode = PlayerPrefs.GetInt("Gamemode");
+                switch (gamemode)
+                {
+                    case 0:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                        }
+                        break;
+                    case 1:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                        }
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
                 }
                 break;
             default:
