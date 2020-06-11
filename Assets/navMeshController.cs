@@ -3,49 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class navMeshController : MonoBehaviour
+public class NavMeshController : MonoBehaviour
 {
     public int posicion = 1;
+    public bool finish = false;
 
     public Transform destino;
-    //public Vector3 hola;
-    //public Transform destino;
+
+    private NavMeshAgent agente;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        agente = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       //Llamar a waitForSeconds
-        NavMeshAgent agente = GetComponent<NavMeshAgent>();
-
+        //Llamar a waitForSeconds
+        
+        //if activar true 
         Move(agente);
 
         if ((destino.position.x == agente.transform.position.x) && (destino.position.z == agente.transform.position.z))
         {
-            if (posicion <= 3)
+            if (GameObject.Find("Objetivo" + posicion)!=null)
             {
                 NuevaPosicion();
+                posicion++;
             }
-            else {
-
-                posicion = 1;
+            else
+            {
+                finish = true;
             }
         }
-        
+
     }
 
-    public void NuevaPosicion() {
-
+    public void NuevaPosicion()
+    {
         destino = GameObject.Find("Objetivo" + posicion).transform;
-        posicion ++;
     }
 
-    public void Move(NavMeshAgent agente) {
+    public void Move(NavMeshAgent agente)
+    {
         agente.destination = destino.transform.position;
+    }
+
+    public bool GetFinish() {
+
+            return finish;
     }
 }
