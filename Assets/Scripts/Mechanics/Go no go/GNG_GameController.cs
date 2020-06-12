@@ -85,6 +85,8 @@ public class GNG_GameController : MonoBehaviour {
         /*timeReaction = data.getDificultad(nivelActual).TiempoReaccionMax / 1000;
         sizeZ = speed * timeReaction;*/
 
+        nivelActual = PlayerPrefs.GetInt("nivelGonogo");
+
         //Inicialización de elementos mediante JSON
         nElementos = data.getDificultad(nivelActual).NElementos;
         nMaxElemRonda = data.getDificultad(nivelActual).NElemXRonda;

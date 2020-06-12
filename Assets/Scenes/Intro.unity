@@ -28493,9 +28493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Go No Go
-
-'
+  m_text: Kitsune
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d6c182148cf09974f880ceb7a6f2d3cc, type: 2}
   m_sharedMaterial: {fileID: -1103543183394147933, guid: d6c182148cf09974f880ceb7a6f2d3cc,
