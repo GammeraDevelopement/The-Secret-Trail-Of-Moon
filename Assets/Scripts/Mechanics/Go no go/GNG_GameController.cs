@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GNG_GameController : MonoBehaviour {
 
@@ -77,6 +78,7 @@ public class GNG_GameController : MonoBehaviour {
 
     [Header("Progress Bar")]
     public Transform movi; //raccon
+    public TMP_Text textoComodines;
     public Transform one; //fox
     public RectTransform bar;
     #endregion progressBar
@@ -106,6 +108,7 @@ public class GNG_GameController : MonoBehaviour {
         //Fox position is the beggining of the bar + max errors
         one.localPosition = new Vector3(barStartPositionFox, one.localPosition.y, one.localPosition.z);
 
+        comodines = comodinesRonda;
 
         estado = GonogoFSM.LOADING;
     }
@@ -139,10 +142,10 @@ public class GNG_GameController : MonoBehaviour {
                 Terrenos(); //Movimiento del terreno
 
                 if (targetsPassed == nMaxElemRonda) {
-                    StopCoroutine(geC.GenerateRound());
                     elemCounter = 0;
                     errorCount = 0; //Se cuentan por ronda. 
                     elemRun = 0;
+                    targetsPassed = 0;
                     
                     textState.text = "SEGUNDA RONDA";
                     textState.gameObject.SetActive(true);
@@ -182,6 +185,7 @@ public class GNG_GameController : MonoBehaviour {
 
         #endregion Estados
 
+        textoComodines.text = comodines.ToString();
         if (errorCount == data.getDificultad(nivelActual).NErroresMaxXRonda) {
             textState.text = "HAS PERDIDO";
             textState.gameObject.SetActive(true);
@@ -209,15 +213,6 @@ public class GNG_GameController : MonoBehaviour {
     public void movementAnimalsUI(Transform animal, float _distanceToRun) {
         animal.localPosition += new Vector3(_distanceToRun, 0, 0);
     }
-
-
-    /*
-    public void SuscribeDelegate(ControllerDelegate function) {
-        CDelegate += function;
-    }
-    public void DeSuscribeDelegate(ControllerDelegate function) {
-        CDelegate -= function;
-    }*/
 
     #region Getters
     public bool get_introduction() {
@@ -250,7 +245,7 @@ public class GNG_GameController : MonoBehaviour {
             comodines--;
             //Preguntar si quieren que se le cuente este error para los datos que ellas recogen.
             aciertoCount = 0;
-            movementAnimalsUI(movi, distanceToRun);
+
         } else {
             audioSource.clip = error;
             audioSource.Play();
@@ -259,6 +254,7 @@ public class GNG_GameController : MonoBehaviour {
             } else {
                 errorCount++;
             }
+            movementAnimalsUI(movi, distanceToRun);
             aciertoCount = 0;
         }
     }
@@ -269,7 +265,7 @@ public class GNG_GameController : MonoBehaviour {
         aciertoCount++;
         aciertoOutput++;
         movementAnimalsUI(one, distanceToRunFox);
-
+        movementAnimalsUI(movi, distanceToRun);
     }
     public void set_elemRunCount()  //Elements crossed
     {
