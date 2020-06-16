@@ -107,15 +107,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.4
+    agentRadius: 0.45
     agentHeight: 2
     agentSlope: 60
-    agentClimb: 0.58
+    agentClimb: 0.48
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.13333334
+    cellSize: 0.14999999
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -1105,7 +1105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oac: {fileID: 18280175}
   mm: {fileID: 388490738}
-  navMesh: {fileID: 0}
+  navMesh: {fileID: 3509033309602083988}
+  one: {fileID: 3509033309602083987}
 --- !u!1 &422989221
 GameObject:
   m_ObjectHideFlags: 0
@@ -27428,8 +27429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicion: 1
-  desactivar: 0
-  destino: {fileID: 762778930}
+  finish: 0
+  destino: {fileID: 81724534}
 --- !u!195 &3509033309602083989
 NavMeshAgent:
   m_ObjectHideFlags: 0
