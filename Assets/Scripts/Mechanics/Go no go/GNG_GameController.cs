@@ -146,7 +146,8 @@ public class GNG_GameController : MonoBehaviour {
                     errorCount = 0; //Se cuentan por ronda. 
                     elemRun = 0;
                     targetsPassed = 0;
-                    
+
+
                     textState.text = "SEGUNDA RONDA";
                     textState.gameObject.SetActive(true);
                     textState.CrossFadeAlpha(1, 0, true);

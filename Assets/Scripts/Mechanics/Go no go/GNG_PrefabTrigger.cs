@@ -51,10 +51,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
    
     private void OnTriggerStay(Collider other) {
         if (other.tag == "Player") {
-            if (!counted) {
-                gng.targetsPassed++;
-                counted = true;
-            }
+            
             switch (tipoInput) {
                 case InputGNG.WEB:
                     if (Input.GetButton(CROSS) || Input.GetKey(KeyCode.A)) {
@@ -121,12 +118,14 @@ public class GNG_PrefabTrigger : MonoBehaviour {
         gng.set_plus_aciertoCount();
         SpecificAnimation(tipoInput);
         gameObject.GetComponent<BoxCollider>().enabled = false;
+        gng.targetsPassed++;
         noInput = false;
     }
 
     private void Error(bool omision) {
         gng.set_plus_errorCount(omision);
         gameObject.GetComponent<BoxCollider>().enabled = false;
+        gng.targetsPassed++;
         noInput = false;
     }
 
@@ -159,6 +158,9 @@ public class GNG_PrefabTrigger : MonoBehaviour {
 
     private void OnTriggerExit(Collider other) {
         if(other.tag == "Player") {
+
+            
+
             if (!instruccionInversa) {
                 if (noInput) {
                     Debug.Log("Error de omisión");
