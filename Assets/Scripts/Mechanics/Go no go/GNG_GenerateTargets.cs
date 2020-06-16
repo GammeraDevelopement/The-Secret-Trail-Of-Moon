@@ -32,9 +32,9 @@ public class GNG_GenerateTargets : MonoBehaviour {
     }
 
     public IEnumerator GenerateRound() {
-        
 
-        while (gng.estado == GNG_GameController.GonogoFSM.FIRSTROUND || gng.estado == GNG_GameController.GonogoFSM.SECONDROUND) {
+        int count = 0;
+        while (count < gng.nMaxElemRonda) {
 
             numRandom = Random.Range(0, 2);
             Debug.Log(numRandom);
@@ -52,7 +52,7 @@ public class GNG_GenerateTargets : MonoBehaviour {
             Instantiate(targetPrefab, positionSpawn.position, targetPrefab.transform.rotation, positionSpawn.transform);
 
             gng.set_plus_elemCounter();
-
+            count++;
             yield return new WaitForSeconds(timeSpawn);
         }
     }

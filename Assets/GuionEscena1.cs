@@ -8,30 +8,34 @@ public class GuionEscena1 : MonoBehaviour
     public OneAnimationController oac;
     public MessageManager mm;
 
+    public NavMeshController navMesh;
+
     // Start is called before the first frame update
     void Start()
     {
 
+
         if (PlayerPrefs.GetInt("escena1") == 0)
         {
-            PlayerPrefs.SetInt("escena1", 1);
+            StartCoroutine(Guion());
+            
         }
         else {
-            PlayerPrefs.SetInt("escena1", 0);
+            StartCoroutine(Guion2());
         }
 
-        StartCoroutine(Guion());
+        
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(PlayerPrefs.GetInt("escena1") == 1)
         {
             StartCoroutine(Guion2());
             PlayerPrefs.SetInt("escena1", 0);
         }    
-    }
+    }*/
 
     IEnumerator Guion() {
         oac.Sleep();
@@ -42,10 +46,13 @@ public class GuionEscena1 : MonoBehaviour
         oac.Talk();  // Sentado
         yield return new WaitForSeconds(5);
         mm.message();
+        Debug.Log("0");
         yield return new WaitForSeconds(5);
         mm.message();
+        Debug.Log("1");
         yield return new WaitForSeconds(5);
         mm.message();
+        Debug.Log("2");
         yield return new WaitForSeconds(5);
         oac.NoTalk();  // Sentado
         PlayerPrefs.SetInt("escena1", 1);
@@ -58,11 +65,18 @@ public class GuionEscena1 : MonoBehaviour
         oac.Talk();
         yield return new WaitForSeconds(5);
         mm.message();
+        Debug.Log("3");
         yield return new WaitForSeconds(5);
         mm.message();
+        Debug.Log("4");
         yield return new WaitForSeconds(5);
         oac.NoTalk();
         yield return new WaitForSeconds(5);
+        while (!navMesh.GetFinish())
+        {
+            yield return null;
+        }
+        PlayerPrefs.SetInt("escena1", 0);
 
     }
 
