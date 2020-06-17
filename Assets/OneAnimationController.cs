@@ -24,7 +24,7 @@ public class OneAnimationController : MonoBehaviour
         
     }
 
-    //TODO cuando se llame al metodo reproducir la animacion
+    
 
     public void Walk() {
 
