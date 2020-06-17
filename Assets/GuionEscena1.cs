@@ -10,6 +10,8 @@ public class GuionEscena1 : MonoBehaviour
 
     public NavMeshController navMesh;
 
+    public GameObject one;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,60 +26,64 @@ public class GuionEscena1 : MonoBehaviour
             StartCoroutine(Guion2());
         }
 
-        
+        navMesh.enabled = false;
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        if(PlayerPrefs.GetInt("escena1") == 1)
-        {
-            StartCoroutine(Guion2());
-            PlayerPrefs.SetInt("escena1", 0);
-        }    
-    }*/
 
     IEnumerator Guion() {
+
         oac.Sleep();
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         oac.NoSleep();
-        oac.Sit();
-        yield return new WaitForSeconds(2);
-        oac.Talk();  // Sentado
-        yield return new WaitForSeconds(5);
+        //oac.Sit();    TODO Activar
+        yield return new WaitForSeconds(9);
+        oac.Talk();//   TODO cambiar por SitTalk
         mm.message();
-        Debug.Log("0");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        oac.NoTalk();//
+        yield return new WaitForSeconds(1);
+        oac.Talk();//
         mm.message();
-        Debug.Log("1");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        oac.NoTalk();//
+        yield return new WaitForSeconds(1);
+        oac.Talk();//
         mm.message();
-        Debug.Log("2");
-        yield return new WaitForSeconds(5);
-        oac.NoTalk();  // Sentado
+        yield return new WaitForSeconds(3);
+        oac.NoTalk();//
+        yield return new WaitForSeconds(1);
         PlayerPrefs.SetInt("escena1", 1);
+        //TODO Llamar a kitsune
     }
 
+
     IEnumerator Guion2() {
-        yield return new WaitForSeconds(1);
-        oac.StandUp();
-        yield return new WaitForSeconds(1);
+
+        mm.id = 3;
+        //oac.Sit();    TODO Activar
+        yield return new WaitForSeconds(2);
         oac.Talk();
-        yield return new WaitForSeconds(5);
         mm.message();
-        Debug.Log("3");
-        yield return new WaitForSeconds(5);
-        mm.message();
-        Debug.Log("4");
         yield return new WaitForSeconds(5);
         oac.NoTalk();
+        yield return new WaitForSeconds(1);
+        oac.Talk();
+        mm.message();
         yield return new WaitForSeconds(5);
-        while (!navMesh.GetFinish())
+        oac.NoTalk();
+        yield return new WaitForSeconds(1);
+        //oac.StandUp();    TODO Activar
+        //yield return new WaitForSeconds(2);
+        oac.Walk();
+        yield return new WaitForSeconds(1);
+        navMesh.enabled = true;     //Se activa el navMesh para mover a One
+        while (!navMesh.finish)
         {
             yield return null;
         }
         PlayerPrefs.SetInt("escena1", 0);
 
+        one.SetActive(false);
     }
 
 }

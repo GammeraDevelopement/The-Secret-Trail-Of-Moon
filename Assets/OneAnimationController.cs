@@ -13,6 +13,7 @@ public class OneAnimationController : MonoBehaviour
     private const string ANIMATION_STRECH = "Strech";
     private const string ANIMATION_SNIFF = "Sniff";
     private const string ANIMATION_TALK = "Talk";
+    private const string ANIMATION_SIT_TALK = "Sit_talk";
 
 
     public Animator anim;
@@ -93,5 +94,15 @@ public class OneAnimationController : MonoBehaviour
     public void NoTalk() {
 
         anim.SetBool(ANIMATION_TALK, false);
+    }
+
+    public void SitTalk() {
+
+        anim.SetBool(ANIMATION_SIT_TALK, true);
+    }
+
+    public void NoSittalk() {
+
+        anim.SetBool(ANIMATION_SIT_TALK, false);
     }
 }

@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkillLevel.unity
     guid: 2bff254e102c7a64cbbedc91e102937b
+  - enabled: 1
+    path: Assets/Scenes/Adventure mode/Escena1.unity
+    guid: 558b5adbd2d623542ac1f09c35f7baf3
   m_configObjects: {}

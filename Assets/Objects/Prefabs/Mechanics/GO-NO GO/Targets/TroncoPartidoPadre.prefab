@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7901e0ddf52e246489f7cf1b624be405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoInput: 0
-  instruccionInversa: 0
+  tipoInput: 5
+  instruccionInversa: 1
 --- !u!1 &4823300832993351659
 GameObject:
   m_ObjectHideFlags: 0
