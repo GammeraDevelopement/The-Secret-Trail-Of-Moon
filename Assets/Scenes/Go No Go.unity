@@ -1305,7 +1305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568359709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000013245464, y: 125, z: -0.69900405}
+  m_LocalPosition: {x: -0, y: 284, z: 866}
   m_LocalScale: {x: 333.333, y: 333.33334, z: 1}
   m_Children:
   - {fileID: 2125582465}
@@ -2585,7 +2585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.14, y: 2.09}
+  m_AnchoredPosition: {x: 2.14, y: 2.44}
   m_SizeDelta: {x: 5059.76, y: 3263.865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1172542797
@@ -5695,7 +5695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012014665300, guid: 181631a6d571e304688779b738767faf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.805
+      value: 0.472
       objectReference: {fileID: 0}
     - target: {fileID: 4000012014665300, guid: 181631a6d571e304688779b738767faf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6055,10 +6055,10 @@ Canvas:
   m_GameObject: {fileID: 8638862890054171007}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1633583522}
-  m_PlaneDistance: 4.66
-  m_PixelPerfect: 0
+  m_PlaneDistance: 0.1
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -6285,7 +6285,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.8
+  m_Height: 1.5
   m_Radius: 0
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -6314,7 +6314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8638862891122324915}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.03, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 8638862891122026897}

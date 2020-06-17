@@ -19,7 +19,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
     private const string ANIM_WEB = "SpiderJumping";
     private const string ANIM_ROCK = "Esquivar";
     private const string ANIM_TREE = "Agacharse";
-    private const string ANIM_BUSH = "Apartar";
+    private const string ANIM_BUSH = "Bushes";
     private const string ANIM_STUMP = "Saltar";
 
     public enum InputGNG {
@@ -144,7 +144,7 @@ public class GNG_PrefabTrigger : MonoBehaviour {
                 Debug.Log("Se agacha en el árbol");
                 break;
             case InputGNG.BUSH:
-                thisObjectAnim.SetBool(ANIM_BUSH, true);
+                thisObjectAnim.SetTrigger(ANIM_BUSH);
                 Debug.Log("Aparta la maleza");
                 break;
             case InputGNG.STUMP:
