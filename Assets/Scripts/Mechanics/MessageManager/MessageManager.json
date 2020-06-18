@@ -6,27 +6,27 @@
 				"id": 0,
 				"Mensajes": [{
 					"id": 0,
-					"Cadena":"\u00A1Hola! \u00BFTe has ca\u00EDdo y te has quedado atrapado aqu\u00ED?",
+					"Cadena":"\u00A1Hola! \u00BFTe has ca\u00EDdo y te has quedado atrapado aqu\u00ED? Pues ya somos dos. ",
 					
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip1",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode1/00",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 3,
+					"Duracion": 5,
 					"Silencio": 1
 				 },
 				 {
 					"id":1,
-					"Cadena": "Pues ya somos dos. Cuando entr\u00E9 aqu\u00ED una piedra me bloque\u00F3 el camino.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Cadena": "Cuando entr\u00E9 aqu\u00ED una piedra me bloque\u00F3 el camino.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode1/01",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 3,
+					"Duracion": 2.5,
 					"Silencio":1
 				},
 				{
 					"id":2,
 					"Cadena": "Veo que eres un animal con manos como MOVI, \u00BFme ayudas a romperla?",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode1/02",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 3,
@@ -35,16 +35,16 @@
 				{
 					"id": 3,
 					"Cadena": "\u00A1Muy bien! Un problema menos. Ahora queda salir de la zona prohibida.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode1/03",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 4.5,
+					"Duracion": 3.75,
 					"Silencio": 0.1
 				},
 				{
 					"id": 4,
 					"Cadena": "Ven, te presentar\u00E9 a MOVI, si es capaz de quedarse quieta cinco segundos.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode1/04",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 4.5,

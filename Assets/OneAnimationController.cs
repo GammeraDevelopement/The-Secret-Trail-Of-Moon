@@ -101,7 +101,7 @@ public class OneAnimationController : MonoBehaviour
         anim.SetBool(ANIMATION_SIT_TALK, true);
     }
 
-    public void NoSittalk() {
+    public void NoSitTalk() {
 
         anim.SetBool(ANIMATION_SIT_TALK, false);
     }
