@@ -24,7 +24,7 @@ public class OneAnimationController : MonoBehaviour
         
     }
 
-    //TODO cuando se llame al metodo reproducir la animacion
+    
 
     public void Walk() {
 
@@ -101,7 +101,7 @@ public class OneAnimationController : MonoBehaviour
         anim.SetBool(ANIMATION_SIT_TALK, true);
     }
 
-    public void NoSittalk() {
+    public void NoSitTalk() {
 
         anim.SetBool(ANIMATION_SIT_TALK, false);
     }

@@ -35,22 +35,22 @@ public class GuionEscena1 : MonoBehaviour
         oac.Sleep();
         yield return new WaitForSeconds(3);
         oac.NoSleep();
-        //oac.Sit();    TODO Activar
+        oac.Sit();    
         yield return new WaitForSeconds(9);
-        oac.Talk();//   TODO cambiar por SitTalk
+        oac.SitTalk();
         mm.message();
-        yield return new WaitForSeconds(3);
-        oac.NoTalk();//
+        yield return new WaitForSeconds(5);
+        oac.NoSitTalk();
         yield return new WaitForSeconds(1);
-        oac.Talk();//
+        oac.SitTalk();
         mm.message();
         yield return new WaitForSeconds(3);
-        oac.NoTalk();//
+        oac.NoSitTalk();
         yield return new WaitForSeconds(1);
-        oac.Talk();//
+        oac.SitTalk();
         mm.message();
         yield return new WaitForSeconds(3);
-        oac.NoTalk();//
+        oac.NoSitTalk();
         yield return new WaitForSeconds(1);
         PlayerPrefs.SetInt("escena1", 1);
         //TODO Llamar a kitsune
@@ -60,19 +60,22 @@ public class GuionEscena1 : MonoBehaviour
     IEnumerator Guion2() {
 
         mm.id = 3;
-        //oac.Sit();    TODO Activar
-        yield return new WaitForSeconds(2);
-        oac.Talk();
+        oac.Sit();
+        yield return new WaitForSeconds(3);
+        oac.SitTalk();
         mm.message();
-        yield return new WaitForSeconds(5);
-        oac.NoTalk();
+        yield return new WaitForSeconds(3.75f);
+        oac.NoSitTalk();
+        yield return new WaitForSeconds(1);
+        oac.StandUp();
         yield return new WaitForSeconds(1);
         oac.Talk();
+        yield return new WaitForSeconds(0.5f);
         mm.message();
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         oac.NoTalk();
         yield return new WaitForSeconds(1);
-        //oac.StandUp();    TODO Activar
+        //oac.StandUp();
         //yield return new WaitForSeconds(2);
         oac.Walk();
         yield return new WaitForSeconds(1);
