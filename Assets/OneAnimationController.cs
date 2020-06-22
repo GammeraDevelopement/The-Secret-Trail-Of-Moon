@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OneAnimationController : MonoBehaviour
-
 {
     private const string ANIMATION_IDLE = "IdleSit";
     private const string ANIMATION_WALK = "Walk";
@@ -17,14 +16,13 @@ public class OneAnimationController : MonoBehaviour
 
 
     public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-        
+        anim = GetComponent<Animator>();  
     }
 
-    
 
     public void Walk() {
 
