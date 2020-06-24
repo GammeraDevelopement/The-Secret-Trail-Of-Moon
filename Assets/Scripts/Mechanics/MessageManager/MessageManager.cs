@@ -21,7 +21,7 @@ public class MessageManager : MonoBehaviour
     public Canvas canvas;
     public TMP_Text text;
 
-    private MessageJSONManager messageJSONManager;
+    public MessageJSONManager messageJSONManager;
     private float duracion;
     private bool wait = false;
     private ArrayList lista = new ArrayList();
@@ -31,7 +31,8 @@ public class MessageManager : MonoBehaviour
     void Start()
     {
 
-        messageJSONManager = gameObject.GetComponent<MessageJSONManager>();
+        if(messageJSONManager == null)
+            messageJSONManager = GetComponent<MessageJSONManager>();
         text.text = "";
 
     }

@@ -19,7 +19,6 @@ public class GuionEscena2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("escena2", 0);
 
         if (PlayerPrefs.GetInt("escena2") == 0) {
 
