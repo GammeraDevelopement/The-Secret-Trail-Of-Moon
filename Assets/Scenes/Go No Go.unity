@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   estado: 0
   instruction: {fileID: 1141742805}
-  speed: 20
+  speed: 10
   terrenos:
   - {fileID: 674533447}
   - {fileID: 1616076481}
