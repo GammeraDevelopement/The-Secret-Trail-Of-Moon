@@ -34,8 +34,10 @@ public class GuionEscena2 : MonoBehaviour
 
     IEnumerator Guion() {
 
-       // mm.escena = 1;
-        //mm.message();
+        Debug.Log(mm.capitulo);
+        Debug.Log(mm.escena);
+        Debug.Log(mm.id);
+        mm.message();
         yield return new WaitForSeconds(8);
     }
 
