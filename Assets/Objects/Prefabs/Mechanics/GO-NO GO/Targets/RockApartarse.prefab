@@ -4979,7 +4979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Aparta!"
+  m_text: "\xA1Esquiva!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8dc8d188757537f4da71e1fa68c25816, type: 2}
   m_sharedMaterial: {fileID: -9097656413065879898, guid: 8dc8d188757537f4da71e1fa68c25816,
@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 9088263553118073467}
-    characterCount: 8
+    characterCount: 9
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -5228,7 +5228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -12.04, y: -2.67}
+  m_AnchoredPosition: {x: -7.1, y: -1.47}
   m_SizeDelta: {x: 986, y: 678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4532246584934133934
@@ -5613,8 +5613,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.35, y: 3, z: 8.67}
-  m_Center: {x: 5.57, y: 1.4, z: 0}
+  m_Size: {x: 8.35, y: 5, z: 8.67}
+  m_Center: {x: 4.25, y: 1.4, z: 0}
 --- !u!114 &6352321482008933651
 MonoBehaviour:
   m_ObjectHideFlags: 0
