@@ -22,6 +22,8 @@ public class GNG_GameController : MonoBehaviour {
     public Transform deathPlace;
     public Transform birthPlace;
 
+    public GameObject winBoard;
+
     [Header("Variables del psicólogo")]
     public int nivelActual = 1;
     public int nMaxElemRonda = 20;
@@ -52,7 +54,8 @@ public class GNG_GameController : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip acierto;
     public AudioClip error;
-    
+    public AudioClip finishedSound;
+
     private int errorCount { get; set; }
     private int errorOmisionCount { get; set; }
     private int aciertoCount { get; set; }
@@ -81,6 +84,7 @@ public class GNG_GameController : MonoBehaviour {
     public TMP_Text textoComodines;
     public Transform one; //fox
     public RectTransform bar;
+    private bool loadingScene;
     #endregion progressBar
 
     void Start() {
@@ -167,18 +171,70 @@ public class GNG_GameController : MonoBehaviour {
                     textState.text = "¡HAS GANADO!";
                     textState.gameObject.SetActive(true);
 
-                    //TODO: Animación de texto que aparece aquí y se va ocultando.
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().clip = finishedSound;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
+                    winBoard.SetActive(true);
 
                     estado = GonogoFSM.FINISHED_WIN;
                 }
 
                 break;
             case GonogoFSM.FINISHED_WIN:
+                int gamemode = PlayerPrefs.GetInt("Gamemode");
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = errorCount + " " + errorOmisionCount + " " + aciertoCount  ;
+                Debug.Log(errorCount);
+                Debug.Log(errorOmisionCount);
+                Debug.Log(aciertoCount);
+                switch (gamemode)
+                {
+                    case 0:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                        }
+                        break;
+                    case 1:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                        }
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case GonogoFSM.FINISHED_LOSE:
 
-                //Recargamos la escena
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                gamemode = PlayerPrefs.GetInt("Gamemode");
+                switch (gamemode)
+                {
+                    case 0:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                        }
+                        break;
+                    case 1:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                        }
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
