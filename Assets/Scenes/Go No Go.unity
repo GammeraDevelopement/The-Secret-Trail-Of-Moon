@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   estado: 0
   instruction: {fileID: 1141742805}
-  speed: 20
+  speed: 10
   terrenos:
   - {fileID: 674533447}
   - {fileID: 1616076481}
@@ -3944,6 +3944,7 @@ MonoBehaviour:
   positionSpawn: {fileID: 1527270333}
   gng: {fileID: 814784312}
   parent: {fileID: 1606491728}
+  timeSpawn: 3
 --- !u!1 &1549503433
 GameObject:
   m_ObjectHideFlags: 0

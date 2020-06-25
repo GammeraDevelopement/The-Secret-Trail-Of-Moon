@@ -7,7 +7,6 @@
 				"Mensajes": [{
 					"id": 0,
 					"Cadena":"\u00A1Hola! \u00BFTe has ca\u00EDdo y te has quedado atrapado aqu\u00ED? Pues ya somos dos. ",
-					
 					"Audio": "Sound/VoiceOver/Chapter1/Episode1/00",
 					"x": 2.5,
 					"y": 30.5,
@@ -56,7 +55,7 @@
 				"Mensajes": [{
 					"id": 0,
 					"Cadena": "\u00A1Movi, por fin te encuentro!",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip1",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/05",
 					"x": 9,
 					"y": 30.5,
 					"Duracion": 2,
@@ -65,7 +64,7 @@
 				{
 					"id":1,
 					"Cadena": "\u00A1ONE!\u00BFD\u00F3nde te hab\u00EDas metido? Estaba hablando contigo.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/06",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 4.5,
@@ -74,7 +73,7 @@
 				{
 					"id":2,
 					"Cadena": "Me hab\u00EDa quedado encerrado... \u00BFQu\u00E9 est\u00E1s haciendo?",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/07",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 3.5,
@@ -82,8 +81,8 @@
 				},
 				{
 					"id":3,
-					"Cadena": "Intento solucionar este rompecabezas",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Cadena": "Intento solucionar este rompecabezas, seguro que consigo algo interesante si logro abrirlo.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/08",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 2,
@@ -91,62 +90,44 @@
 				},
 				{
 					"id":4,
-					"Cadena": "seguro que consigo algo interesante si logro abrirlo.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
-					"x": 2.5,
-					"y": 30.5,
-					"Duracion": 2.5,
-					"Silencio":1
-				},
-				{
-					"id":5,
 					"Cadena": "Ayud\u00E9mosle, si no, no nos va a hacer caso.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/09",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 3,
 					"Silencio":1
 				},
 				{
-					"id":6,
+					"id":5,
 					"Cadena": "Sab\u00EDa que hab\u00EDa una llave oculta. \u00A1Oh, hola! Soy Movi.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/10",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion":5 ,
 					"Silencio":1
 				},
 				{
-					"id":7,
-					"Cadena": "Ah, yo soy One, se me olvid\u00F3 presentarme.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"id":6,
+					"Cadena": "Ah, yo soy One, se me olvid\u00F3 presentarme. Nos quedamos atrapados en la zona prohibida sin querer.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/11",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 3,
 					"Silencio":1
 				},
 				{
-					"id":8,
-					"Cadena": "Nos quedamos atrapados en la zona prohibida sin querer.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
-					"x": 2.5,
-					"y": 30.5,
-					"Duracion": 3.5,
-					"Silencio":1
-				},
-				{
-					"id":9,
+					"id":7,
 					"Cadena": "Ahora tenemos una llave, \u00A1vamos a ver para qu\u00E9 sirve!",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/12",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 4,
 					"Silencio":1
 				},
 				{
-					"id":10,
+					"id":8,
 					"Cadena": "Movi,¡espera!",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/13",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 1.5,

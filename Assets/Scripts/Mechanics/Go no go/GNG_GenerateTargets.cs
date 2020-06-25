@@ -11,7 +11,7 @@ public class GNG_GenerateTargets : MonoBehaviour {
     [SerializeField]private GNG_GameController gng;                            /// Referencia del script GoNoGo
     [SerializeField]private Terrain parent;
 
-    private float timeSpawn;                      /// Tiempo en milisegundos entre cada aparición de elementos
+    public float timeSpawn = 0;                      /// Tiempo en milisegundos entre cada aparición de elementos
     private int numRandom;                        /// Posición random en la lista
     private int firstTarget = 0;
     private int secondTarget = 0;
@@ -21,8 +21,10 @@ public class GNG_GenerateTargets : MonoBehaviour {
 
     void Start() {
         data = gng.GetComponent<GNG_DifficultyJSON>();
-        timeSpawn = data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000;
-
+        if (timeSpawn == 0) {
+            timeSpawn = data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000;
+        }
+        
         firstTarget = 0;
         secondTarget = 0;
         do {
