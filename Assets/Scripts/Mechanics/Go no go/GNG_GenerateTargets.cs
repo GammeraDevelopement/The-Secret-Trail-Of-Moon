@@ -7,6 +7,7 @@ public class GNG_GenerateTargets : MonoBehaviour {
 
     public List<GameObject> TargetList;           /// Todos los targets que deberán aparecer de manera aleatoria
     public Transform positionSpawn;               /// Posición en la que van a Spawnear
+    public string[] elements;
 
     [SerializeField]private GNG_GameController gng;                            /// Referencia del script GoNoGo
     [SerializeField]private Terrain parent;
@@ -21,16 +22,26 @@ public class GNG_GenerateTargets : MonoBehaviour {
 
     void Start() {
         data = gng.GetComponent<GNG_DifficultyJSON>();
-        if (timeSpawn == 0) {
+        if (timeSpawn == 0)
+        {
             timeSpawn = data.getDificultad(gng.nivelActual).TiempoAparicionEstimulos / 1000;
         }
-        
+
         firstTarget = 0;
         secondTarget = 0;
-        do {
-            firstTarget = Random.Range(0, 5);
-            secondTarget = Random.Range(0, 5);
-        } while (firstTarget == secondTarget);
+
+        if (gng.nivelActual > 16)
+        {
+            do
+            {
+                firstTarget = Random.Range(0, 5);
+                secondTarget = Random.Range(0, 5);
+            } while (firstTarget == secondTarget);
+        }
+
+        string[] split = elements[gng.nivelActual].Split(';');
+        firstTarget = int.Parse(split[0]);
+        secondTarget = int.Parse(split[1]);
     }
 
     public IEnumerator GenerateRound() {

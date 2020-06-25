@@ -47,6 +47,7 @@ public class GNG_GameController : MonoBehaviour {
     public GameObject initialPopup;
     public TMP_Text textState;
     public Image black;
+    public GameObject winBoard;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -81,6 +82,9 @@ public class GNG_GameController : MonoBehaviour {
     public TMP_Text textoComodines;
     public Transform one; //fox
     public RectTransform bar;
+    private bool loadingScene;
+    private int gamemode;
+    private AudioClip finishedSound;
     #endregion progressBar
 
     void Start() {
@@ -174,11 +178,66 @@ public class GNG_GameController : MonoBehaviour {
 
                 break;
             case GonogoFSM.FINISHED_WIN:
+
+                GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().clip = finishedSound;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
+                winBoard.SetActive(true);
+
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text =  "";
+                
+                gamemode = PlayerPrefs.GetInt("Gamemode");
+                switch (gamemode)
+                {
+                    case 0:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                        }
+                        break;
+                    case 1:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                        }
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case GonogoFSM.FINISHED_LOSE:
 
-                //Recargamos la escena
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = aciertoCount + " " + errorOmisionCount + " " + errorCount;
+
+                gamemode = PlayerPrefs.GetInt("Gamemode");
+                switch (gamemode)
+                {
+                    case 0:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                        }
+                        break;
+                    case 1:
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
+                        }
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
@@ -244,8 +303,7 @@ public class GNG_GameController : MonoBehaviour {
             audioSource.Play();
 
             comodines--;
-            //Preguntar si quieren que se le cuente este error para los datos que ellas recogen.
-            aciertoCount = 0;
+            
 
         } else {
             audioSource.clip = error;
