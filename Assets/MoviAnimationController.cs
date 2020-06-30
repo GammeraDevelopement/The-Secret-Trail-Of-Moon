@@ -71,6 +71,11 @@ public class MoviAnimationController : MonoBehaviour
 
     public void Think() {
 
-        anim.SetTrigger(ANIMATION_THINK);
+        anim.SetBool(ANIMATION_THINK, true);
+    }
+
+    public void NoThink() {
+
+        anim.SetBool(ANIMATION_THINK, false);
     }
 }
