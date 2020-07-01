@@ -54,12 +54,18 @@ public class GNG_GameController : MonoBehaviour {
     public AudioClip acierto;
     public AudioClip error;
     
-    private int errorCount { get; set; }
+    private int errorCount { get; set; }                //Variables de Ronda 2
     private int errorOmisionCount { get; set; }
-    private int aciertoCount { get; set; }
+    private int aciertoCount { get; set; }              //Fin Variables Ronda 2
     private int aciertoOutput = 0;
     private int comodines = 0;
     private float timeReaction;
+
+    #region Variables Ronda 1          
+    private int aciertosRound1;
+    private int errorComisionRound1;
+    private int errorOmisionRound1;
+    #endregion
 
     public float sizeZ;
 
@@ -146,6 +152,11 @@ public class GNG_GameController : MonoBehaviour {
                 Terrenos(); //Movimiento del terreno
 
                 if (targetsPassed == nMaxElemRonda) {
+
+                    aciertosRound1 = aciertoCount;
+                    errorComisionRound1 = errorCount;
+                    errorOmisionRound1 = errorOmisionCount;
+                    
                     elemCounter = 0;
                     errorCount = 0; //Se cuentan por ronda. 
                     elemRun = 0;
@@ -183,8 +194,8 @@ public class GNG_GameController : MonoBehaviour {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
                 winBoard.SetActive(true);
 
-                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text =  "";
-                
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text =  aciertoCount + errorOmisionCount + (errorCount + errorComisionRound1) + "";
+
                 gamemode = PlayerPrefs.GetInt("Gamemode");
                 switch (gamemode)
                 {
