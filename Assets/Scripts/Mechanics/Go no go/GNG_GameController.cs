@@ -56,8 +56,8 @@ public class GNG_GameController : MonoBehaviour {
     
     private int errorCount { get; set; }                //Variables de Ronda 2
     private int errorOmisionCount { get; set; }
-    private int aciertoCount { get; set; }              //Fin Variables Ronda 2
-    private int aciertoOutput = 0;
+    private int aciertoCount { get; set; }              //Aciertos seguidos
+    private int aciertoOutput = 0;                      //Aciertos totales
     private int comodines = 0;
     private float timeReaction;
 
@@ -153,9 +153,9 @@ public class GNG_GameController : MonoBehaviour {
 
                 if (targetsPassed == nMaxElemRonda) {
 
-                    aciertosRound1 = aciertoCount;
-                    errorComisionRound1 = errorCount;
-                    errorOmisionRound1 = errorOmisionCount;
+                    aciertosRound1 = aciertoOutput;         //Salvar los datos de ronda1
+                    errorComisionRound1 = errorCount;       //
+                    errorOmisionRound1 = errorOmisionCount; //
                     
                     elemCounter = 0;
                     errorCount = 0; //Se cuentan por ronda. 
@@ -167,8 +167,6 @@ public class GNG_GameController : MonoBehaviour {
                     textState.gameObject.SetActive(true);
                     textState.CrossFadeAlpha(1, 0, true);
                     textState.CrossFadeAlpha(0, 2.5F, true);
-
-                    //TODO: Animación de texto que aparece aquí y se va ocultando.
 
                     estado = GonogoFSM.SECONDROUND;
                     StartCoroutine(geC.GenerateRound());
@@ -182,10 +180,15 @@ public class GNG_GameController : MonoBehaviour {
                     textState.text = "¡HAS GANADO!";
                     textState.gameObject.SetActive(true);
 
-                    //TODO: Animación de texto que aparece aquí y se va ocultando.
-
                     estado = GonogoFSM.FINISHED_WIN;
                 }
+                else if (errorCount == data.getDificultad(nivelActual).NErroresMaxXRonda){
+                    textState.text = "HAS PERDIDO";
+                    textState.gameObject.SetActive(true);
+
+                    estado = GonogoFSM.FINISHED_LOSE;
+                }
+
 
                 break;
             case GonogoFSM.FINISHED_WIN:
@@ -194,7 +197,7 @@ public class GNG_GameController : MonoBehaviour {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
                 winBoard.SetActive(true);
 
-                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text =  aciertoCount + errorOmisionCount + (errorCount + errorComisionRound1) + "";
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text =  aciertoOutput + " " + errorOmisionCount + " " + (errorCount + errorComisionRound1);
 
                 gamemode = PlayerPrefs.GetInt("Gamemode");
                 switch (gamemode)
@@ -223,7 +226,9 @@ public class GNG_GameController : MonoBehaviour {
                 break;
             case GonogoFSM.FINISHED_LOSE:
 
-                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = aciertoCount + " " + errorOmisionCount + " " + errorCount;
+                winBoard.SetActive(true);
+
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = aciertoOutput + " " + errorOmisionCount + " " + (errorCount + errorComisionRound1);
 
                 gamemode = PlayerPrefs.GetInt("Gamemode");
                 switch (gamemode)
@@ -257,11 +262,11 @@ public class GNG_GameController : MonoBehaviour {
         #endregion Estados
 
         textoComodines.text = comodines.ToString();
-        if (errorCount == data.getDificultad(nivelActual).NErroresMaxXRonda) {
+        /*if (errorCount == data.getDificultad(nivelActual).NErroresMaxXRonda) {
             textState.text = "HAS PERDIDO";
             textState.gameObject.SetActive(true);
             estado = GonogoFSM.FINISHED_LOSE;
-        }
+        }*/
         if (aciertoCount >= data.getDificultad(nivelActual).NAciertosSeguidosComodin && comodines != data.getDificultad(nivelActual).NComodines) {
             comodines++;
             aciertoCount -= 3;
@@ -314,7 +319,7 @@ public class GNG_GameController : MonoBehaviour {
             audioSource.Play();
 
             comodines--;
-            
+            aciertoCount = 0;
 
         } else {
             audioSource.clip = error;
@@ -325,8 +330,9 @@ public class GNG_GameController : MonoBehaviour {
                 errorCount++;
             }
             movementAnimalsUI(movi, distanceToRun);
-            aciertoCount = 0;
+            
         }
+        Debug.Log(aciertoOutput + " " + errorOmisionCount + " " + (errorCount + errorComisionRound1));
     }
     public void set_plus_aciertoCount() {
         audioSource.clip = acierto;
@@ -336,6 +342,7 @@ public class GNG_GameController : MonoBehaviour {
         aciertoOutput++;
         movementAnimalsUI(one, distanceToRunFox);
         movementAnimalsUI(movi, distanceToRun);
+        Debug.Log(aciertoOutput+ " " + errorOmisionCount + " " + (errorCount + errorComisionRound1));
     }
     public void set_elemRunCount()  //Elements crossed
     {
