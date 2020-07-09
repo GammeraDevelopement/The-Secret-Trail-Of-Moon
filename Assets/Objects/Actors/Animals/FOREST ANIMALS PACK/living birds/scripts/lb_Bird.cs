@@ -130,8 +130,8 @@ public class lb_Bird : MonoBehaviour {
 		landing = false;
 		onGround = false;
 		GetComponent<Rigidbody>().isKinematic = false;
-		GetComponent<Rigidbody>().velocity = Vector3.zero;
-		GetComponent<Rigidbody>().drag = 0.5f;
+		GetComponent<Rigidbody>().velocity = Vector3.zero; //Vector3.zero;
+        GetComponent<Rigidbody>().drag = 0.5f;
 		anim.applyRootMotion = false;
 		anim.SetBool (flyingBoolHash,true);
 		anim.SetBool(landingBoolHash, false);

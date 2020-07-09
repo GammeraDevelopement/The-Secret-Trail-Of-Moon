@@ -267,6 +267,7 @@ public class CSAT : MonoBehaviour {
                 Instantiate(distractor1, distractorGenerator1.transform.position, distractorGenerator1.transform.rotation);
                 yield return new WaitForSeconds(Random.Range(10, 40));
                 if (distractores > 1) {
+                    Debug.Log("<color=aqua>[CSAT.cs]</color> Generación de pajaro.");
                     Instantiate(distractor2, distractorGenerator2.transform.position, Quaternion.identity);
                     yield return new WaitForSeconds(Random.Range(10, 40));
                 }
