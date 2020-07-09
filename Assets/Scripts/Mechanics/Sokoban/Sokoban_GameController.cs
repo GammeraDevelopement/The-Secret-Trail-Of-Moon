@@ -67,7 +67,7 @@ public class Sokoban_GameController : MonoBehaviour {
 
     private void Start() {
         black.CrossFadeAlpha(0, 0.5F, true);
-        if (PlayerPrefs.GetInt("nivelSokoban") != 12) {
+        if (PlayerPrefs.GetInt("nivelSokoban") != 1) {
             tutorial = false;
         } else {
             tutorial = true;
