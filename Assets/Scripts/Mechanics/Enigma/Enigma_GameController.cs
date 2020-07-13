@@ -43,6 +43,7 @@ public class Enigma_GameController : MonoBehaviour {
     [Tooltip("Mínimo 6 imágenes.")]
     public Sprite[] codeImages;
     public GameObject instruction;
+    public GameObject paredOculta;
 
     [Header("Variables del HUD")]
     public Text timeleftText;
@@ -95,6 +96,7 @@ public class Enigma_GameController : MonoBehaviour {
         Debug.Log("Estado Begin:" + estado);
         //vrui.enabled = true;
 
+        paredOculta.active = true;
         oi.enabled = true;
         solucion = new int[numeroRuedas];
         solucionPropuesta = new int[numeroRuedas];
@@ -192,6 +194,7 @@ public class Enigma_GameController : MonoBehaviour {
                 break;
 
             case EnimgaFSM.MEMORIZING:
+                paredOculta.active = false;
                 if (timeLeft >= 0) {
                     timeLeft = timeLeft - Time.deltaTime;
                     timeleftText.text = "" + Mathf.Round(timeLeft) + "";
