@@ -9,14 +9,15 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ToonSmoke
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: EFFECT_BUMP _ALPHABLEND_ON _REQUIRE_UV2
+  m_ShaderKeywords: _ALPHATEST_ON _REQUIRE_UV2
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2450
   stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses: []
+    RenderType: TransparentCutout
+  disabledShaderPasses:
+  - ALWAYS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -64,13 +65,13 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMode: 0
     - _Cull: 0
-    - _Cutoff: 0.033
+    - _Cutoff: 0.014
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.025
     - _DistortionEnabled: 1
     - _DistortionStrength: 27.89
     - _DistortionStrengthScaled: 2.789
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EmissionEnabled: 0
     - _FlipbookMode: 1
     - _GlossMapScale: 1
@@ -79,7 +80,7 @@ Material:
     - _InvFade: 0.92
     - _LightingEnabled: 0
     - _Metallic: 0
-    - _Mode: 2
+    - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -87,9 +88,9 @@ Material:
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0.87
     - _SpecularHighlights: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 1}

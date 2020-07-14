@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+
 
 public class GNG_GameController : MonoBehaviour {
 
@@ -60,6 +62,8 @@ public class GNG_GameController : MonoBehaviour {
     private int aciertoOutput = 0;                      //Aciertos totales
     private int comodines = 0;
     private float timeReaction;
+
+
 
     #region Variables Ronda 1          
     private int aciertosRound1;
@@ -352,5 +356,4 @@ public class GNG_GameController : MonoBehaviour {
     }
     #endregion Setters
 
-
-}
+    }

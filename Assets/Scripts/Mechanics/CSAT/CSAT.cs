@@ -58,6 +58,7 @@ public class CSAT : MonoBehaviour {
     [BoxGroup("GUI")] public GameObject instruction;
     [BoxGroup("GUI")] public TMP_Text textoGanador;
     [BoxGroup("GUI")] public Image imagenACambiar;
+    [BoxGroup("GUI")] public GameObject imagenACambiarDesactivar;
     [BoxGroup("GUI")] public Image imagenGanador;
     [BoxGroup("GUI")] public Image barraFuerza;
     [BoxGroup("GUI")] public Image barraRoca;
@@ -216,6 +217,7 @@ public class CSAT : MonoBehaviour {
                         Debug.Log("<color=aqua>[CSAT.cs]</color> Se ha producido un error por comisión");
                     }
                 } else if (comienza && piedrasLanzadas >= vidaRoca) {
+                    imagenACambiarDesactivar.active = false;
                     StartCoroutine(ganar());
                     estado = CSATFSM.FINISHED;
                     Debug.Log("<color=aqua>[CSAT.cs]</color> Winner");
