@@ -201,7 +201,9 @@ public class GNG_GameController : MonoBehaviour {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
                 winBoard.SetActive(true);
 
-                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text =  aciertoOutput + " " + errorOmisionCount + " " + (errorCount + errorComisionRound1);
+                winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = "Aciertos:       " + aciertosRound1 + "               " + (aciertoOutput-aciertosRound1) + 
+                    " \nErrores Comision:       " + errorComisionRound1 + "               " + (errorCount-errorComisionRound1) +
+                    " \nErrores Omision:       " + errorOmisionRound1 + "               " + (errorOmisionCount-errorOmisionRound1);
 
                 gamemode = PlayerPrefs.GetInt("Gamemode");
                 switch (gamemode)
