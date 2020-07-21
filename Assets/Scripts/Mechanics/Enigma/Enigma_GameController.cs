@@ -221,11 +221,11 @@ public class Enigma_GameController : MonoBehaviour {
                         ruedasACambiarDePosicion[j] = rueda[i].transform.GetChild(0).GetChild(0).GetChild(j).gameObject;
                     }
 
-                    if (nivel > 13) {
+                    if (nivel > 0) {
                         Vector3 aux;
                         Quaternion aux2;
                         System.Random rand = new System.Random();
-                        int max = rand.Next(numeroElementos - 1);
+                        int max = rand.Next(numeroElementos);
                         aux = ruedasACambiarDePosicion[0].transform.position;
                         ruedasACambiarDePosicion[0].transform.position = ruedasACambiarDePosicion[max].transform.position;
                         ruedasACambiarDePosicion[max].transform.position = aux;
