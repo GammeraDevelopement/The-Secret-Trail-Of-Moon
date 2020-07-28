@@ -15,6 +15,14 @@ public class GuionEscena2 : MonoBehaviour
 
     public GameObject one;
     public GameObject movi;
+    public GameObject player;
+
+    //public Vector3 posFinalOne;
+    public Vector3 target;
+    public GameObject objetivo11;
+    public GameObject objetivo12;
+    public GameObject objetivo21;
+    public GameObject objetivo22;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +30,14 @@ public class GuionEscena2 : MonoBehaviour
 
         if (PlayerPrefs.GetInt("escena2") == 0) {
 
+            objetivo11.SetActive(true);
+            objetivo12.SetActive(true);
             StartCoroutine(Guion());
         }
         else
         {
+            objetivo21.SetActive(true);
+            objetivo22.SetActive(true);
             StartCoroutine(Guion2());
         }
         
@@ -68,29 +80,64 @@ public class GuionEscena2 : MonoBehaviour
         oac.Walk();
         yield return new WaitForSeconds(1);
         navMeshOne.enabled = true;
-        /* while (!navMeshOne.finish)
-         {
-             yield return null;
-             //yield return new WaitForSeconds(0.5f);
-         }*/
         yield return new WaitForSeconds(1.5f);
-        navMeshOne.enabled = false;
-        yield return new WaitForSeconds(1);
         oac.NoWalk();
+        yield return new WaitForSeconds(0.5f);
+        navMeshOne.enabled = false;
+        yield return new WaitForSeconds(0.5f);
         oac.Talk();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         mm.message();                   //4
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2.25f);
         oac.NoTalk();
         yield return new WaitForSeconds(2);
         PlayerPrefs.SetInt("escena2", 1);
+        
     }
 
     IEnumerator Guion2()
     {
-
+        mm.id = 5;
+        //posFinalOne = new Vector3(47.16f, 2, 66.71f);
         yield return new WaitForSeconds(1);
+        //one.transform.localPosition = posFinalOne;        //PORQUE NO SE MUEVE?!?
+        mac.Talk();
+        //Rotacion de movi hacia el player
+        target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+        movi.transform.LookAt(target);    
+        
+        mm.message();           //5
+        yield return new WaitForSeconds(5.5f);
+        mac.noTalk();
+        mm.id = 6;  //Hay un error por el cual no se pasa a id 2  en mm y no se porque, asi que fuerzo
+        yield return new WaitForSeconds(1);
+        oac.Talk();
+        mm.message();           //6
+        yield return new WaitForSeconds(5.7f);
+        oac.NoTalk();
+        yield return new WaitForSeconds(1);
+        mac.Talk();
+        yield return new WaitForSeconds(1);
+        mm.message();           //7
+        yield return new WaitForSeconds(3.6f);
+        mac.noTalk();
+        yield return new WaitForSeconds(1);
+        mac.Walk();
+        navMeshMovi.enabled = true;
+        mac.Run();
+        yield return new WaitForSeconds(3);
+        oac.Talk();
+        mm.message();
+        yield return new WaitForSeconds(1.6f);
+        oac.NoTalk();
+        oac.Walk();
+        navMeshOne.enabled = true;
+        oac.Run();
+        yield return new WaitForSeconds(5);
+
         PlayerPrefs.SetInt("escena2", 0);
+        
+        yield return new WaitForSeconds(1);
     }
 
 }
