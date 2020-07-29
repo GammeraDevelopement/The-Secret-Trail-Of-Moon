@@ -17,7 +17,7 @@ public class GuionEscena2 : MonoBehaviour
     public GameObject movi;
     public GameObject player;
 
-    //public Vector3 posFinalOne;
+    public Vector3 posFinalOne;
     public Vector3 target;
     public GameObject objetivo11;
     public GameObject objetivo12;
@@ -92,15 +92,16 @@ public class GuionEscena2 : MonoBehaviour
         oac.NoTalk();
         yield return new WaitForSeconds(2);
         PlayerPrefs.SetInt("escena2", 1);
-        
+        posFinalOne = objetivo12.transform.position;
     }
 
     IEnumerator Guion2()
     {
+        navMeshOne.enabled = true;
         mm.id = 5;
-        //posFinalOne = new Vector3(47.16f, 2, 66.71f);
+        one.transform.position = posFinalOne;
         yield return new WaitForSeconds(1);
-        //one.transform.localPosition = posFinalOne;        //PORQUE NO SE MUEVE?!?
+           
         mac.Talk();
         //Rotacion de movi hacia el player
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
