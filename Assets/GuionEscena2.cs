@@ -19,10 +19,6 @@ public class GuionEscena2 : MonoBehaviour
 
     public Vector3 posFinalOne;
     public Vector3 target;
-    public GameObject objetivo11;
-    public GameObject objetivo12;
-    public GameObject objetivo21;
-    public GameObject objetivo22;
 
     // Start is called before the first frame update
     void Start()
@@ -30,14 +26,14 @@ public class GuionEscena2 : MonoBehaviour
 
         if (PlayerPrefs.GetInt("escena2") == 0) {
 
-            objetivo11.SetActive(true);
-            objetivo12.SetActive(true);
+            navMeshOne.parte = 1;
+            navMeshMovi.parte = 1;
             StartCoroutine(Guion());
         }
         else
         {
-            objetivo21.SetActive(true);
-            objetivo22.SetActive(true);
+            navMeshOne.parte = 2;
+            navMeshMovi.parte = 2;
             StartCoroutine(Guion2());
         }
         
@@ -92,12 +88,12 @@ public class GuionEscena2 : MonoBehaviour
         oac.NoTalk();
         yield return new WaitForSeconds(2);
         PlayerPrefs.SetInt("escena2", 1);
-        posFinalOne = objetivo12.transform.position;
+        //posFinalOne = objetivo12.transform.position;
     }
 
     IEnumerator Guion2()
     {
-        navMeshOne.enabled = true;
+        
         mm.id = 5;
         one.transform.position = posFinalOne;
         yield return new WaitForSeconds(1);
@@ -110,7 +106,7 @@ public class GuionEscena2 : MonoBehaviour
         mm.message();           //5
         yield return new WaitForSeconds(5.5f);
         mac.noTalk();
-        mm.id = 6;  //Hay un error por el cual no se pasa a id 2  en mm y no se porque, asi que fuerzo
+        mm.id = 6;  //Hay un error por el cual no se pasa a id 6  en mm y no se porque, asi que fuerzo
         yield return new WaitForSeconds(1);
         oac.Talk();
         mm.message();           //6
@@ -135,7 +131,11 @@ public class GuionEscena2 : MonoBehaviour
         navMeshOne.enabled = true;
         oac.Run();
         yield return new WaitForSeconds(5);
-
+        while (!navMeshOne.finish)
+        {
+            yield return null;
+        }
+        Debug.Log("finis");
         PlayerPrefs.SetInt("escena2", 0);
         
         yield return new WaitForSeconds(1);

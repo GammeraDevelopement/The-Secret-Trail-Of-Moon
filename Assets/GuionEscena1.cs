@@ -19,10 +19,12 @@ public class GuionEscena1 : MonoBehaviour
 
         if (PlayerPrefs.GetInt("escena1") == 0)
         {
+            navMesh.parte = 1;
             StartCoroutine(Guion());
             
         }
         else {
+            navMesh.parte = 2;
             StartCoroutine(Guion2());
         }
 
