@@ -259,6 +259,7 @@ public class Sokoban_GameController : MonoBehaviour {
         winEffect.Play();
         source.clip = winSound;
         source.Play();
+        PlayerPrefs.SetInt("MovimientosTekaTeki", nMovements);
         state = SokobanFSM.FINISHED;
     }
 

@@ -339,6 +339,9 @@ public class CSAT : MonoBehaviour {
         textoGanador.CrossFadeAlpha(1, 0.5F, true);
         imagenGanador.transform.GetChild(1).gameObject.SetActive(true);
         imagenGanador.transform.GetChild(2).GetComponent<TMP_Text>().text = "Aciertos: " + aciertos + " \nErrores Comision: " + erroresComision + " \nErrores Omisión: " + erroresOmision + " \nEstímulos:" + cantidadImagenesGeneradas;
+        PlayerPrefs.SetInt("AciertosCSAT",aciertos);
+        PlayerPrefs.SetInt("ErroresComisionCSAT", erroresComision);
+        PlayerPrefs.SetInt("ErroresOmisionCSAT", erroresOmision);
         yield return new WaitForSeconds(3.0F);
         Destroy(roca);
         comienza = false;

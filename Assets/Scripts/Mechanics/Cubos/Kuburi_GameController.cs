@@ -158,6 +158,10 @@ public class Kuburi_GameController : MonoBehaviour
                 Debug.Log("Tiempo :" + temporizador.GetMilliseconds() + " Seconds:"+temporizador.GetSeconds());
                 winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = temporizador.GetMinutes() + temporizador.GetSeconds() + "";
                 temporizador.stopTimer();
+                int minute = temporizador.GetMinutes();
+                int second = temporizador.GetSeconds();
+                PlayerPrefs.SetInt("MinutosKuburi", minute);
+                PlayerPrefs.SetInt("SegundosKuburi", second);
                 int gamemode = PlayerPrefs.GetInt("Gamemode");
                 switch (gamemode)
                 {

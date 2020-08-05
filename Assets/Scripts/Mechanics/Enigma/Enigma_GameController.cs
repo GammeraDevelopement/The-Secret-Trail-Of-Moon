@@ -248,6 +248,8 @@ public class Enigma_GameController : MonoBehaviour {
                     source.Play();
                     winBoard.SetActive(true);
                     winBoard.transform.GetChild(1).GetComponent<TMP_Text>().text = "Aciertos:" + seriesCorrectas + " Errores:" + errores;
+                    PlayerPrefs.SetInt("AciertosEnigma", seriesCorrectas);
+                    PlayerPrefs.SetInt("ErroresEnigma", errores);
                     estado = EnimgaFSM.FINISHED;
                 }
                 //Si pulsa el botón x
