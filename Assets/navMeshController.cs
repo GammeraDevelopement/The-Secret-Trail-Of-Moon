@@ -76,11 +76,12 @@ public class NavMeshController : MonoBehaviour
             }
             else
             {
+                
                 Move(agente);
 
                 if ((destino.position.x == agente.transform.position.x) && (destino.position.z == agente.transform.position.z))
                 {
-
+                   
                     contador++;
                 }
             }

@@ -16,8 +16,9 @@ public class GuionEscena2 : MonoBehaviour
     public GameObject one;
     public GameObject movi;
     public GameObject player;
+    public GameObject auxPosFinalOne;
 
-    public Vector3 posFinalOne;
+    //public Vector3 posFinalOne;
     public Vector3 target;
 
     // Start is called before the first frame update
@@ -88,21 +89,23 @@ public class GuionEscena2 : MonoBehaviour
         oac.NoTalk();
         yield return new WaitForSeconds(2);
         PlayerPrefs.SetInt("escena2", 1);
-        //posFinalOne = objetivo12.transform.position;
     }
 
     IEnumerator Guion2()
     {
         
         mm.id = 5;
-        one.transform.position = posFinalOne;
+        one.transform.position = auxPosFinalOne.transform.position; //Poner a one en la misma posicion que termina la parte 1
+
         yield return new WaitForSeconds(1);
-           
         mac.Talk();
-        //Rotacion de movi hacia el player
+
+        //Rotacion de movi y one hacia el player
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
-        movi.transform.LookAt(target);    
-        
+        movi.transform.LookAt(target);
+        one.transform.LookAt(target);
+
+        yield return new WaitForSeconds(2);
         mm.message();           //5
         yield return new WaitForSeconds(5.5f);
         mac.noTalk();
@@ -110,7 +113,7 @@ public class GuionEscena2 : MonoBehaviour
         yield return new WaitForSeconds(1);
         oac.Talk();
         mm.message();           //6
-        yield return new WaitForSeconds(5.7f);
+        yield return new WaitForSeconds(5.2f);
         oac.NoTalk();
         yield return new WaitForSeconds(1);
         mac.Talk();
@@ -120,21 +123,22 @@ public class GuionEscena2 : MonoBehaviour
         mac.noTalk();
         yield return new WaitForSeconds(1);
         mac.Walk();
+        yield return new WaitForSeconds(1);
         navMeshMovi.enabled = true;
         mac.Run();
         yield return new WaitForSeconds(3);
         oac.Talk();
-        mm.message();
-        yield return new WaitForSeconds(1.6f);
+        mm.message();           //8
+        yield return new WaitForSeconds(1);
         oac.NoTalk();
         oac.Walk();
+        yield return new WaitForSeconds(1.5f);
         navMeshOne.enabled = true;
         oac.Run();
         yield return new WaitForSeconds(5);
-        while (!navMeshOne.finish)
-        {
-            yield return null;
-        }
+        movi.SetActive(false);
+        yield return new WaitForSeconds(5);
+        one.SetActive(false);
         Debug.Log("finis");
         PlayerPrefs.SetInt("escena2", 0);
         

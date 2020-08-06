@@ -25,6 +25,7 @@ public class PantallaInformes : MonoBehaviour
         {
             outputCSAT.transform.GetComponent<TMP_Text>().text = nj;
         }
+
         if (PlayerPrefs.HasKey("AciertosEnigma"))
         {
 
@@ -35,6 +36,7 @@ public class PantallaInformes : MonoBehaviour
         {
             outputEnigma.transform.GetComponent<TMP_Text>().text = nj;
         }
+
         if (PlayerPrefs.HasKey("MovimientosTekaTeki"))
         {
 
@@ -45,6 +47,7 @@ public class PantallaInformes : MonoBehaviour
         {
             outputTekaTeki.transform.GetComponent<TMP_Text>().text = nj;
         }
+
         if (PlayerPrefs.HasKey("MinutosKuburi"))
         {
 

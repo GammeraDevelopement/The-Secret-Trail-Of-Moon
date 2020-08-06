@@ -112,7 +112,7 @@
 					"Audio": "Sound/VoiceOver/Chapter1/Episode2/11",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 5.6,
+					"Duracion": 5,
 					"Silencio":1
 				},
 				{
@@ -126,7 +126,7 @@
 				},
 				{
 					"id":8,
-					"Cadena": "Movi,¡espera!",
+					"Cadena": "Movi,\u00A1espera!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode2/13",
 					"x": 2.5,
 					"y": 30.5,
