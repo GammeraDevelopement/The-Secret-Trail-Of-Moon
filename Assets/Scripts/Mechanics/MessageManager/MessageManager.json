@@ -76,7 +76,7 @@
 					"Audio": "Sound/VoiceOver/Chapter1/Episode2/07",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 2.5,
+					"Duracion": 2.6,
 					"Silencio":1
 				},
 				{
@@ -99,24 +99,42 @@
 				},
 				{
 					"id":5,
-					"Cadena": "Sab\u00EDa que hab\u00EDa una llave oculta. \u00A1Oh, hola! Soy Movi.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode2/10",
+					"Cadena": "Sab\u00EDa que hab\u00EDa una llave oculta.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/10a",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion":5.5 ,
-					"Silencio":1
+					"Duracion":1.8 ,
+					"Silencio":0.5
 				},
 				{
 					"id":6,
-					"Cadena": "Ah, yo soy One, se me olvid\u00F3 presentarme. Nos quedamos atrapados en la zona prohibida sin querer.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode2/11",
+					"Cadena": "\u00A1Oh, hola! Soy Movi.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/10b",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 5,
+					"Duracion":2.8 ,
 					"Silencio":1
 				},
 				{
 					"id":7,
+					"Cadena": "Ah, yo soy One, se me olvid\u00F3 presentarme.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/11a",
+					"x": 2.5,
+					"y": 30.5,
+					"Duracion": 2.2,
+					"Silencio":0.5
+				},
+				{
+					"id":8,
+					"Cadena": "Nos quedamos atrapados en la zona prohibida sin querer.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode2/11b",
+					"x": 2.5,
+					"y": 30.5,
+					"Duracion": 2.5,
+					"Silencio":1
+				},
+				{
+					"id":9,
 					"Cadena": "Ahora tenemos una llave, \u00A1vamos a ver para qu\u00E9 sirve!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode2/12",
 					"x": 2.5,
@@ -125,7 +143,7 @@
 					"Silencio":1
 				},
 				{
-					"id":8,
+					"id":10,
 					"Cadena": "Movi,\u00A1espera!",
 					"Audio": "Sound/VoiceOver/Chapter1/Episode2/13",
 					"x": 2.5,

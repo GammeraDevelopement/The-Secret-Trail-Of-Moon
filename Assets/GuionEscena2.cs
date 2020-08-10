@@ -63,10 +63,9 @@ public class GuionEscena2 : MonoBehaviour
         mac.noTalk();
         mac.Think();
         yield return new WaitForSeconds(1);
-        mm.id = 2;  //Hay un error por el cual no se pasa a id 2  en mm y no se porque, asi que fuerzo
         oac.Talk();
         mm.message();                   //2
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.6f);
         oac.NoTalk();
         mac.NoThink();
         yield return new WaitForSeconds(3);
@@ -97,28 +96,45 @@ public class GuionEscena2 : MonoBehaviour
         mm.id = 5;
         one.transform.position = auxPosFinalOne.transform.position; //Poner a one en la misma posicion que termina la parte 1
 
-        yield return new WaitForSeconds(1);
-        mac.Talk();
+        
 
         //Rotacion de movi y one hacia el player
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
         movi.transform.LookAt(target);
         one.transform.LookAt(target);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        mac.Talk();
+
         mm.message();           //5
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSeconds(1.8f);
         mac.noTalk();
-        mm.id = 6;  //Hay un error por el cual no se pasa a id 6  en mm y no se porque, asi que fuerzo
+        //mm.id = 6;  //Hay un error por el cual no se pasa a id 6  en mm y no se porque, asi que fuerzo
+        yield return new WaitForSeconds(0.5f);
+        mac.Talk();
+
+        mm.message();           //6
+        yield return new WaitForSeconds(2.8f);
+        mac.noTalk();
+        
         yield return new WaitForSeconds(1);
         oac.Talk();
-        mm.message();           //6
-        yield return new WaitForSeconds(5.2f);
+
+        mm.message();           //7
+        yield return new WaitForSeconds(2.3f);
+        oac.NoTalk();
+        
+        yield return new WaitForSeconds(0.5f);
+        //mm.id = 8;  //Hay un error por el cual no se pasa a id 6  en mm y no se porque, asi que fuerzo
+        oac.Talk();
+
+        mm.message();           //8
+        yield return new WaitForSeconds(2.5f);
         oac.NoTalk();
         yield return new WaitForSeconds(1);
         mac.Talk();
-        yield return new WaitForSeconds(1);
-        mm.message();           //7
+       
+        mm.message();           //9
         yield return new WaitForSeconds(3.6f);
         mac.noTalk();
         yield return new WaitForSeconds(1);
@@ -128,8 +144,8 @@ public class GuionEscena2 : MonoBehaviour
         mac.Run();
         yield return new WaitForSeconds(3);
         oac.Talk();
-        mm.message();           //8
-        yield return new WaitForSeconds(1);
+        mm.message();           //10
+        yield return new WaitForSeconds(1.2f);
         oac.NoTalk();
         oac.Walk();
         yield return new WaitForSeconds(1.5f);

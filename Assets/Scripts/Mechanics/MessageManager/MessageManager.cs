@@ -43,18 +43,19 @@ public class MessageManager : MonoBehaviour
         source.clip = clip;
         source.Play();
         text.text = messageJSONManager.GetMensajes(capitulo, escena, id).Cadena;
+        id++;
         yield return new WaitForSeconds(duracion);
         text.text = "";
         yield return new WaitForSeconds(silencio);
-        id++;
         
+        Debug.Log(id);
         if (id <= messageJSONManager.getLength(capitulo, escena)-1) {
             wait = false;
         } 
         else {
             wait = true;
         }
-            yield return null;
+            
     }
 
     public void message() {

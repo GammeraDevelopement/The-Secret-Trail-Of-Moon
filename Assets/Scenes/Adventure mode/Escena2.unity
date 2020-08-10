@@ -8545,7 +8545,7 @@ MonoBehaviour:
   escena: 1
   id: 0
   duracionTotal: 0
-  velocidad: 2
+  velocidad: 1.1
   source: {fileID: 1133466265}
   canvas: {fileID: 312962885}
   text: {fileID: 1348624252}
@@ -50238,6 +50238,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -3038505739825773257, guid: 2d998a2627285c14abce46522c9b8517,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.007
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
       propertyPath: m_Name
@@ -50247,6 +50252,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BlendShapeWeights.Array.size
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829595007330724162, guid: 2d998a2627285c14abce46522c9b8517,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d998a2627285c14abce46522c9b8517, type: 3}
