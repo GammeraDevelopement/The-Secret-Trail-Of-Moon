@@ -17686,7 +17686,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 0.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -50176,7 +50176,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.62
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
@@ -50257,6 +50257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707475116878469891, guid: 2d998a2627285c14abce46522c9b8517,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d998a2627285c14abce46522c9b8517, type: 3}

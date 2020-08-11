@@ -49,7 +49,7 @@ public class GuionEscena2 : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         oac.NoTalk();
         oac.Walk();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         navMeshOne.enabled = true;
         yield return new WaitForSeconds(2);
         navMeshOne.enabled = false;
@@ -96,8 +96,6 @@ public class GuionEscena2 : MonoBehaviour
         mm.id = 5;
         one.transform.position = auxPosFinalOne.transform.position; //Poner a one en la misma posicion que termina la parte 1
 
-        
-
         //Rotacion de movi y one hacia el player
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
         movi.transform.LookAt(target);
@@ -105,50 +103,44 @@ public class GuionEscena2 : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         mac.Talk();
-
         mm.message();           //5
         yield return new WaitForSeconds(1.8f);
         mac.noTalk();
-        //mm.id = 6;  //Hay un error por el cual no se pasa a id 6  en mm y no se porque, asi que fuerzo
         yield return new WaitForSeconds(0.5f);
         mac.Talk();
-
         mm.message();           //6
         yield return new WaitForSeconds(2.8f);
-        mac.noTalk();
-        
+        mac.noTalk();        
         yield return new WaitForSeconds(1);
         oac.Talk();
-
+        yield return new WaitForSeconds(1.2f);
         mm.message();           //7
         yield return new WaitForSeconds(2.3f);
         oac.NoTalk();
-        
-        yield return new WaitForSeconds(0.5f);
-        //mm.id = 8;  //Hay un error por el cual no se pasa a id 6  en mm y no se porque, asi que fuerzo
+        yield return new WaitForSeconds(1);
         oac.Talk();
-
+        yield return new WaitForSeconds(0.5f);
         mm.message();           //8
         yield return new WaitForSeconds(2.5f);
         oac.NoTalk();
         yield return new WaitForSeconds(1);
-        mac.Talk();
-       
+        mac.Talk();     
         mm.message();           //9
         yield return new WaitForSeconds(3.6f);
         mac.noTalk();
         yield return new WaitForSeconds(1);
         mac.Walk();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.2f);
         navMeshMovi.enabled = true;
         mac.Run();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         oac.Talk();
+        yield return new WaitForSeconds(1);
         mm.message();           //10
         yield return new WaitForSeconds(1.2f);
         oac.NoTalk();
         oac.Walk();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.3f);
         navMeshOne.enabled = true;
         oac.Run();
         yield return new WaitForSeconds(5);
@@ -157,7 +149,6 @@ public class GuionEscena2 : MonoBehaviour
         one.SetActive(false);
         Debug.Log("finis");
         PlayerPrefs.SetInt("escena2", 0);
-        
         yield return new WaitForSeconds(1);
     }
 
