@@ -157,34 +157,34 @@
 				"Mensajes": [{
 					"id":0,
 					"Cadena": "Aqu\u00ED es, hemos llegado.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode3/14",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 2,
+					"Duracion": 1.55,
 					"Silencio":1
 				},
 				{
 					"id":1,
 					"Cadena": "S\u00ED, de ah\u00ED arriba nos ca\u00EDmos y no hemos sabido volver a subir.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
-					"x": 2.5,
-					"y": 30.5,
-					"Duracion": 3,
-					"Silencio":1
-				},
-				{
-					"id":2,
-					"Cadena": "Seguro que estas cosas en la pared sirven para algo. Vamos a investigar.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode3/15",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 4,
 					"Silencio":1
 				},
 				{
+					"id":2,
+					"Cadena": "Seguro que estas cosas en la pared sirven para algo. Vamos a investigar.",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode3/16",
+					"x": 2.5,
+					"y": 30.5,
+					"Duracion": 3.7,
+					"Silencio":1
+				},
+				{
 					"id":3,
 					"Cadena": "\u00A1Já!\u00A1Te dije que eso serv\u00EDa para algo! \u00A1Vamos, corred!",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode3/17",
 					"x": 2.5,
 					"y": 30.5,
 					"Duracion": 4,
@@ -193,19 +193,19 @@
 				{
 					"id":4,
 					"Cadena": "\u00BFQu\u00E9 ocurre, por qu\u00E9 tanta prisa?",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode3/18",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion":3 ,
+					"Duracion":1.65,
 					"Silencio":1
 				},
 				{
 					"id":5,
 					"Cadena": "Estoy oliendo a los impostores, algo ha pasado seguro.",
-					"Audio": "Sound/VoiceOver/Chapter1/Episode1/clip2",
+					"Audio": "Sound/VoiceOver/Chapter1/Episode3/19",
 					"x": 2.5,
 					"y": 30.5,
-					"Duracion": 3,
+					"Duracion": 3.3,
 					"Silencio":1
 				}]
 			},
