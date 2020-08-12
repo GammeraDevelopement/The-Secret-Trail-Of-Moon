@@ -18,7 +18,6 @@ public class GuionEscena2 : MonoBehaviour
     public GameObject player;
     public GameObject auxPosFinalOne;
 
-    //public Vector3 posFinalOne;
     public Vector3 target;
 
     // Start is called before the first frame update

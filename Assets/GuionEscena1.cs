@@ -11,6 +11,7 @@ public class GuionEscena1 : MonoBehaviour
     public NavMeshController navMesh;
 
     public GameObject one;
+    public GameObject rock;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class GuionEscena1 : MonoBehaviour
 
 
     IEnumerator Guion() {
-
+        rock.SetActive(true);
         oac.Sleep();
         yield return new WaitForSeconds(3);
         oac.NoSleep();
@@ -61,6 +62,7 @@ public class GuionEscena1 : MonoBehaviour
 
     IEnumerator Guion2() {
 
+        rock.SetActive(false);
         mm.id = 3;
         oac.Sit();
         yield return new WaitForSeconds(3);
