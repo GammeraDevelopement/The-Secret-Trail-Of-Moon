@@ -248,7 +248,7 @@ public class Chess_GameController : MonoBehaviour
                     if (Input.GetButtonDown("Square") && !loadingScene) {
                         black.CrossFadeAlpha(1, 0.5F, true);
                         loadingScene = true;
-                        AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                        AsyncOperation async = SceneManager.LoadSceneAsync(0);
                     }
                 } else {
                     Destroy(clone);

@@ -304,7 +304,7 @@ public class Enigma_GameController : MonoBehaviour {
                         {
                             black.CrossFadeAlpha(1, 0.5F, true);
                             loadingScene = true;
-                            AsyncOperation async = SceneManager.LoadSceneAsync("Intro");
+                            AsyncOperation async = SceneManager.LoadSceneAsync(0);
                         }
                         break;
                     case 1:
