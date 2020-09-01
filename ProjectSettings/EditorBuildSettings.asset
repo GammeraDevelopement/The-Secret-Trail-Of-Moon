@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroConcurso.unity
     guid: 51593e024c434034d900b6f4d83f9ac1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 71c7b20d2517bd14ab57dc291763949d
   - enabled: 0
@@ -29,49 +29,49 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Go No Go.unity
     guid: 37a0c7c42aff3114ca5e517e4e252e0c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Tower.unity
     guid: 4a767545afde73d409544f9738f2e9a5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Bishop.unity
     guid: 85d63581bebfaa540a849cd535708eef
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_King.unity
     guid: 49f406727552a874eb527c38d00631af
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Knight.unity
     guid: 7d2f5323cc3af794e836b75103e81831
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Pawn.unity
     guid: c97026e2c6dee754db94a4d633cfaec2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Queen.unity
     guid: 528f4020d36bb7e4ea6aa963aa2a47b5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Tutorial.unity
     guid: 2c7dea1adc4dfcc4682131ce453a6bdb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Checks1.unity
     guid: f6d4ee4067393844ab384dd3cfdaf967
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_LargeTutorial.unity
     guid: ec280c8a06cb4704cb8c1b0815f0d322
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Repaso1.unity
     guid: 833447a700be53348828fa515da7c380
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Repaso2.unity
     guid: 4242713985310a2488bfbedc8b032e44
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Checks2.unity
     guid: 48cdacdd28f89654fafcab5a227dfa9c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chess Levels/chess_Checks3.unity
     guid: 705a70893212ab74ab2a05c7f09e0f55
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tutorial1.unity
     guid: df7a63696aecba941a77f26e86c577a2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Safe Place.unity
     guid: f5d2678ac8de7d849ac246c83e517e7a
   - enabled: 0
@@ -83,13 +83,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkillLevel.unity
     guid: 2bff254e102c7a64cbbedc91e102937b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Adventure mode/Escena1.unity
     guid: 558b5adbd2d623542ac1f09c35f7baf3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Adventure mode/Escena2.unity
     guid: 3cfa5b04041ef6a44add0a9cc378d783
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Adventure mode/Escena3.unity
     guid: c74031b2640235c4a91aec0ec95efe1f
   - enabled: 1
