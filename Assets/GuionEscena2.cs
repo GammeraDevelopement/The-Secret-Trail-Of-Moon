@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GuionEscena2 : MonoBehaviour
 {
@@ -87,6 +88,8 @@ public class GuionEscena2 : MonoBehaviour
         oac.NoTalk();
         yield return new WaitForSeconds(2);
         PlayerPrefs.SetInt("escena2", 1);
+
+        SceneManager.LoadSceneAsync(3);
     }
 
     IEnumerator Guion2()
@@ -149,6 +152,8 @@ public class GuionEscena2 : MonoBehaviour
         Debug.Log("finis");
         PlayerPrefs.SetInt("escena2", 0);
         yield return new WaitForSeconds(1);
+
+        SceneManager.LoadSceneAsync(21);
     }
 
 }

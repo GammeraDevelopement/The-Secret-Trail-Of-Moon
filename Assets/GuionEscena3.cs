@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GuionEscena3 : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class GuionEscena3 : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         //PlayerPrefs.SetInt("escena3", 1);
+
+        SceneManager.LoadSceneAsync(21);
     }
 
     IEnumerator Guion2()
@@ -52,5 +55,7 @@ public class GuionEscena3 : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         PlayerPrefs.SetInt("escena3", 0);
+
+        SceneManager.LoadSceneAsync(21);
     }
 }

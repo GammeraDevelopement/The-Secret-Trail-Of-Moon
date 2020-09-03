@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GuionEscena1 : MonoBehaviour
 {
@@ -21,8 +22,7 @@ public class GuionEscena1 : MonoBehaviour
         if (PlayerPrefs.GetInt("escena1") == 0)
         {
             navMesh.parte = 1;
-            StartCoroutine(Guion());
-            
+            StartCoroutine(Guion());      
         }
         else {
             navMesh.parte = 2;
@@ -56,7 +56,8 @@ public class GuionEscena1 : MonoBehaviour
         oac.NoSitTalk();
         yield return new WaitForSeconds(1);
         PlayerPrefs.SetInt("escena1", 1);
-        //TODO Llamar a kitsune
+
+        SceneManager.LoadSceneAsync(1);
     }
 
 
@@ -89,8 +90,9 @@ public class GuionEscena1 : MonoBehaviour
             yield return null;
         }
         PlayerPrefs.SetInt("escena1", 0);
-
         one.SetActive(false);
+
+        SceneManager.LoadSceneAsync(21);
     }
 
 }

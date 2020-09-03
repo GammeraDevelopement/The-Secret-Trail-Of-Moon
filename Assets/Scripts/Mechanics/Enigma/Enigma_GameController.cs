@@ -316,6 +316,9 @@ public class Enigma_GameController : MonoBehaviour {
                         }
                         break;
                     case 2:
+                        loadingScene = true;
+                        //Cargar parte 2
+                        SceneManager.LoadSceneAsync(24);
                         break;
                     default:
                         break;

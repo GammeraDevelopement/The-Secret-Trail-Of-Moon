@@ -249,6 +249,10 @@ public class CSAT : MonoBehaviour {
                         }
                         break;
                     case 2:
+                        black.CrossFadeAlpha(1, 0.5F, true);
+                        loadingScene = true;
+                        //Cargar parte 2
+                        SceneManager.LoadSceneAsync(22);
                         break;
                     default:
                         break;

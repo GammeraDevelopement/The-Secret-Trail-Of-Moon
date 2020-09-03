@@ -1017,6 +1017,7 @@ MonoBehaviour:
   mm: {fileID: 388490738}
   navMesh: {fileID: 3509033309602083988}
   one: {fileID: 3509033309602083987}
+  rock: {fileID: 1291199346}
 --- !u!1 &422989221
 GameObject:
   m_ObjectHideFlags: 0
