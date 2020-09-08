@@ -92,7 +92,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adventure mode/Escena3.unity
     guid: c74031b2640235c4a91aec0ec95efe1f
-  - enabled: 0
-    path: Assets/Scenes/Adventure mode/Escena2 Concurso.unity
-    guid: 624ba63145a07fa41befd3723eef7ba5
   m_configObjects: {}

@@ -60,7 +60,7 @@ public class GuionEscena2 : MonoBehaviour
         mac.Talk();
         mm.message();                   //1
         yield return new WaitForSeconds(3.5f);
-        mac.noTalk();
+        mac.NoTalk();
         mac.Think();
         yield return new WaitForSeconds(1);
         oac.Talk();
@@ -72,7 +72,7 @@ public class GuionEscena2 : MonoBehaviour
         mac.Talk();
         mm.message();                   //3
         yield return new WaitForSeconds(6);
-        mac.noTalk();
+        mac.NoTalk();
         oac.Walk();
         yield return new WaitForSeconds(1);
         navMeshOne.enabled = true;
@@ -107,12 +107,12 @@ public class GuionEscena2 : MonoBehaviour
         mac.Talk();
         mm.message();           //5
         yield return new WaitForSeconds(1.8f);
-        mac.noTalk();
+        mac.NoTalk();
         yield return new WaitForSeconds(0.5f);
         mac.Talk();
         mm.message();           //6
         yield return new WaitForSeconds(2.8f);
-        mac.noTalk();        
+        mac.NoTalk();        
         yield return new WaitForSeconds(1);
         oac.Talk();
         yield return new WaitForSeconds(1.2f);
@@ -129,7 +129,7 @@ public class GuionEscena2 : MonoBehaviour
         mac.Talk();     
         mm.message();           //9
         yield return new WaitForSeconds(3.6f);
-        mac.noTalk();
+        mac.NoTalk();
         yield return new WaitForSeconds(1);
         mac.Walk();
         yield return new WaitForSeconds(1.2f);

@@ -65,7 +65,7 @@ public class MoviAnimationController : MonoBehaviour
         anim.SetBool(ANIMATION_TALK, true);
     }
 
-    public void noTalk() {
+    public void NoTalk() {
         anim.SetBool(ANIMATION_TALK, false);
     }
 

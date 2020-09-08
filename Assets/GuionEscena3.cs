@@ -39,10 +39,29 @@ public class GuionEscena3 : MonoBehaviour
 
     IEnumerator Guion()
     {
+        mm.escena = 2;
         //Rotacion de movi y one hacia el player
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
         movi.transform.LookAt(target);
         one.transform.LookAt(target);
+
+        yield return new WaitForSeconds(1);
+        oac.Talk();
+        mm.message(); //0
+        yield return new WaitForSeconds(1.55f);
+        oac.NoTalk();
+        mac.Talk();
+        yield return new WaitForSeconds(1);
+        mm.message();
+        yield return new WaitForSeconds(4);
+        mac.NoTalk();
+        yield return new WaitForSeconds(1);
+        oac.Talk();
+        yield return new WaitForSeconds(0.5f);
+        mm.message();
+        yield return new WaitForSeconds(3.7f);
+        oac.NoTalk();
+        yield return new WaitForSeconds(1);
 
         yield return new WaitForSeconds(1);
         //PlayerPrefs.SetInt("escena3", 1);
