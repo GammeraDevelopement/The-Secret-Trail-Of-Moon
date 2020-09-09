@@ -16,6 +16,7 @@ public class GuionEscena3 : MonoBehaviour
     public GameObject one;
     public GameObject movi;
     public GameObject player;
+    public GameObject activatedStairs;
 
     public Vector3 target;
 
@@ -31,6 +32,7 @@ public class GuionEscena3 : MonoBehaviour
         }
         else
         {
+            activatedStairs.SetActive(true);
             navMeshOne.parte = 2;
             navMeshMovi.parte = 2;
             StartCoroutine(Guion2());
@@ -39,7 +41,6 @@ public class GuionEscena3 : MonoBehaviour
 
     IEnumerator Guion()
     {
-        mm.escena = 2;
         //Rotacion de movi y one hacia el player
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
         movi.transform.LookAt(target);
@@ -52,27 +53,60 @@ public class GuionEscena3 : MonoBehaviour
         oac.NoTalk();
         mac.Talk();
         yield return new WaitForSeconds(1);
-        mm.message();
-        yield return new WaitForSeconds(4);
+        mm.message(); //1
+        yield return new WaitForSeconds(4.2f);
         mac.NoTalk();
         yield return new WaitForSeconds(1);
         oac.Talk();
         yield return new WaitForSeconds(0.5f);
-        mm.message();
+        mm.message(); //2
         yield return new WaitForSeconds(3.7f);
         oac.NoTalk();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
+        PlayerPrefs.SetInt("escena3", 1);
 
-        yield return new WaitForSeconds(1);
-        //PlayerPrefs.SetInt("escena3", 1);
-
-        SceneManager.LoadSceneAsync(21);
+        //SceneManager.LoadSceneAsync(4);
     }
 
     IEnumerator Guion2()
     {
+        mm.id = 3;
+
+        //Rotacion de movi y one hacia el player
+        target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+        movi.transform.LookAt(target);
+        one.transform.LookAt(target);
 
         yield return new WaitForSeconds(1);
+        mac.Talk();
+        mm.message(); //3
+        yield return new WaitForSeconds(4);
+        mac.NoTalk();
+        yield return new WaitForSeconds(1);
+        oac.Talk();
+        mm.message(); //4
+        yield return new WaitForSeconds(1.65f);
+        oac.NoTalk();
+        yield return new WaitForSeconds(1);
+        mac.Talk();
+        mm.message(); //5
+        yield return new WaitForSeconds(3.3f);
+        mac.NoTalk();
+        yield return new WaitForSeconds(0.5f);
+        mac.Walk();
+        yield return new WaitForSeconds(1.2f);
+        oac.Walk();
+        navMeshMovi.enabled = true;
+        mac.Run();
+        yield return new WaitForSeconds(1.2f);
+        navMeshOne.enabled = true;
+        oac.Run();
+        yield return new WaitForSeconds(4);
+        movi.SetActive(false);
+        yield return new WaitForSeconds(1);
+        one.SetActive(false);
+      
+        yield return new WaitForSeconds(3);
         PlayerPrefs.SetInt("escena3", 0);
 
         SceneManager.LoadSceneAsync(21);

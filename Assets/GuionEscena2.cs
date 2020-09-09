@@ -149,7 +149,7 @@ public class GuionEscena2 : MonoBehaviour
         movi.SetActive(false);
         yield return new WaitForSeconds(5);
         one.SetActive(false);
-        Debug.Log("finis");
+
         PlayerPrefs.SetInt("escena2", 0);
         yield return new WaitForSeconds(1);
 
