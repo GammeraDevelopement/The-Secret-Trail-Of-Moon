@@ -65,7 +65,7 @@ public class GuionEscena3 : MonoBehaviour
         yield return new WaitForSeconds(2);
         PlayerPrefs.SetInt("escena3", 1);
 
-        //SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadSceneAsync(4);
     }
 
     IEnumerator Guion2()
@@ -94,14 +94,16 @@ public class GuionEscena3 : MonoBehaviour
         mac.NoTalk();
         yield return new WaitForSeconds(0.5f);
         mac.Walk();
-        yield return new WaitForSeconds(1.2f);
-        oac.Walk();
+        yield return new WaitForSeconds(1.7f);
         navMeshMovi.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        oac.Walk();
         mac.Run();
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(0.5f);
         navMeshOne.enabled = true;
+        yield return new WaitForSeconds(0.5f);
         oac.Run();
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(7);
         movi.SetActive(false);
         yield return new WaitForSeconds(1);
         one.SetActive(false);
