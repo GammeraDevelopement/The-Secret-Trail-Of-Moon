@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 567211653dde85c46a90e9f79762da6d
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: OneIdle1
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: OneIdle1
       takeName: Take 001
       internalID: 0
       firstFrame: 240
@@ -75,6 +75,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
