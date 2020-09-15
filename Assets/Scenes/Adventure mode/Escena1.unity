@@ -952,7 +952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &388490738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,13 +1575,14 @@ GameObject:
   - component: {fileID: 645712596}
   - component: {fileID: 645712595}
   - component: {fileID: 645712594}
+  - component: {fileID: 645712597}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &645712594
 Animator:
   serializedVersion: 3
@@ -1620,6 +1621,12 @@ PlayableDirector:
     value: {fileID: 3509033309602083990}
   - key: {fileID: -2073262891059518757, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
     value: {fileID: 4032237382970783933}
+  - key: {fileID: -3749460558032022920, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1836454840526086826, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
+    value: {fileID: 645712593}
+  - key: {fileID: -8167719821562592980, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
+    value: {fileID: 3509033309602083990}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &645712596
@@ -1636,6 +1643,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &645712597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645712593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 881ff96ca5874404ea07de02e39541f5, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 388490737}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &657934945
 GameObject:
   m_ObjectHideFlags: 0
@@ -27243,27 +27279,27 @@ PrefabInstance:
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.083
+      value: 22.86
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.199
+      value: 10.16
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.758
+      value: -4.48
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.60265446
+      value: -0.67573005
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
@@ -27273,7 +27309,7 @@ PrefabInstance:
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79800224
+      value: 0.73714924
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
@@ -27288,7 +27324,7 @@ PrefabInstance:
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -74.12
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8487073057087422888, guid: c71190c4f38c29046a822c2eac34f391,
         type: 3}
