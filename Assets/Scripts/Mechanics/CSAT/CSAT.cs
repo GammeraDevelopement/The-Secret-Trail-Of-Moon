@@ -253,6 +253,7 @@ public class CSAT : MonoBehaviour {
                         loadingScene = true;
                         //Cargar parte 2
                         SceneManager.LoadSceneAsync(22);
+                        Debug.Log("Se ha cargado la parte 2");
                         break;
                     default:
                         break;
