@@ -1662,22 +1662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 7e85e56630975df4c97daed31318569f, type: 2}
     - {fileID: 11400000, guid: 3092386ce14422b4fb9a2a6d96037c17, type: 2}
     m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 645712598}
-          m_MethodName: StartAt
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 645712598}
@@ -27388,13 +27374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162b17e860ff3a745add946dcb27bdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contador: 0
-  parte: 0
-  finish: 0
-  destino: {fileID: 81724534}
-  positionsGuion1: []
-  positionsGuion2:
-  - {fileID: 81724530}
 --- !u!195 &3509033309602083989
 NavMeshAgent:
   m_ObjectHideFlags: 0

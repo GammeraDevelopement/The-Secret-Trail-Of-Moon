@@ -11,12 +11,16 @@ public class SignalEmitersEscene : MonoBehaviour
     private PlayableDirector director;
     public GameObject controlPanel;
 
-
-    
     void Start()
     {
-        
+      
+        if (PlayerPrefs.GetInt("escena1") == 1) {
+            director = GetComponent<PlayableDirector>();
+            director.time = 25;
+        }
     }
+    
+    //SUSTITUIR POR CASE CUANDO SE AVANCE
 
     public void NextScene()     //Carga la siguiente escena
     {
@@ -26,7 +30,7 @@ public class SignalEmitersEscene : MonoBehaviour
             PlayerPrefs.SetInt("escena1", 1);
             SceneManager.LoadSceneAsync(1);
         }
-        else
+        else if (PlayerPrefs.GetInt("escena1") == 1)
         {
             PlayerPrefs.SetInt("escena1", 0);
             SceneManager.LoadSceneAsync(21);
@@ -34,14 +38,4 @@ public class SignalEmitersEscene : MonoBehaviour
 
     }
 
-    public void StartAt()   //Para que empiece la segunda parte de la escena
-    {
-        
-        Debug.Log("StartAt");
-        if (PlayerPrefs.GetInt("escena1") == 1)
-        {
-            director = GetComponent<PlayableDirector>();
-            director.time = 25;
-        }
-    }
 }
