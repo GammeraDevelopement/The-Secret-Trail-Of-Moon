@@ -1632,6 +1632,8 @@ PlayableDirector:
     value: {fileID: 3509033309602083987}
   - key: {fileID: 3863807403605572990, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
     value: {fileID: 1291199346}
+  - key: {fileID: 3021786078048893319, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
+    value: {fileID: 28912106}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &645712596
@@ -27374,6 +27376,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162b17e860ff3a745add946dcb27bdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: 0
+  parte: 0
+  finish: 0
+  destino: {fileID: 0}
+  positionsGuion1: []
+  positionsGuion2: []
 --- !u!195 &3509033309602083989
 NavMeshAgent:
   m_ObjectHideFlags: 0
