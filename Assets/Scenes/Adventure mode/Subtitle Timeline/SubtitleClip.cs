@@ -7,21 +7,22 @@ public class SubtitleClip : PlayableAsset
 {
     public string subtitleText;
 
-    public MessageManager mm;
-
-   /* public void gettingText()
-    {
-        subtitleText = mm.message();
-
-    }*/
+    public int capitulo;
+    public int escena;
+    public int id = 0;
+    public GameObject messageJSONManager;
 
     public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
     {
+        MessageJSONManager mm = messageJSONManager.GetComponent<MessageJSONManager>();
+
         var playable = ScriptPlayable<SubtitleBehaviour>.Create(graph);
 
         SubtitleBehaviour subtitleBehaviour = playable.GetBehaviour();
-        subtitleBehaviour.subtitleText = subtitleText;
+        subtitleText = mm.GetMensajes(capitulo, escena, id).Cadena;
+        subtitleBehaviour.subtitleText = subtitleText;    
 
         return playable;
     }
+
 }
