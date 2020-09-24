@@ -62,6 +62,7 @@ public class MessageJSONManager : MonoBehaviour
     }
 
     public Mensajes GetMensajes(int id_capitulo, int id_escena, int id_mensaje) {
+        Debug.Log(id_capitulo + " " + id_escena + " " + id_mensaje);
         return root.Capitulos[0].Capitulo[id_capitulo].Escena[id_escena].Mensajes[id_mensaje];
     }
 
