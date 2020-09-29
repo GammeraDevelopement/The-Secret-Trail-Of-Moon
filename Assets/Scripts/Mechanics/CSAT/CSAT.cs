@@ -217,7 +217,7 @@ public class CSAT : MonoBehaviour {
                         Debug.Log("<color=aqua>[CSAT.cs]</color> Se ha producido un error por comisión");
                     }
                 } else if (comienza && piedrasLanzadas >= vidaRoca) {
-                    imagenACambiarDesactivar.active = false;
+                    imagenACambiarDesactivar.SetActive(false);
                     StartCoroutine(ganar());
                     estado = CSATFSM.FINISHED;
                     Debug.Log("<color=aqua>[CSAT.cs]</color> Winner");
@@ -252,7 +252,7 @@ public class CSAT : MonoBehaviour {
                         black.CrossFadeAlpha(1, 0.5F, true);
                         loadingScene = true;
                         //Cargar parte 2
-                        SceneManager.LoadSceneAsync(22);
+                        SceneManager.LoadSceneAsync("Escena1");
                         Debug.Log("Se ha cargado la parte 2");
                         break;
                     default:

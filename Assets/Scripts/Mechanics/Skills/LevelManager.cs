@@ -16,7 +16,7 @@ public class LevelManager : ScriptableObject
         switch (name)
         {
             case "Smasher":
-                Debug.Log("He entrado en case " + name);
+                //Debug.Log("He entrado en case " + name);
                 foreach (Level item in levels)
                 {
                     if (item.name == "AtencionSostenida")
