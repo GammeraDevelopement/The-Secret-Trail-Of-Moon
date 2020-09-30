@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 489bc0eac85beb24689cdc42fd7d6819
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: MoviIdle
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -40,7 +40,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: MoviIdle
       takeName: Take 001
       internalID: 0
       firstFrame: 1
@@ -80,6 +80,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

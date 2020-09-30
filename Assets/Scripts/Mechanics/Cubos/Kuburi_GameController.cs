@@ -184,7 +184,7 @@ public class Kuburi_GameController : MonoBehaviour
                     case 2:
                         loadingScene = true;
                         //Cargar parte 2
-                        SceneManager.LoadSceneAsync(23);
+                        SceneManager.LoadSceneAsync("Escena2");
                         break;
                     default:
                         break;
