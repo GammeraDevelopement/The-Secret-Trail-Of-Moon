@@ -273,7 +273,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 67108863
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 27
+  m_firstOverflowCharacterIndex: 33
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -394,13 +394,14 @@ GameObject:
   - component: {fileID: 30126402}
   - component: {fileID: 30126404}
   - component: {fileID: 30126403}
+  - component: {fileID: 30126405}
   m_Layer: 2
   m_Name: black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &30126402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -433,13 +434,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c2142d83296e28b42b7aa5831076c609, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -457,6 +458,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30126401}
   m_CullTransparentMesh: 0
+--- !u!95 &30126405
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30126401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &81724530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,10 +1654,15 @@ PlayableDirector:
     value: {fileID: 1291199346}
   - key: {fileID: 3021786078048893319, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
     value: {fileID: 28912106}
-  - key: {fileID: 2185403521153525281, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
-    value: {fileID: 0}
+  - key: {fileID: 757459052070776141, guid: 723e1db25dd6f5f44bcfb74d339af222, type: 2}
+    value: {fileID: 30126405}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 5b08900d599b21549bf37313d6121dd0: {fileID: 30126401}
+    - 9cd39593d9c894c4bb91511883e7130b: {fileID: 1687090736}
+    - 990f6ddc03dbe814d94826a200edd36e: {fileID: 30126401}
+    - 7594086bced234e46a1d5646432f1354: {fileID: 85614549}
+    - e1d5f39018cbd274181b62a68543915d: {fileID: 30126401}
 --- !u!4 &645712596
 Transform:
   m_ObjectHideFlags: 0

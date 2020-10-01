@@ -11,7 +11,6 @@ public class SignalEmitersEscene : MonoBehaviour
     [Header("Timelines")]
     private PlayableDirector director;
     public GameObject controlPanel;
-    //public Image black;
 
     void Start()
     {
@@ -27,12 +26,10 @@ public class SignalEmitersEscene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Escena1"))
         {
-            //black.CrossFadeAlpha(0, 0.1F, true);
+
             
             if (PlayerPrefs.GetInt("escena1") == 0)
             {
-               //black.enabled = true;
-                //black.CrossFadeAlpha(1, 1F, true);
                 PlayerPrefs.SetInt("escena1", 1);
                 PlayerPrefs.SetInt("nivelCSAT", 1);
                 SceneManager.LoadSceneAsync("CSAT Tutorial");
