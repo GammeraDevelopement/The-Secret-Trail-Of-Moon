@@ -19,6 +19,10 @@ public class SignalEmitersEscene : MonoBehaviour
             director = GetComponent<PlayableDirector>();
             director.time = 25;
         }
+        if (PlayerPrefs.GetInt("escena2") == 1) {
+            director = GetComponent<PlayableDirector>();
+            director.time = 35;
+        }
     }
     
 
