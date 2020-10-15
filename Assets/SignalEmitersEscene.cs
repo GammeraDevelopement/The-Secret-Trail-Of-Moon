@@ -30,8 +30,8 @@ public class SignalEmitersEscene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Escena1"))
         {
+            PlayerPrefs.SetInt("Savegame", 1);
 
-            
             if (PlayerPrefs.GetInt("escena1") == 0)
             {
                 PlayerPrefs.SetInt("escena1", 1);
@@ -47,6 +47,9 @@ public class SignalEmitersEscene : MonoBehaviour
 
         else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Escena2"))
         {
+
+            PlayerPrefs.SetInt("Savegame", 2);
+
             if (PlayerPrefs.GetInt("escena2") == 0)
             {
                 PlayerPrefs.SetInt("escena2", 1);

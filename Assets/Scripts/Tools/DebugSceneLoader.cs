@@ -23,14 +23,31 @@ public class DebugSceneLoader : MonoBehaviour {
     }
 
     public void setScene(string scene) {
-        sceneName = scene;
+
+        /*if (PlayerPrefs.GetInt("Gamemode") == 2)
+        {
+            if (PlayerPrefs.GetInt("Savegame") != 0)
+            {
+                sceneName = "Escena" + PlayerPrefs.GetInt("Savegame");
+            }
+            /*else
+            {
+                sceneName = "Escena1";
+            }
+        }
+        else
+        { */
+            sceneName = scene;
+        //}
+        
     }
 
     IEnumerator LoadNewScene() {
         AsyncOperation async;
         black.CrossFadeAlpha(1, 0.5F, true);
         yield return new WaitForSeconds(3);
-        if (dd != null) {
+
+         if(dd != null) {
             Debug.Log("Scene " + dd.value + " loaded.");
             async = SceneManager.LoadSceneAsync(dd.captionText.text);
         } else {
