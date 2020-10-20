@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Debug Room.unity
     guid: f3c4cb5e98c254141954c942607e9f99
   - enabled: 1
-    path: Assets/Scenes/CSAT Tutorial.unity
+    path: Assets/Scenes/CSAT Cueva.unity
     guid: b608f8f1cde0bad498a300b9e3c367c8
   - enabled: 1
     path: Assets/Scenes/Sokoban tutorial.unity
@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adventure mode/Escena3.unity
     guid: c74031b2640235c4a91aec0ec95efe1f
+  - enabled: 1
+    path: Assets/Scenes/Adventure mode/Smasher Escena1.unity
+    guid: 264c659029820ad4a871a41bd7cad255
   m_configObjects: {}

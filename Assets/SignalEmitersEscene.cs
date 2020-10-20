@@ -36,7 +36,7 @@ public class SignalEmitersEscene : MonoBehaviour
             {
                 PlayerPrefs.SetInt("escena1", 1);
                 PlayerPrefs.SetInt("nivelCSAT", 1);
-                SceneManager.LoadSceneAsync("CSAT Tutorial");
+                SceneManager.LoadSceneAsync("Smasher Escena1");
             }
             else if (PlayerPrefs.GetInt("escena1") == 1)
             {
