@@ -182,9 +182,13 @@ public class Kuburi_GameController : MonoBehaviour
                         }
                         break;
                     case 2:
-                        loadingScene = true;
-                        //Cargar parte 2
-                        SceneManager.LoadSceneAsync("Escena2");
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            //Cargar parte 2
+                            SceneManager.LoadSceneAsync("Escena2");
+                        }
                         break;
                     default:
                         break;

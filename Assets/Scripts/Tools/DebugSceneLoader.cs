@@ -22,7 +22,7 @@ public class DebugSceneLoader : MonoBehaviour {
 
     public void loadScene() {
         StartCoroutine(LoadNewScene());
-        setScene("Escena1");      // Si algo falla descomentar esto
+        //setScene("Escena1");      // Si algo falla descomentar esto
     }
 
     public void newGame() {
