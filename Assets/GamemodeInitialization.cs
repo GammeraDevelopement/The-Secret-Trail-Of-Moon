@@ -16,20 +16,7 @@ public class GamemodeInitialization : MonoBehaviour
     public void ChangeGamemode(int value) {
 
         PlayerPrefs.SetInt("Gamemode", value);
-        /*
-        if (PlayerPrefs.GetInt("Gamemode") == 2)
-        {
-            if (PlayerPrefs.GetInt("Savegame") != 0)
-            {
-                botonContinuar.SetActive(true);
-            }
-        }
-        //Continue? si -> loadScene("Escena"+Savegame), no->loadScene("Escena1") */
+        
     }
     
-    /*
-    public void PartidaNueva() {
-
-        PlayerPrefs.SetInt("Savegame", 0);
-    }*/
 }

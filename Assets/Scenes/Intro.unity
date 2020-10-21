@@ -4519,6 +4519,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   black: {fileID: 696301390}
+  gm: {fileID: 309915756}
+  cont: {fileID: 298014903}
+  btnAceptar: {fileID: 1291916961}
 --- !u!114 &309915759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4531,7 +4534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76697bc396b3bcb4ab14cd6f454f7d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoader: {fileID: 0}
+  sceneLoader: {fileID: 309915756}
 --- !u!1 &316315105
 GameObject:
   m_ObjectHideFlags: 0
@@ -15259,7 +15262,7 @@ GameObject:
   - component: {fileID: 1002941080}
   - component: {fileID: 1002941079}
   m_Layer: 5
-  m_Name: To be continued
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
