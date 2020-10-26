@@ -95,4 +95,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adventure mode/Smasher Escena1.unity
     guid: 264c659029820ad4a871a41bd7cad255
+  - enabled: 1
+    path: Assets/Scenes/CSAT Tutorial.unity
+    guid: bc9e30ee9df299744a25ef53a0b90975
   m_configObjects: {}

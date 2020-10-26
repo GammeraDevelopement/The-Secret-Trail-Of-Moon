@@ -249,11 +249,14 @@ public class CSAT : MonoBehaviour {
                         }
                         break;
                     case 2:
-                        black.CrossFadeAlpha(1, 0.5F, true);
-                        loadingScene = true;
-                        //Cargar parte 2
-                        SceneManager.LoadSceneAsync("Escena1");
-                        Debug.Log("Se ha cargado la parte 2");
+                        if (Input.GetButtonDown("Square") && !loadingScene)
+                        {
+                            black.CrossFadeAlpha(1, 0.5F, true);
+                            loadingScene = true;
+                            //Cargar parte 2
+                            SceneManager.LoadSceneAsync("Escena1");
+                            Debug.Log("Se ha cargado la parte 2");
+                        }
                         break;
                     default:
                         break;

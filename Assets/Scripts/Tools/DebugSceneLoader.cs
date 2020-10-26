@@ -22,7 +22,7 @@ public class DebugSceneLoader : MonoBehaviour {
 
     public void loadScene() {
         StartCoroutine(LoadNewScene());
-        //setScene("Escena1");      // Si algo falla descomentar esto
+        //setScene("Escena1");     
     }
 
     public void newGame() {
@@ -45,7 +45,7 @@ public class DebugSceneLoader : MonoBehaviour {
 
     public void setScene(string scene) {
 
-       /* if (PlayerPrefs.GetInt("Gamemode") == 2)
+        if (PlayerPrefs.GetInt("Gamemode") == 2)
         {
             if (PlayerPrefs.GetInt("Savegame") != 0)
             {
@@ -57,9 +57,9 @@ public class DebugSceneLoader : MonoBehaviour {
             }
         }
         else
-        { */
+        {
             sceneName = scene;              // y dejar solo esta linea de codigo
-        //}
+        }
         
     }
 

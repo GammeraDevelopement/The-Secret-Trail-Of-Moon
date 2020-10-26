@@ -19,7 +19,7 @@ public class SignalEmitersEscene : MonoBehaviour
             director = GetComponent<PlayableDirector>();
             director.time = 25;
         }
-        if (PlayerPrefs.GetInt("escena2") == 1) {
+        else if (PlayerPrefs.GetInt("escena2") == 1) {
             director = GetComponent<PlayableDirector>();
             director.time = 35;
         }
@@ -35,12 +35,13 @@ public class SignalEmitersEscene : MonoBehaviour
             if (PlayerPrefs.GetInt("escena1") == 0)
             {
                 PlayerPrefs.SetInt("escena1", 1);
-                PlayerPrefs.SetInt("nivelCSAT", 1);
+                PlayerPrefs.SetInt("nivelCSAT", 2);
                 SceneManager.LoadSceneAsync("CSAT Cueva");
             }
             else if (PlayerPrefs.GetInt("escena1") == 1)
             {
                 PlayerPrefs.SetInt("escena1", 0);
+                PlayerPrefs.SetInt("Savegame", 2);
                 SceneManager.LoadSceneAsync("Escena2");        //Cambiar a EXP cuando terminado (21)
             }
         }
@@ -53,7 +54,7 @@ public class SignalEmitersEscene : MonoBehaviour
             if (PlayerPrefs.GetInt("escena2") == 0)
             {
                 PlayerPrefs.SetInt("escena2", 1);
-                PlayerPrefs.SetInt("nivelCubos", 1);
+                PlayerPrefs.SetInt("nivelCubos", 2);
                 SceneManager.LoadSceneAsync("Cubos");
             }
             else if (PlayerPrefs.GetInt("escena2") == 1)
