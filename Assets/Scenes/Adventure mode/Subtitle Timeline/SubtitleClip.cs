@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 public class SubtitleClip : PlayableAsset
 {
+    [TextArea]
     public string subtitleText;
 
 

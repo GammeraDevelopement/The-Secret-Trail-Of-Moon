@@ -55,7 +55,7 @@ public class SignalEmitersEscene : MonoBehaviour
             {
                 PlayerPrefs.SetInt("escena2", 1);
                 PlayerPrefs.SetInt("nivelCubos", 2);
-                SceneManager.LoadSceneAsync("Cubos");
+                SceneManager.LoadSceneAsync("Kuburi Escena2");
             }
             else if (PlayerPrefs.GetInt("escena2") == 1)
             {

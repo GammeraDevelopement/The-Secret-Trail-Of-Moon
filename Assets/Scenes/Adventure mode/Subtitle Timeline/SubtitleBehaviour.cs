@@ -13,5 +13,6 @@ public class SubtitleBehaviour : PlayableBehaviour
         TextMeshProUGUI text = playerData as TextMeshProUGUI;
         text.text = subtitleText;
         text.color = new Color(1, 1, 1, info.weight);  // fading
+        text.alignment = TextAlignmentOptions.Center;
     }
 }

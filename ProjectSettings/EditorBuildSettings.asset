@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enigma Working Memory.unity
     guid: 3728d040b70e59b4ca7db5c52c4961ee
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Go No Go.unity
     guid: 37a0c7c42aff3114ca5e517e4e252e0c
   - enabled: 1
@@ -98,4 +98,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CSAT Tutorial.unity
     guid: bc9e30ee9df299744a25ef53a0b90975
+  - enabled: 1
+    path: Assets/Scenes/Adventure mode/Kuburi Escena2.unity
+    guid: 1b41f13b20bd50544819cde6e4296281
   m_configObjects: {}

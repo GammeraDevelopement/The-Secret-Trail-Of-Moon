@@ -64,7 +64,7 @@ Material:
     - _AO: 2.4
     - _BaseLight: 0.35
     - _BumpScale: 1
-    - _Cutoff: 0.13
+    - _Cutoff: 0.486
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1

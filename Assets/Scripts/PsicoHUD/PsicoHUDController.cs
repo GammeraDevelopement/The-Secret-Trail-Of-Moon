@@ -14,6 +14,7 @@ public class PsicoHUDController : MonoBehaviour
 
     public Slider[] slider;
     public Dropdown dropdown;
+    public GameObject loading;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +34,10 @@ public class PsicoHUDController : MonoBehaviour
         string sceneString = "";
         foreach (GameObject item in scenePool) {
             PsicoHUDSceneButton phsb = item.GetComponent<PsicoHUDSceneButton>();
-            sceneString += phsb.name + ":" + phsb.level + ";XpScene;";
+            sceneString += phsb.name + ":" + phsb.level +";"/* ";XpScene;"*/;
         }
         Debug.Log(sceneString);
+        loading.SetActive(true);
         PlayerPrefs.SetString("SceneString", sceneString);
         gameObject.GetComponent<SceneLoader>().LoadSceneInOrder();
     }
