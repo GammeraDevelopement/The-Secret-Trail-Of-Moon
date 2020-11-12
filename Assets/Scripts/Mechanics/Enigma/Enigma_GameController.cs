@@ -320,7 +320,7 @@ public class Enigma_GameController : MonoBehaviour {
                         {
                             loadingScene = true;
                             //Cargar parte 2
-                            SceneManager.LoadSceneAsync(24);
+                            SceneManager.LoadSceneAsync("Escena3");
                         }
                         break;
                     default:
