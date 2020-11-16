@@ -2889,7 +2889,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.629
+      value: 2.082
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
@@ -2899,7 +2899,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
@@ -2909,7 +2909,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
@@ -2929,7 +2929,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 152.714
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2d998a2627285c14abce46522c9b8517,
         type: 3}
@@ -3301,6 +3301,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4356335512606346, guid: 46cd7505b523d234fa00d2c791433c86,
     type: 3}
   m_PrefabInstance: {fileID: 715706395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &720375509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5447aabba0bf6b847bb4410f06e869a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1146203314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &734382305
 PrefabInstance:
@@ -3893,7 +3899,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a9e031e5b66e86347aed3785ef736254,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a9e031e5b66e86347aed3785ef736254,
         type: 3}
@@ -3903,7 +3909,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a9e031e5b66e86347aed3785ef736254,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a9e031e5b66e86347aed3785ef736254,
         type: 3}
@@ -5771,6 +5777,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1238737100}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1133466265
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133466263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1133466266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5950,7 +5975,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5447aabba0bf6b847bb4410f06e869a1,
         type: 3}
       propertyPath: m_Name
-      value: templo escena 3 escaleras desplegadas
+      value: Escaleras templo estiradas
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 5447aabba0bf6b847bb4410f06e869a1,
         type: 3}
@@ -6839,7 +6864,7 @@ PrefabInstance:
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9015884
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
@@ -6849,22 +6874,22 @@ PrefabInstance:
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.40451747
+      value: 0.40451744
       objectReference: {fileID: 0}
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.91453034
+      value: -0.9145303
       objectReference: {fileID: 0}
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
@@ -6879,7 +6904,7 @@ PrefabInstance:
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 312.27798
+      value: 359
       objectReference: {fileID: 0}
     - target: {fileID: 4032237383560492362, guid: aa0f4104de693ab43aa1753fbd99b0fd,
         type: 3}
@@ -7331,7 +7356,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 67108863
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -7597,6 +7622,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5434957067914291652, guid: f37c41fa710aa1b47914a6a36d980b6e,
     type: 3}
   m_PrefabInstance: {fileID: 1367124002}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1367689030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5447aabba0bf6b847bb4410f06e869a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2091298949}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1408630849
 PrefabInstance:
@@ -11336,7 +11367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909307431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.648155, y: 3.8330305, z: 67.787704}
+  m_LocalPosition: {x: 53.012, y: 2.574, z: 66.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11379,6 +11410,10 @@ PlayableDirector:
     value: {fileID: 1133466263}
   - key: {fileID: -506188242683645519, guid: b9f2752c8b2869d449d6aba8537f0970, type: 2}
     value: {fileID: 1909307431}
+  - key: {fileID: -3481272772483874284, guid: b9f2752c8b2869d449d6aba8537f0970, type: 2}
+    value: {fileID: 1367689030}
+  - key: {fileID: -8004093672797004043, guid: b9f2752c8b2869d449d6aba8537f0970, type: 2}
+    value: {fileID: 720375509}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1909307435
@@ -12348,7 +12383,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5447aabba0bf6b847bb4410f06e869a1,
         type: 3}
       propertyPath: m_Name
-      value: templo escena 3 escaleras
+      value: Escaleras templo recogidas
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 5447aabba0bf6b847bb4410f06e869a1,
         type: 3}
