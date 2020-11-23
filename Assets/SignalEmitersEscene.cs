@@ -85,16 +85,9 @@ public class SignalEmitersEscene : MonoBehaviour
             else if (PlayerPrefs.GetInt("escena3") == 1)
             {
                 PlayerPrefs.SetInt("escena3", 0);
-                SceneManager.LoadSceneAsync("Intro");        //Cambiar a EXP cuadno terminado (21)   Y ESCENA 4
+                SceneManager.LoadSceneAsync("Escena4");        //Cambiar a EXP cuadno terminado (21)
             }
-        }
-
-
-
-        
-
-
-
+        }// Escena3
     }
 
 }
